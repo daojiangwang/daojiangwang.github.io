@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-01T01:33:24.240Z</updated>
+  <updated>2018-10-15T02:47:27.150Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在华师大的第一个月</title>
+    <link href="http://yoursite.com/2018/10/15/%E5%9C%A8%E5%8D%8E%E5%B8%88%E5%A4%A7%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%9C%88/"/>
+    <id>http://yoursite.com/2018/10/15/在华师大的第一个月/</id>
+    <published>2018-10-15T00:55:57.000Z</published>
+    <updated>2018-10-15T02:47:27.150Z</updated>
+    
+    <content type="html"><![CDATA[<!-- 标签别名 --><blockquote class="blockquote-center"><p>九月初七<br>晴</p></blockquote><a id="more"></a><p>转眼已经来到新校园一个多月了，认识了好多新同学，也见到些老同学，唠嗑着生活，计划着将来，有的迷茫困惑，有的认清自己规划将来。<br>而我呢，在明确的考研目标完成后，如今却千头万绪，一下没了方向。在导师建议下，计划着做系统项目，可能在实验室项目里做性能或测试方面的工作。当然做啥不是最重要，更需要的是<strong>不断学习</strong>！<br>本想做个技术博主的，发现自己手艺不精，所以也没更新的动力，，有机会的话，更新下论文阅读吧，督促更新。<del>假装自己有访客</del><br><img src="/images/sh01.jpg" alt="&quot;浦东&quot;"></p><hr><p>最后说个小事，喜欢一个优秀的姑娘，她同学说她像ab，我却觉得她像~!@#$%^&amp;*，当然，她谁也不像，她就是她。她多才多艺，喜欢运动，心地善良，“华美”。。。恩恩，我要加油，立个flag，百天之后再更新吧！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;!-- 标签别名 --&gt;
+&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;九月初七&lt;br&gt;晴&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="点滴" scheme="http://yoursite.com/tags/%E7%82%B9%E6%BB%B4/"/>
+    
+  </entry>
   
   <entry>
     <title>关于博客</title>
