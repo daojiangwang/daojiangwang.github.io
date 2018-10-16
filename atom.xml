@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-16T08:45:01.970Z</updated>
+  <updated>2018-10-16T08:48:23.085Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/10/16/hexo%E8%AE%BF%E9%97%AE%E9%87%8F%E4%B8%8E%E8%AE%BF%E5%AE%A2%E5%A4%B1%E6%95%88%E5%8E%9F%E5%9B%A0/"/>
     <id>http://yoursite.com/2018/10/16/hexo访问量与访客失效原因/</id>
     <published>2018-10-16T08:31:47.000Z</published>
-    <updated>2018-10-16T08:45:01.970Z</updated>
+    <updated>2018-10-16T08:48:23.085Z</updated>
     
-    <content type="html"><![CDATA[<p>嘻嘻，昨天更新后想看看访问有没有变化的，忽然发现统计功能无效了，之前使用的不蒜子脚本，去看了下原来不蒜子域名修改了。</p><p>不蒜子官网：<a href="http://busuanzi.ibruce.info/?spm=5176.11156381.0.0.828c6ca0FyPv10" target="_blank" rel="noopener">http://busuanzi.ibruce.info/?spm=5176.11156381.0.0.828c6ca0FyPv10</a></p><p>解决：将\themes\next\layout_partials\footer.swig下的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p><p>修改为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p>嘻嘻，昨天更新后想看看访问有没有变化的，忽然发现统计功能无效了，之前使用的不蒜子脚本，去看了下原来不蒜子域名修改了。</p><p>不蒜子官网：<a href="http://busuanzi.ibruce.info/?spm=5176.11156381.0.0.828c6ca0FyPv10" target="_blank" rel="noopener">http://busuanzi.ibruce.info/?spm=5176.11156381.0.0.828c6ca0FyPv10</a></p><p>解决：将\themes\next\layout_partials\footer.swig下的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p><p>修改为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
