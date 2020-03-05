@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next2.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next2.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next2.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo2.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="前端," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="djwang呀" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="1.Minimize HTTP Requests　　减少 HTTP 请求图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。 2.Use a Content Delivery">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优化网站加载速度的34条法则，Yahoo!">
+<meta property="og:url" content="http://yoursite.com/2020/03/05/优化网站加载速度的34条法则, Yahoo!/index.html">
+<meta property="og:site_name" content="djwang呀">
+<meta property="og:description" content="1.Minimize HTTP Requests　　减少 HTTP 请求图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。 2.Use a Content Delivery">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-03-05T12:26:24.911Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="优化网站加载速度的34条法则，Yahoo!">
+<meta name="twitter:description" content="1.Minimize HTTP Requests　　减少 HTTP 请求图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。 2.Use a Content Delivery">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/03/05/优化网站加载速度的34条法则, Yahoo!/"/>
+
+
+
+
+
+  <title>优化网站加载速度的34条法则，Yahoo! | djwang呀</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	
+	<a href="https://github.com/daojiangwang" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+	
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">djwang呀</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">时至今日你仍是我的光芒</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/05/优化网站加载速度的34条法则, Yahoo!/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="djwang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="djwang呀">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">优化网站加载速度的34条法则，Yahoo!</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-05T20:16:09+08:00">
+                2020-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/03/05/优化网站加载速度的34条法则, Yahoo!/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/05/优化网站加载速度的34条法则, Yahoo!/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1-Minimize-HTTP-Requests-减少-HTTP-请求"><a href="#1-Minimize-HTTP-Requests-减少-HTTP-请求" class="headerlink" title="1.Minimize HTTP Requests　　减少 HTTP 请求"></a>1.Minimize HTTP Requests　　减少 HTTP 请求</h3><pre><code>图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。
+</code></pre><h3 id="2-Use-a-Content-Delivery-Network-利用-CDN-技术"><a href="#2-Use-a-Content-Delivery-Network-利用-CDN-技术" class="headerlink" title="2.Use a Content Delivery Network　　利用 CDN 技术"></a>2.Use a Content Delivery Network　　利用 CDN 技术</h3><h3 id="3-Add-an-Expires-or-a-Cache-Control-Header-设置头文件过期或者静态缓存"><a href="#3-Add-an-Expires-or-a-Cache-Control-Header-设置头文件过期或者静态缓存" class="headerlink" title="3.Add an Expires or a Cache-Control Header　　设置头文件过期或者静态缓存"></a>3.Add an Expires or a Cache-Control Header　　设置头文件过期或者静态缓存</h3><pre><code>浏览器会用缓存来减少http请求数来加快页面加载的时间，如果页面头部加一个很长的过期时间，浏览器就会一直缓存页面里的元素。不过这样如果页面里的东西变动的话就要改名字了，否则用户端不会主动刷新，看自己衡量了~ 这项可以通过修改.htaccess文件来实现。
+</code></pre><h3 id="4-Gzip-Components-Gzip压缩"><a href="#4-Gzip-Components-Gzip压缩" class="headerlink" title="4.Gzip Components　　Gzip压缩"></a>4.Gzip Components　　Gzip压缩</h3><p>　　Gzip格式是一种很普遍的压缩技术，几乎所有的浏览器都有解压Gzip格式的能力，而且它可以压缩的比例非常大，一般压缩率为85%。压缩没压缩，可以到 这里 做下测试。</p>
+<h3 id="5-Put-Stylesheets-at-the-Top-把CSS放顶部"><a href="#5-Put-Stylesheets-at-the-Top-把CSS放顶部" class="headerlink" title="5.Put Stylesheets at the Top　　把CSS放顶部"></a>5.Put Stylesheets at the Top　　把CSS放顶部</h3><p>　　让浏览者能尽早的看到网站的完整样式。</p>
+<h3 id="6-Put-Scripts-at-the-Bottom-把-JS-放底部"><a href="#6-Put-Scripts-at-the-Bottom-把-JS-放底部" class="headerlink" title="6.Put Scripts at the Bottom　　把 JS 放底部"></a>6.Put Scripts at the Bottom　　把 JS 放底部</h3><p>　　网站呈现完毕后再进行功能设置，当然这些JS要在你的加载过程中不影响内容表现。</p>
+<h3 id="7-Avoid-CSS-Expressions-避免-CSS-Expressions"><a href="#7-Avoid-CSS-Expressions-避免-CSS-Expressions" class="headerlink" title="7.Avoid CSS Expressions　　避免 CSS Expressions"></a>7.Avoid CSS Expressions　　避免 CSS Expressions</h3><p>　　CSS表达式很可怕，这个只被IE支持的东西执行时候的运算量非常大，你移动一下鼠标它都要进行重计算的，但有时候为了做浏览器的兼容必须要用到这个</p>
+<h3 id="8-Make-JavaScript-and-CSS-External-将-JS-和-CSS-外链"><a href="#8-Make-JavaScript-and-CSS-External-将-JS-和-CSS-外链" class="headerlink" title="8.Make JavaScript and CSS External　　将 JS 和 CSS 外链"></a>8.Make JavaScript and CSS External　　将 JS 和 CSS 外链</h3><p>　　前面讲到了缓存这个事情，一些较为公用的JS和CSS，我们可以使用外链的形式，譬如我就是从Google外链来的jQuery文件，如果我的浏览者在浏览别的使用了这个外链文件的网站时已经下载并缓存了这个文件，那么他在浏览我的网站的时候就不需要再进行下载了！~</p>
+<h3 id="9-Reduce-DNS-Lookups-减少DNS查找"><a href="#9-Reduce-DNS-Lookups-减少DNS查找" class="headerlink" title="9.Reduce DNS Lookups　　减少DNS查找"></a>9.Reduce DNS Lookups　　减少DNS查找</h3><p>　　貌似是要减少网站从外部调用资源，我的Google分析和picasa的外链图片都算在里面了。</p>
+<h3 id="10-Minify-JavaScript-and-CSS-减小-JS-和-CSS-的体积"><a href="#10-Minify-JavaScript-and-CSS-减小-JS-和-CSS-的体积" class="headerlink" title="10.Minify JavaScript and CSS　　减小 JS 和 CSS 的体积"></a>10.Minify JavaScript and CSS　　减小 JS 和 CSS 的体积</h3><p>　　写JS和CSS都是有技巧的，用最少的代码实现同样的功能，减少空白，增强逻辑性，用缩写方式等等，当然也有不少工具也能够帮你实现</p>
+<h3 id="11-Avoid-Redirects-避免重定向"><a href="#11-Avoid-Redirects-避免重定向" class="headerlink" title="11.Avoid Redirects　　避免重定向"></a>11.Avoid Redirects　　避免重定向</h3><p>　　在写入链接时，虽然”<a href="http://www.today-s-ooxx..com&quot;" target="_blank" rel="noopener">http://www.today-s-ooxx..com&quot;</a> 和 “<a href="http://www.today-s-ooxx..com/&quot;" target="_blank" rel="noopener">http://www.today-s-ooxx..com/&quot;</a> 仅有一个最后的”/”只差，但是结果是不同的，服务器需要花时间把前者重定向为后者然后进行跳转，这个要自己注意，也可以在Apache里用Alias 或者mod_rewrite或者DirectorySlash解决。</p>
+<h3 id="12-Remove-Duplicate-Scripts-删除重复脚本"><a href="#12-Remove-Duplicate-Scripts-删除重复脚本" class="headerlink" title="12.Remove Duplicate Scripts　　删除重复脚本"></a>12.Remove Duplicate Scripts　　删除重复脚本</h3><p>　　重复调用的代码浏览器并不会识别忽略，而是会再次运算一遍，这当然是大大的浪费。</p>
+<h3 id="13-Configure-ETags-配置-ETags"><a href="#13-Configure-ETags-配置-ETags" class="headerlink" title="13.Configure ETags　　配置 ETags"></a>13.Configure ETags　　配置 ETags</h3><p>　　搞不清楚咋回事，总之我是在.htaccess里把它删除了。</p>
+<h3 id="14-Make-Ajax-Cacheable-缓存-Ajax"><a href="#14-Make-Ajax-Cacheable-缓存-Ajax" class="headerlink" title="14.Make Ajax Cacheable　　缓存 Ajax"></a>14.Make Ajax Cacheable　　缓存 Ajax</h3><p>　　Ajax是实时响应的，在浏览器接收到新的数据前，旧的数据被缓存，这样能够更好的提高效率。</p>
+<h3 id="15-Flush-the-Buffer-Early-尽早的释放缓冲"><a href="#15-Flush-the-Buffer-Early-尽早的释放缓冲" class="headerlink" title="15.Flush the Buffer Early　　尽早的释放缓冲"></a>15.Flush the Buffer Early　　尽早的释放缓冲</h3><p>　　当用户进行页面请求时，服务器端需要花费200到500毫秒时间来拼合HTML，将写在head与body之间，释放缓冲，这样可以将文件头先发送出去，然后再发送文件内容，提高效率。</p>
+<h3 id="16-Use-GET-for-AJAX-Requests-用-GET-方式进行-AJAX-请求"><a href="#16-Use-GET-for-AJAX-Requests-用-GET-方式进行-AJAX-请求" class="headerlink" title="16.Use GET for AJAX Requests　　用 GET 方式进行 AJAX 请求"></a>16.Use GET for AJAX Requests　　用 GET 方式进行 AJAX 请求</h3><p>　　Get 方法和服务器只有一次交互（发送数据），而 Post 要两次（发送头部再发送数据）。</p>
+<h3 id="17-Post-load-Components-延迟加载组件"><a href="#17-Post-load-Components-延迟加载组件" class="headerlink" title="17.Post-load Components　　延迟加载组件*"></a>17.Post-load Components　　延迟加载组件*</h3><p>　　最先加载必须的组件进行页面初始化，然后再加载其他，YUI Image Loader 是很好的例子。</p>
+<h3 id="18-Preload-components-预加载组件"><a href="#18-Preload-components-预加载组件" class="headerlink" title="18.Preload components　　预加载组件"></a>18.Preload components　　预加载组件</h3><p>　　提前加载以后可能用到的东西，和延迟加载并不冲突，它的目的是为后续请求提供更快的响应，参见Google首页上的CSS sprites应用。</p>
+<h3 id="19-Reduce-the-Number-of-DOM-Elements-减少-DOM-元素数量"><a href="#19-Reduce-the-Number-of-DOM-Elements-减少-DOM-元素数量" class="headerlink" title="19.Reduce the Number of DOM Elements　　减少 DOM 元素数量"></a>19.Reduce the Number of DOM Elements　　减少 DOM 元素数量</h3><p>　　复杂的页面结构意味着更长的下载及响应时间，更合理更高效的使用标签来架构页面，是好的前端的必备条件。</p>
+<h3 id="20-Split-Components-Across-Domains-跨域分离组件"><a href="#20-Split-Components-Across-Domains-跨域分离组件" class="headerlink" title="20.Split Components Across Domains　　跨域分离组件"></a>20.Split Components Across Domains　　跨域分离组件</h3><p>　　页面组件多个来源可以增大你的平行下载量，但注意不要过多，超过2-4个域名会引起上面说到的DNS查找浪费。</p>
+<h3 id="21-Minimize-the-Number-of-iframes-减少-iframe-数量"><a href="#21-Minimize-the-Number-of-iframes-减少-iframe-数量" class="headerlink" title="21.Minimize the Number of iframes　　减少 iframe 数量"></a>21.Minimize the Number of iframes　　减少 iframe 数量</h3><p>　　需要更有效的利用 ifames。<br>　　iframe 优点：有利于下载缓慢的广告等第三方内容，安全沙箱，并行下载脚本<br>　　iframe 缺点：即使为空也会有较大资源消耗，会阻止页面的onload，非语义</p>
+<h3 id="22-No-404s-不要出现-404-页面"><a href="#22-No-404s-不要出现-404-页面" class="headerlink" title="22.No 404s　　不要出现 404 页面"></a>22.No 404s　　不要出现 404 页面</h3><p>　　站点本身里（非搜索结果）出现404页面，无意义的404页面会影响用户体验并且会消耗服务器资源。</p>
+<h3 id="23-Reduce-Cookie-Size-减小-Cookie"><a href="#23-Reduce-Cookie-Size-减小-Cookie" class="headerlink" title="23.Reduce Cookie Size　　减小 Cookie"></a>23.Reduce Cookie Size　　减小 Cookie</h3><p>　　Cookie在服务器及浏览器之间的通过文件头进行交换，尽可能减小Cookie体积，设置合理的过期时间，能够很好的提高效率。</p>
+<h3 id="24-Use-Cookie-free-Domains-for-Components-对组件使用无Cookie的域名"><a href="#24-Use-Cookie-free-Domains-for-Components-对组件使用无Cookie的域名" class="headerlink" title="24.Use Cookie-free Domains for Components　　对组件使用无Cookie的域名"></a>24.Use Cookie-free Domains for Components　　对组件使用无Cookie的域名</h3><p>　　对静态组件的Cookie读取是一种浪费，使用另一个无Cookie的域名来存放你的静态组件式一个好方法，或者也可以在Cookie中只存放带www的域名。</p>
+<h3 id="25-Minimize-DOM-Access-减少DOM的访问次数"><a href="#25-Minimize-DOM-Access-减少DOM的访问次数" class="headerlink" title="25.Minimize DOM Access　　减少DOM的访问次数"></a>25.Minimize DOM Access　　减少DOM的访问次数</h3><p>　　JS访问DOM是很慢的，尽量不要用JS来设置页面布局。</p>
+<h3 id="26-Develop-Smart-Event-Handlers-开发灵活的事件处理句柄"><a href="#26-Develop-Smart-Event-Handlers-开发灵活的事件处理句柄" class="headerlink" title="26.Develop Smart Event Handlers　　开发灵活的事件处理句柄"></a>26.Develop Smart Event Handlers　　开发灵活的事件处理句柄</h3><p>　　DOM树上过多的元素被加入事件句柄的话，反应效率肯定会低，YUI事件工具有一个 onAvailable 方法可以帮助你灵活的设置DOM事件句柄</p>
+<h3 id="27-Choose-lt-link-gt-over-import-使用-而非-import"><a href="#27-Choose-lt-link-gt-over-import-使用-而非-import" class="headerlink" title="27.Choose &lt; link &gt;over @import　　使用 而非 @import"></a>27.Choose &lt; link &gt;over @import　　使用 <link>而非 @import</h3><p>　　在IE中使用@import就和在页面底部用&lt; link &gt;一样，我们前面说要把&lt; link &gt;放顶部的。</p>
+<h3 id="28-Avoid-Filters-避免过滤器的使用"><a href="#28-Avoid-Filters-避免过滤器的使用" class="headerlink" title="28.Avoid Filters　　避免过滤器的使用"></a>28.Avoid Filters　　避免过滤器的使用</h3><p>　　如果需要Alpha透明，不要使用AlphaImageLoader，它效率低下而且只对IE6及以下的版本适用，用PNG8图片。如果你非要使用，加上_filter以免影响IE7+用户。</p>
+<h3 id="29-Optimize-Images-优化图片"><a href="#29-Optimize-Images-优化图片" class="headerlink" title="29.Optimize Images　　优化图片"></a>29.Optimize Images　　优化图片</h3><p>　　将你的GIF转为PNG8会是个减小体积的好办法，另外有很多方法处理你的JPG及PNG图片以达到优化效果。</p>
+<h3 id="30-Optimize-CSS-Sprites-优化-CSS-精灵图"><a href="#30-Optimize-CSS-Sprites-优化-CSS-精灵图" class="headerlink" title="30.Optimize CSS Sprites　　优化 CSS 精灵图"></a>30.Optimize CSS Sprites　　优化 CSS 精灵图</h3><p>　　在CSS 精灵图中竖直并尽量紧凑的排列图片，尽量将颜色相似的图片排在一起，会减小图片本身的大小及提高页面图片显示速度。</p>
+<h3 id="31-Don’t-Scale-Images-in-HTML-不要在-HTML中-缩放图片"><a href="#31-Don’t-Scale-Images-in-HTML-不要在-HTML中-缩放图片" class="headerlink" title="31.Don’t Scale Images in HTML　　不要在 HTML中 缩放图片"></a>31.Don’t Scale Images in HTML　　不要在 HTML中 缩放图片</h3><p>　　图片要用多大的就用多大的，1000X1000的图片被width=”100″ height=”100″以后，本身的KB数是不会减少的。</p>
+<h3 id="32-Make-favicon-ico-Small-and-Cacheable-缩小favicon-ico的大小并缓存它"><a href="#32-Make-favicon-ico-Small-and-Cacheable-缩小favicon-ico的大小并缓存它" class="headerlink" title="32.Make favicon. ico Small and Cacheable　　缩小favicon. ico的大小并缓存它"></a>32.Make favicon. ico Small and Cacheable　　缩小favicon. ico的大小并缓存它</h3><p>　　站点的浏览器ICO应该不是经常换吧，那就长时间的缓存它，并且最好控制在1K以下。</p>
+<h3 id="33-Keep-Components-under-25K-保证组件在25K以下"><a href="#33-Keep-Components-under-25K-保证组件在25K以下" class="headerlink" title="33.Keep Components under 25K　　保证组件在25K以下"></a>33.Keep Components under 25K　　保证组件在25K以下</h3><p>　　iPhone不能缓存25K以上的组件，并且这还是要在被压缩前。</p>
+<h3 id="34-Pack-Components-into-a-Multipart-Document-将组件打包进一个多部分的文档中"><a href="#34-Pack-Components-into-a-Multipart-Document-将组件打包进一个多部分的文档中" class="headerlink" title="34.Pack Components into a Multipart Document　将组件打包进一个多部分的文档中"></a>34.Pack Components into a Multipart Document　将组件打包进一个多部分的文档中</h3><p>　　就好像在邮件中加入附件一样，一个HTTP请求就够了，但是这一技术需要确保你的代理支持，iPhone就不支持。</p>
+<h3 id="转载"><a href="#转载" class="headerlink" title="转载"></a>转载</h3><p>原文地址：<a href="https://developer.yahoo.com/performance/rules.html" target="_blank" rel="noopener">Best Practices for Speeding Up Your Web Site</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/17/深度学习学习笔记（一）/" rel="next" title="深度学习学习笔记（一）">
+                <i class="fa fa-chevron-left"></i> 深度学习学习笔记（一）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a href="/" class="site-author-image" rel="start" style="border:none">
+			
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="djwang" />
+            
+			</a>
+              <p class="site-author-name" itemprop="name">djwang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/daojiangwang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=ibi9vri5vL_6v7zJ_Pin6ubk" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/phantom-10" target="_blank" title="zhihu">
+                      
+                        <i class="fa fa-fw fa-spinner"></i>zhihu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=1471056365&site=qq&menu=yes" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+           
+          
+
+        </div>
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height=86 src="//music.163.com/outchain/player?type=2&id=536622304&auto=0&height=66"></iframe>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Minimize-HTTP-Requests-减少-HTTP-请求"><span class="nav-number">1.</span> <span class="nav-text">1.Minimize HTTP Requests　　减少 HTTP 请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Use-a-Content-Delivery-Network-利用-CDN-技术"><span class="nav-number">2.</span> <span class="nav-text">2.Use a Content Delivery Network　　利用 CDN 技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Add-an-Expires-or-a-Cache-Control-Header-设置头文件过期或者静态缓存"><span class="nav-number">3.</span> <span class="nav-text">3.Add an Expires or a Cache-Control Header　　设置头文件过期或者静态缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Gzip-Components-Gzip压缩"><span class="nav-number">4.</span> <span class="nav-text">4.Gzip Components　　Gzip压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Put-Stylesheets-at-the-Top-把CSS放顶部"><span class="nav-number">5.</span> <span class="nav-text">5.Put Stylesheets at the Top　　把CSS放顶部</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Put-Scripts-at-the-Bottom-把-JS-放底部"><span class="nav-number">6.</span> <span class="nav-text">6.Put Scripts at the Bottom　　把 JS 放底部</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-Avoid-CSS-Expressions-避免-CSS-Expressions"><span class="nav-number">7.</span> <span class="nav-text">7.Avoid CSS Expressions　　避免 CSS Expressions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-Make-JavaScript-and-CSS-External-将-JS-和-CSS-外链"><span class="nav-number">8.</span> <span class="nav-text">8.Make JavaScript and CSS External　　将 JS 和 CSS 外链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-Reduce-DNS-Lookups-减少DNS查找"><span class="nav-number">9.</span> <span class="nav-text">9.Reduce DNS Lookups　　减少DNS查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-Minify-JavaScript-and-CSS-减小-JS-和-CSS-的体积"><span class="nav-number">10.</span> <span class="nav-text">10.Minify JavaScript and CSS　　减小 JS 和 CSS 的体积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-Avoid-Redirects-避免重定向"><span class="nav-number">11.</span> <span class="nav-text">11.Avoid Redirects　　避免重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-Remove-Duplicate-Scripts-删除重复脚本"><span class="nav-number">12.</span> <span class="nav-text">12.Remove Duplicate Scripts　　删除重复脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-Configure-ETags-配置-ETags"><span class="nav-number">13.</span> <span class="nav-text">13.Configure ETags　　配置 ETags</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-Make-Ajax-Cacheable-缓存-Ajax"><span class="nav-number">14.</span> <span class="nav-text">14.Make Ajax Cacheable　　缓存 Ajax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-Flush-the-Buffer-Early-尽早的释放缓冲"><span class="nav-number">15.</span> <span class="nav-text">15.Flush the Buffer Early　　尽早的释放缓冲</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-Use-GET-for-AJAX-Requests-用-GET-方式进行-AJAX-请求"><span class="nav-number">16.</span> <span class="nav-text">16.Use GET for AJAX Requests　　用 GET 方式进行 AJAX 请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-Post-load-Components-延迟加载组件"><span class="nav-number">17.</span> <span class="nav-text">17.Post-load Components　　延迟加载组件*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-Preload-components-预加载组件"><span class="nav-number">18.</span> <span class="nav-text">18.Preload components　　预加载组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-Reduce-the-Number-of-DOM-Elements-减少-DOM-元素数量"><span class="nav-number">19.</span> <span class="nav-text">19.Reduce the Number of DOM Elements　　减少 DOM 元素数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-Split-Components-Across-Domains-跨域分离组件"><span class="nav-number">20.</span> <span class="nav-text">20.Split Components Across Domains　　跨域分离组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-Minimize-the-Number-of-iframes-减少-iframe-数量"><span class="nav-number">21.</span> <span class="nav-text">21.Minimize the Number of iframes　　减少 iframe 数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-No-404s-不要出现-404-页面"><span class="nav-number">22.</span> <span class="nav-text">22.No 404s　　不要出现 404 页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-Reduce-Cookie-Size-减小-Cookie"><span class="nav-number">23.</span> <span class="nav-text">23.Reduce Cookie Size　　减小 Cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-Use-Cookie-free-Domains-for-Components-对组件使用无Cookie的域名"><span class="nav-number">24.</span> <span class="nav-text">24.Use Cookie-free Domains for Components　　对组件使用无Cookie的域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25-Minimize-DOM-Access-减少DOM的访问次数"><span class="nav-number">25.</span> <span class="nav-text">25.Minimize DOM Access　　减少DOM的访问次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26-Develop-Smart-Event-Handlers-开发灵活的事件处理句柄"><span class="nav-number">26.</span> <span class="nav-text">26.Develop Smart Event Handlers　　开发灵活的事件处理句柄</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#27-Choose-lt-link-gt-over-import-使用-而非-import"><span class="nav-number">27.</span> <span class="nav-text">27.Choose &lt; link &gt;over @import　　使用 而非 @import</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#28-Avoid-Filters-避免过滤器的使用"><span class="nav-number">28.</span> <span class="nav-text">28.Avoid Filters　　避免过滤器的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-Optimize-Images-优化图片"><span class="nav-number">29.</span> <span class="nav-text">29.Optimize Images　　优化图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#30-Optimize-CSS-Sprites-优化-CSS-精灵图"><span class="nav-number">30.</span> <span class="nav-text">30.Optimize CSS Sprites　　优化 CSS 精灵图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-Don’t-Scale-Images-in-HTML-不要在-HTML中-缩放图片"><span class="nav-number">31.</span> <span class="nav-text">31.Don’t Scale Images in HTML　　不要在 HTML中 缩放图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#32-Make-favicon-ico-Small-and-Cacheable-缩小favicon-ico的大小并缓存它"><span class="nav-number">32.</span> <span class="nav-text">32.Make favicon. ico Small and Cacheable　　缩小favicon. ico的大小并缓存它</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#33-Keep-Components-under-25K-保证组件在25K以下"><span class="nav-number">33.</span> <span class="nav-text">33.Keep Components under 25K　　保证组件在25K以下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#34-Pack-Components-into-a-Multipart-Document-将组件打包进一个多部分的文档中"><span class="nav-number">34.</span> <span class="nav-text">34.Pack Components into a Multipart Document　将组件打包进一个多部分的文档中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转载"><span class="nav-number">35.</span> <span class="nav-text">转载</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+	
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">djwang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'iKF6Lzzbw4GT5UYNIBEfFdzw-gzGzoHsz',
+        appKey: 'AC4RxKjBG3nb98X9ykBQM5SK',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
