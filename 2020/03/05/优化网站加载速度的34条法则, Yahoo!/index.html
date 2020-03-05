@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="1.Minimize HTTP Requests　　减少 HTTP 请求图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。 2.Use a Content Delivery">
+<meta name="description" content="1.Minimize HTTP Requests　　减少 HTTP 请求　　图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。 2.Use a Content Delive">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="优化网站加载速度的34条法则，Yahoo!">
 <meta property="og:url" content="http://yoursite.com/2020/03/05/优化网站加载速度的34条法则, Yahoo!/index.html">
 <meta property="og:site_name" content="djwang呀">
-<meta property="og:description" content="1.Minimize HTTP Requests　　减少 HTTP 请求图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。 2.Use a Content Delivery">
+<meta property="og:description" content="1.Minimize HTTP Requests　　减少 HTTP 请求　　图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。 2.Use a Content Delive">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-03-05T12:26:24.911Z">
+<meta property="og:updated_time" content="2020-03-05T12:38:29.635Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="优化网站加载速度的34条法则，Yahoo!">
-<meta name="twitter:description" content="1.Minimize HTTP Requests　　减少 HTTP 请求图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。 2.Use a Content Delivery">
+<meta name="twitter:description" content="1.Minimize HTTP Requests　　减少 HTTP 请求　　图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。 2.Use a Content Delive">
 
 
 
@@ -351,9 +351,9 @@
       
 
       
-        <h3 id="1-Minimize-HTTP-Requests-减少-HTTP-请求"><a href="#1-Minimize-HTTP-Requests-减少-HTTP-请求" class="headerlink" title="1.Minimize HTTP Requests　　减少 HTTP 请求"></a>1.Minimize HTTP Requests　　减少 HTTP 请求</h3><pre><code>图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。
-</code></pre><h3 id="2-Use-a-Content-Delivery-Network-利用-CDN-技术"><a href="#2-Use-a-Content-Delivery-Network-利用-CDN-技术" class="headerlink" title="2.Use a Content Delivery Network　　利用 CDN 技术"></a>2.Use a Content Delivery Network　　利用 CDN 技术</h3><h3 id="3-Add-an-Expires-or-a-Cache-Control-Header-设置头文件过期或者静态缓存"><a href="#3-Add-an-Expires-or-a-Cache-Control-Header-设置头文件过期或者静态缓存" class="headerlink" title="3.Add an Expires or a Cache-Control Header　　设置头文件过期或者静态缓存"></a>3.Add an Expires or a Cache-Control Header　　设置头文件过期或者静态缓存</h3><pre><code>浏览器会用缓存来减少http请求数来加快页面加载的时间，如果页面头部加一个很长的过期时间，浏览器就会一直缓存页面里的元素。不过这样如果页面里的东西变动的话就要改名字了，否则用户端不会主动刷新，看自己衡量了~ 这项可以通过修改.htaccess文件来实现。
-</code></pre><h3 id="4-Gzip-Components-Gzip压缩"><a href="#4-Gzip-Components-Gzip压缩" class="headerlink" title="4.Gzip Components　　Gzip压缩"></a>4.Gzip Components　　Gzip压缩</h3><p>　　Gzip格式是一种很普遍的压缩技术，几乎所有的浏览器都有解压Gzip格式的能力，而且它可以压缩的比例非常大，一般压缩率为85%。压缩没压缩，可以到 这里 做下测试。</p>
+        <h3 id="1-Minimize-HTTP-Requests-减少-HTTP-请求"><a href="#1-Minimize-HTTP-Requests-减少-HTTP-请求" class="headerlink" title="1.Minimize HTTP Requests　　减少 HTTP 请求"></a>1.Minimize HTTP Requests　　减少 HTTP 请求</h3><p>　　图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。</p>
+<h3 id="2-Use-a-Content-Delivery-Network-利用-CDN-技术"><a href="#2-Use-a-Content-Delivery-Network-利用-CDN-技术" class="headerlink" title="2.Use a Content Delivery Network　　利用 CDN 技术"></a>2.Use a Content Delivery Network　　利用 CDN 技术</h3><h3 id="3-Add-an-Expires-or-a-Cache-Control-Header-设置头文件过期或者静态缓存"><a href="#3-Add-an-Expires-or-a-Cache-Control-Header-设置头文件过期或者静态缓存" class="headerlink" title="3.Add an Expires or a Cache-Control Header　　设置头文件过期或者静态缓存"></a>3.Add an Expires or a Cache-Control Header　　设置头文件过期或者静态缓存</h3><p>　　浏览器会用缓存来减少http请求数来加快页面加载的时间，如果页面头部加一个很长的过期时间，浏览器就会一直缓存页面里的元素。不过这样如果页面里的东西变动的话就要改名字了，否则用户端不会主动刷新，看自己衡量了~ 这项可以通过修改.htaccess文件来实现。<br><a id="more"></a></p>
+<h3 id="4-Gzip-Components-Gzip压缩"><a href="#4-Gzip-Components-Gzip压缩" class="headerlink" title="4.Gzip Components　　Gzip压缩"></a>4.Gzip Components　　Gzip压缩</h3><p>　　Gzip格式是一种很普遍的压缩技术，几乎所有的浏览器都有解压Gzip格式的能力，而且它可以压缩的比例非常大，一般压缩率为85%。压缩没压缩，可以到 这里 做下测试。</p>
 <h3 id="5-Put-Stylesheets-at-the-Top-把CSS放顶部"><a href="#5-Put-Stylesheets-at-the-Top-把CSS放顶部" class="headerlink" title="5.Put Stylesheets at the Top　　把CSS放顶部"></a>5.Put Stylesheets at the Top　　把CSS放顶部</h3><p>　　让浏览者能尽早的看到网站的完整样式。</p>
 <h3 id="6-Put-Scripts-at-the-Bottom-把-JS-放底部"><a href="#6-Put-Scripts-at-the-Bottom-把-JS-放底部" class="headerlink" title="6.Put Scripts at the Bottom　　把 JS 放底部"></a>6.Put Scripts at the Bottom　　把 JS 放底部</h3><p>　　网站呈现完毕后再进行功能设置，当然这些JS要在你的加载过程中不影响内容表现。</p>
 <h3 id="7-Avoid-CSS-Expressions-避免-CSS-Expressions"><a href="#7-Avoid-CSS-Expressions-避免-CSS-Expressions" class="headerlink" title="7.Avoid CSS Expressions　　避免 CSS Expressions"></a>7.Avoid CSS Expressions　　避免 CSS Expressions</h3><p>　　CSS表达式很可怕，这个只被IE支持的东西执行时候的运算量非常大，你移动一下鼠标它都要进行重计算的，但有时候为了做浏览器的兼容必须要用到这个</p>
