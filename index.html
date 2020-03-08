@@ -270,6 +270,143 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/08/SPA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="djwang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="djwang呀">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/08/SPA/" itemprop="url">SPA</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-08T17:17:45+08:00">
+                2020-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/03/08/SPA/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/08/SPA/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="SPA"><a href="#SPA" class="headerlink" title="SPA"></a>SPA</h2><p>单页Web应用（single page web application，SPA），就是只有一张Web页面的应用，是加载单个HTML 页面并在用户与应用程序交互时动态更新该页面的Web应用程序。</p>
+<h3 id="SPA的特点："><a href="#SPA的特点：" class="headerlink" title="SPA的特点："></a>SPA的特点：</h3><p>-速度：更好的用户体验，让用户在web app感受native app的速度和流畅，<br>-MVVM：经典MVVM开发模式，前后端各负其责。<br>-ajax：重前端，业务逻辑全部在本地操作，数据都需要通过AJAX同步、提交。<br>-路由：在URL中采用#号来作为当前视图的地址,改变#号后的参数，页面并不会重载</p>
+<h3 id="SPA的两个缺点："><a href="#SPA的两个缺点：" class="headerlink" title="SPA的两个缺点："></a>SPA的两个缺点：</h3><p>-首屏渲染等待时长： 必须得加载完毕，才能渲染出首屏<br>-seo不友好：爬虫只能拿到一个div，认为页面是空的，不利于seo</p>
+<h3 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h3><p>-用循环的视角审视Web应用开发<br>-框定一个一致的SPA图形用户界面（GUI）和模型<br>-将SPA的原则带回服务器端<br>-聚集于对合适的应用进行早期SPA开发 [3]</p>
+<h3 id="SPA的优缺点"><a href="#SPA的优缺点" class="headerlink" title="SPA的优缺点"></a>SPA的优缺点</h3><p>单页Web程序的出现是客户端发展的必然结果，但是该技术也是有些局限性，所以采用之前需要了解清楚它的优缺点。</p>
+<p>1、优点：<br>1). 良好的交互体验<br>用户不需要重新刷新页面，获取数据也是通过Ajax异步获取，页面显示流畅。<br>2). 良好的前后端工作分离模式<br>单页Web应用可以和RESTful规约一起使用，通过REST API提供接口数据，并使用Ajax异步获取，这样有助于分离客户端和服务器端工作。更进一步，可以在客户端也可以分解为静态页面和页面交互两个部分。<br>3). 减轻服务器压力<br>服务器只用出数据就可以，不用管展示逻辑和页面合成，吞吐能力会提高几倍；<br>4). 共用一套后端程序代码<br>不用修改后端程序代码就可以同时用于Web界面、手机、平板等多种客户端；</p>
+<p>2、缺点：<br>1). SEO难度较高<br>由于所有的内容都在一个页面中动态替换显示，所以在SEO上其有着天然的弱势，所以如果你的站点对SEO很看重，且要用单页应用，那么就做些静态页面给搜索引擎用吧。<br>2). 前进、后退管理<br>由于单页Web应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理，当然此问题也有解决方案，比如利用URI中的散列+iframe实现。<br>3). 初次加载耗时多<br>为实现单页Web应用功能及显示效果，需要在加载页面的时候将JavaScript、CSS统一加载，部分页面可以在需要的时候加载。所以必须对JavaScript及CSS代码进行合并压缩处理，如果使用第三方库，建议使用一些大公司的CDN，因此带宽的消耗是必然的。</p>
+<p>转自<a href="https://www.jianshu.com/p/dcea4d914b65" target="_blank" rel="noopener">雄霸烽火狼</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/05/优化网站加载速度的34条法则, Yahoo!/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1203,7 +1340,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
