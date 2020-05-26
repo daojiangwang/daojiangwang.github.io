@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-26T08:13:25.371Z</updated>
+  <updated>2020-05-26T08:25:27.796Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RestController和@Controller的区别</title>
+    <link href="http://yoursite.com/2020/03/26/RestController/"/>
+    <id>http://yoursite.com/2020/03/26/RestController/</id>
+    <published>2020-03-26T07:46:44.000Z</published>
+    <updated>2020-05-26T08:25:27.796Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Controller-返回一个页面"><a href="#Controller-返回一个页面" class="headerlink" title="@Controller 返回一个页面"></a>@Controller 返回一个页面</h3> <a id="more"></a><p>单独使用 @Controller 不加 @ResponseBody的一般用于在返回一个页面，基本用于传统的Spring MVC 的应用，对应于前后端不分离的情况。<br><img src="/images/202005/Controller.png" alt="@Controller"></p><h3 id="RestController-Spring4之后开发-返回JSON或XML形式数据"><a href="#RestController-Spring4之后开发-返回JSON或XML形式数据" class="headerlink" title="@RestController(Spring4之后开发) 返回JSON或XML形式数据"></a>@RestController(Spring4之后开发) 返回JSON或XML形式数据</h3><p>@RestController只返回对象，对象数据直接以 JSON 或 XML 形式写入 HTTP 响应(Response)中，这种情况属于 RESTful Web服务，适用于目前主流的前后端分离开发。<br><img src="/images/202005/RestController.png" alt="@RestController"><br>相当于 @Controller +@ResponseBody，@ResponseBody 注解的作用是将 Controller 的方法返回的对象通过适当的转换器转换为指定的格式之后，写入到HTTP 响应(Response)对象的 body 中，通常用来返回 JSON 或者 XML 数据，返回 JSON 数据的情况比较多。<br><img src="/images/202005/CtrlviaResponseBody.png" alt="Spring 3.x"></p><p>图源：JavaGuide</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Controller-返回一个页面&quot;&gt;&lt;a href=&quot;#Controller-返回一个页面&quot; class=&quot;headerlink&quot; title=&quot;@Controller 返回一个页面&quot;&gt;&lt;/a&gt;@Controller 返回一个页面&lt;/h3&gt;
+    
+    </summary>
+    
+      <category term="Spring" scheme="http://yoursite.com/categories/Spring/"/>
+    
+    
+      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring框架</title>
