@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="djwang呀">
 <meta property="og:description" content="前缀和是oj里常用的一种预处理，主要用于处理类似区间和相关的题。能大大减少查询的时间复杂读。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-05-27T04:00:27.671Z">
+<meta property="og:updated_time" content="2020-05-27T04:02:49.942Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前缀和">
 <meta name="twitter:description" content="前缀和是oj里常用的一种预处理，主要用于处理类似区间和相关的题。能大大减少查询的时间复杂读。">
@@ -378,7 +378,7 @@
 <blockquote>
 <p><strong>输入</strong> ：A = [4,5,0,-2,-3,1], K = 5<br><strong>输出</strong> ：7<br><strong>解释</strong> ：有 7 个子数组满足其元素之和可被 K = 5 整除: [4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]</p>
 </blockquote>
-<p>以下为题解：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">subarraysDivByK</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> K)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//利用前缀和的差，可以得到某段数组和是否可被整除</span></span><br><span class="line">    <span class="comment">//比如s[i+j]-s[i],可得A[i：j+1]的和</span></span><br><span class="line">    <span class="comment">//又(s[i+j]-s[i])%k==0，可化为s[i+j]%k==s[i]%k==0</span></span><br><span class="line">	<span class="comment">//所以只要用record数组统计和的求模结果，就可以组合得出结果，比如求模为1的有2个，则是C22=1</span></span><br><span class="line">    <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span>[] sum = <span class="keyword">new</span> <span class="keyword">int</span>[A.length+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] record =<span class="keyword">new</span> <span class="keyword">int</span>[K];</span><br><span class="line">    sum[<span class="number">0</span>]=A[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;A.length;i++)&#123;</span><br><span class="line">		sum[i]=sum[i-<span class="number">1</span>]+A[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=A.length;i++)&#123;</span><br><span class="line">		<span class="comment">//Java对负数取模为负数</span></span><br><span class="line">        record[((sum[i] % K)+K)%K]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;K;i++)&#123;</span><br><span class="line">        res += record[i] * (record[i] - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>以下为题解：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">subarraysDivByK</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> K)</span> </span>&#123;</span><br><span class="line"><span class="comment">//利用前缀和的差，可以得到某段数组和是否可被整除</span></span><br><span class="line">    <span class="comment">//比如s[i+j]-s[i],可得A[i：j+1]的和</span></span><br><span class="line">    <span class="comment">//又(s[i+j]-s[i])%k==0，可化为s[i+j]%k==s[i]%k==0</span></span><br><span class="line">	<span class="comment">//所以只要用record数组统计和的求模结果，就可以组合得出结果，比如求模为1的有2个，则是C22=1</span></span><br><span class="line">    <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span>[] sum = <span class="keyword">new</span> <span class="keyword">int</span>[A.length+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] record =<span class="keyword">new</span> <span class="keyword">int</span>[K];</span><br><span class="line">    sum[<span class="number">0</span>]=A[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;A.length;i++)&#123;</span><br><span class="line">		sum[i]=sum[i-<span class="number">1</span>]+A[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=A.length;i++)&#123;</span><br><span class="line">		<span class="comment">//Java对负数取模为负数</span></span><br><span class="line">        record[((sum[i] % K)+K)%K]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;K;i++)&#123;</span><br><span class="line">        res += record[i] * (record[i] - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -409,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/23/SpringFramework/" rel="next" title="Spring框架">
-                <i class="fa fa-chevron-left"></i> Spring框架
+              <a href="/2020/04/17/proxy/" rel="next" title="代理">
+                <i class="fa fa-chevron-left"></i> 代理
               </a>
             
           </div>
@@ -418,6 +418,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/29/JavaCollection/" rel="prev" title="JavaCollection">
+                JavaCollection <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -494,7 +498,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -505,7 +509,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -516,7 +520,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
