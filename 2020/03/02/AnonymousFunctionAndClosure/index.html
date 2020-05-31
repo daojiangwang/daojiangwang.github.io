@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。  一、匿名函数声明一个普通函数,函数名为fun：123function fun()&amp;#123;    //函数体&amp;#125; 那么将函数名去掉，就是匿名函数：12345678910111213141516171819//单独的匿名函数会报错,无法运行、无法调">
+<meta name="description" content="匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 匿名函数与闭包">
 <meta property="og:url" content="http://yoursite.com/2020/03/02/AnonymousFunctionAndClosure/index.html">
 <meta property="og:site_name" content="djwang呀">
-<meta property="og:description" content="匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。  一、匿名函数声明一个普通函数,函数名为fun：123function fun()&amp;#123;    //函数体&amp;#125; 那么将函数名去掉，就是匿名函数：12345678910111213141516171819//单独的匿名函数会报错,无法运行、无法调">
+<meta property="og:description" content="匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-05-31T02:24:51.692Z">
+<meta property="og:updated_time" content="2020-05-31T07:42:05.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 匿名函数与闭包">
-<meta name="twitter:description" content="匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。  一、匿名函数声明一个普通函数,函数名为fun：123function fun()&amp;#123;    //函数体&amp;#125; 那么将函数名去掉，就是匿名函数：12345678910111213141516171819//单独的匿名函数会报错,无法运行、无法调">
+<meta name="twitter:description" content="匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。">
 
 
 
@@ -374,7 +374,7 @@
 
       
         <blockquote>
-<p>匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。</p>
+<p>匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。<br><a id="more"></a></p>
 </blockquote>
 <h2 id="一、匿名函数"><a href="#一、匿名函数" class="headerlink" title="一、匿名函数"></a>一、匿名函数</h2><p>声明一个普通函数,函数名为fun：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>那么将函数名去掉，就是匿名函数：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单独的匿名函数会报错,无法运行、无法调用</span></span><br><span class="line"><span class="comment">//function() &#123;</span></span><br><span class="line"><span class="comment">//  //函数体</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//未在应用场景中，不符合语法，需加上括号</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//在函数后面加上括号，可通过表达式的自我执行，立即执行</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">//如需传值，可以括号内传值</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)(“匿名函数”);</span><br></pre></td></tr></table></figure></p>
