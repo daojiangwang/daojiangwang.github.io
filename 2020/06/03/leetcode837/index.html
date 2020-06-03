@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="js," />
+  <meta name="keywords" content="LeetCode," />
 
 
 
@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。">
-<meta name="keywords" content="js">
+<meta name="description" content="爱丽丝参与一个大致基于纸牌游戏 “21点” 规则的游戏，描述如下：爱丽丝以 0 分开始，并在她的得分少于 K 分时抽取数字。 抽取时，她从 [1, W] 的范围中随机获得一个整数作为分数进行累计，其中 W 是整数。 每次抽取都是独立的，其结果具有相同的概率。问：当爱丽丝获得不少于 K 分时，她就停止抽取数字。 爱丽丝的分数不超过 N 的概率是多少？">
+<meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript 匿名函数与闭包">
-<meta property="og:url" content="http://yoursite.com/2020/03/02/AnonymousFunctionAndClosure/index.html">
+<meta property="og:title" content="为什么他能靠21点成为亿万富翁？LeetCode837、新21点">
+<meta property="og:url" content="http://yoursite.com/2020/06/03/leetcode837/index.html">
 <meta property="og:site_name" content="djwang呀">
-<meta property="og:description" content="匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。">
+<meta property="og:description" content="爱丽丝参与一个大致基于纸牌游戏 “21点” 规则的游戏，描述如下：爱丽丝以 0 分开始，并在她的得分少于 K 分时抽取数字。 抽取时，她从 [1, W] 的范围中随机获得一个整数作为分数进行累计，其中 W 是整数。 每次抽取都是独立的，其结果具有相同的概率。问：当爱丽丝获得不少于 K 分时，她就停止抽取数字。 爱丽丝的分数不超过 N 的概率是多少？">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-05-31T07:43:51.582Z">
+<meta property="og:updated_time" content="2020-06-03T09:51:17.166Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript 匿名函数与闭包">
-<meta name="twitter:description" content="匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。">
+<meta name="twitter:title" content="为什么他能靠21点成为亿万富翁？LeetCode837、新21点">
+<meta name="twitter:description" content="爱丽丝参与一个大致基于纸牌游戏 “21点” 规则的游戏，描述如下：爱丽丝以 0 分开始，并在她的得分少于 K 分时抽取数字。 抽取时，她从 [1, W] 的范围中随机获得一个整数作为分数进行累计，其中 W 是整数。 每次抽取都是独立的，其结果具有相同的概率。问：当爱丽丝获得不少于 K 分时，她就停止抽取数字。 爱丽丝的分数不超过 N 的概率是多少？">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/02/AnonymousFunctionAndClosure/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/03/leetcode837/"/>
 
 
 
 
 
-  <title>JavaScript 匿名函数与闭包 | djwang呀</title>
+  <title>为什么他能靠21点成为亿万富翁？LeetCode837、新21点 | djwang呀</title>
   
 
 
@@ -274,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/02/AnonymousFunctionAndClosure/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/03/leetcode837/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="djwang">
@@ -291,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaScript 匿名函数与闭包</h1>
+          <h1 class="post-title" itemprop="name headline">为什么他能靠21点成为亿万富翁？LeetCode837、新21点</h1>
         
 
         <div class="post-meta">
@@ -303,8 +303,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-02T10:19:22+08:00">
-                2020-03-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-03T16:58:08+08:00">
+                2020-06-03
               </time>
             
 
@@ -326,8 +326,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
                   </a>
                 </span>
 
@@ -344,8 +344,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/03/02/AnonymousFunctionAndClosure/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/03/02/AnonymousFunctionAndClosure/" itemprop="commentCount"></span>
+                <a href="/2020/06/03/leetcode837/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/03/leetcode837/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -373,15 +373,17 @@
       
 
       
-        <blockquote>
-<p>匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。</p>
+        <p>爱丽丝参与一个大致基于纸牌游戏 “21点” 规则的游戏，描述如下：<br>爱丽丝以 0 分开始，并在她的得分少于 K 分时抽取数字。 抽取时，她从 [1, W] 的范围中随机获得一个整数作为分数进行累计，其中 W 是整数。 每次抽取都是独立的，其结果具有相同的概率。<br>问：当爱丽丝获得不少于 K 分时，她就停止抽取数字。 爱丽丝的分数不超过 N 的概率是多少？<br><a id="more"></a><br><strong>示例1</strong>：</p>
+<blockquote>
+<p>输入：N = 10, K = 1, W = 10<br>输出：1.00000<br>说明：爱丽丝得到一张卡，然后停止。</p>
 </blockquote>
-<a id="more"></a>
-<h2 id="一、匿名函数"><a href="#一、匿名函数" class="headerlink" title="一、匿名函数"></a>一、匿名函数</h2><p>声明一个普通函数,函数名为fun：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>那么将函数名去掉，就是匿名函数：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单独的匿名函数会报错,无法运行、无法调用</span></span><br><span class="line"><span class="comment">//function() &#123;</span></span><br><span class="line"><span class="comment">//  //函数体</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//未在应用场景中，不符合语法，需加上括号</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//在函数后面加上括号，可通过表达式的自我执行，立即执行</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">//如需传值，可以括号内传值</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)(“匿名函数”);</span><br></pre></td></tr></table></figure></p>
-<p>匿名函数运用场景：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1、事件</span></span><br><span class="line">&lt;button id=<span class="string">"btn"</span>&gt;点击&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">    var btn=document.getElementById("btn");</span></span><br><span class="line"><span class="regexp">    btn.onclick=function()&#123;</span></span><br><span class="line"><span class="regexp">        alert("点击按钮");</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2、对象</span></span><br><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">    name:<span class="string">"张三"</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"我是"</span>+<span class="keyword">this</span>.name+<span class="string">"，今年"</span>+<span class="keyword">this</span>.age+<span class="string">"岁。"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj.say());<span class="comment">//我是张三，今年18岁。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3、函数表达式，用作赋值</span></span><br><span class="line"><span class="keyword">var</span> say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"我是张三，今年18岁。"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//4、回调函数</span></span><br><span class="line">say(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"我是张三，今年18岁。"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>匿名函数主要用于闭包，以及模拟块级作用域，减少全局变量，执行结束即销毁，而闭包有所不同</p>
-<h2 id="二、闭包"><a href="#二、闭包" class="headerlink" title="二、闭包"></a>二、闭包</h2><p>都知道在函数内部可以直接读取全局变量，但是在函数外部无法读取函数内部的局部变量。而闭包所实现的就是从外部读取函数内部的局部变量，其方法就是在函数内部创建另一个函数，而如果这个内部函数被返回，并且在其他地方被调用了，这个内部函数就是闭包，闭包会携带它的函数作用域，可以继续存在于缓存中。闭包可以看做两个函数的桥梁，沟通其局部变量。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过全局变量来累加</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    a++;</span><br><span class="line">    alert(<span class="string">"a="</span>+a);</span><br><span class="line">&#125;</span><br><span class="line">add();<span class="comment">//a=2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过闭包返回局部变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        a++;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">alert(add()());<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>示例2</strong>：</p>
+<blockquote>
+<p>输入：N = 6, K = 1, W = 10<br>输出：0.60000<br>说明：爱丽丝得到一张卡，然后停止。<br>在 W = 10 的 6 种可能下，她的得分不超过 N = 6 分。</p>
+</blockquote>
+<p><strong>分析</strong>：<br>总之，就是边缘试探，求将超未超的概率。<br>用动态规划，由已知条件得到未知的情况。<br>令dp[x]表示得分x的情况下，开始游戏并获胜的概率，这样d[0]就是结果所得。已知可以得到，当K&lt;=x&lt;=min(N,K+W-1)时已成胜局，故dp[x]=1,(K+W不能被满足)，而x&gt;=min(N,K+W+1)时dp[x]=0;<br>当0&lt;=x&lt;K时，可以知道 W*dp[x]=dp[x+1]+dp[x+2]+…+dp[x+W],即dp[x]的获胜概率，可由下一个状态的概率和得到。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">new21Game</span><span class="params">(<span class="keyword">int</span> N, <span class="keyword">int</span> K, <span class="keyword">int</span> W)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (K == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1.0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">double</span>[] dp = <span class="keyword">new</span> <span class="keyword">double</span>[K + W];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = K; i &lt;= N &amp;&amp; i &lt; K + W; i++) &#123;</span><br><span class="line">		dp[i] = <span class="number">1.0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = K - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= W; j++) &#123;</span><br><span class="line">			dp[i] += dp[i + j] / W;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> dp[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>以上解法复杂度为O(N+KW]，超时了。可以优化0-K间x的取值方式，以邻项计算，dp[x]-dp[x+1]=(dp[x+1]-dp[x+W+1])/W，其中0&lt;=x&lt;K-1，x=K-1时不满足，dp[K-1]可由前面的方法得到dp[K]开始值为1，dp[K-1]=(min(N,K+W-1)-K+1)/W。这样时间复杂度为O(min(N,K+W))。<br>代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">new21Game</span><span class="params">(<span class="keyword">int</span> N, <span class="keyword">int</span> K, <span class="keyword">int</span> W)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (K == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1.0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">double</span>[] dp = <span class="keyword">new</span> <span class="keyword">double</span>[K + W];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = K; i &lt;= N &amp;&amp; i &lt; K + W; i++) &#123;</span><br><span class="line">		dp[i] = <span class="number">1.0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	dp[K - <span class="number">1</span>] = <span class="number">1.0</span> * Math.min(N - K + <span class="number">1</span>, W) / W;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = K - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		dp[i] = dp[i + <span class="number">1</span>] + (dp[i + <span class="number">1</span>] - dp[i + W + <span class="number">1</span>]) / W;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> dp[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>继续分析开始的解时，可以知道是以定长的窗口，来得到0&lt;=x&lt;K时dp的值，那么也可以以一个sum来计算dp[x+1]+dp[x+2]+…+dp[x+W],每次左移时，加上dp[x]，而减去dp[X+W]，这样 以dp[x]=sum/W的公式，也可以有上例的时间复杂度。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">new21Game</span><span class="params">(<span class="keyword">int</span> N, <span class="keyword">int</span> K, <span class="keyword">int</span> W)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (K == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1.0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">double</span>[] dp = <span class="keyword">new</span> <span class="keyword">double</span>[K + W];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = K; i &lt;= N &amp;&amp; i &lt; K + W; i++) &#123;</span><br><span class="line">		dp[i] = <span class="number">1.0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">double</span> sum=Math.min(N,K+W-<span class="number">1</span>)-K+<span class="number">1</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = K - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		dp[i] = sum / W;</span><br><span class="line">		s=s-dp[i+W]+dp[i];	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> dp[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -399,7 +401,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
+            <a href="/tags/LeetCode/" rel="tag"><i class="fa fa-tag"></i> LeetCode</a>
           
         </div>
       
@@ -412,8 +414,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/16/hexo访问量与访客失效原因/" rel="next" title="hexo访问量与访客失效原因">
-                <i class="fa fa-chevron-left"></i> hexo访问量与访客失效原因
+              <a href="/2020/06/03/dbConnectionpoolvs/" rel="next" title="java比较传统方式和数据库连接池方式的性能差异">
+                <i class="fa fa-chevron-left"></i> java比较传统方式和数据库连接池方式的性能差异
               </a>
             
           </div>
@@ -421,10 +423,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/03/05/优化网站加载速度的34条法则, Yahoo!/" rel="prev" title="优化网站加载速度的34条法则，Yahoo!">
-                优化网站加载速度的34条法则，Yahoo! <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -479,17 +477,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             <a href="/" class="site-author-image" rel="start" style="border:none">
@@ -591,22 +580,6 @@
 		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height=86 src="//music.163.com/outchain/player?type=2&id=536622304&auto=0&height=66"></iframe>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、匿名函数"><span class="nav-number">1.</span> <span class="nav-text">一、匿名函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、闭包"><span class="nav-number">2.</span> <span class="nav-text">二、闭包</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
