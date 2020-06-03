@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="djwang呀">
 <meta property="og:description" content="Servlet跳转 服务端跳转 客户端跳转">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-05-31T07:52:40.578Z">
+<meta property="og:updated_time" content="2020-05-31T12:36:34.132Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Servlet开发（三）">
 <meta name="twitter:description" content="Servlet跳转 服务端跳转 客户端跳转">
@@ -375,9 +375,10 @@
       
         <h2 id="Servlet跳转"><a href="#Servlet跳转" class="headerlink" title="Servlet跳转"></a>Servlet跳转</h2><ul>
 <li>服务端跳转</li>
-<li>客户端跳转<a id="more"></a>
-设计登陆成功和失败的两个页面success.html、fail.html。</li>
+<li>客户端跳转</li>
 </ul>
+<a id="more"></a>
+<p>设计登陆成功和失败的两个页面success.html、fail.html。</p>
 <h3 id="服务端跳转"><a href="#服务端跳转" class="headerlink" title="服务端跳转"></a>服务端跳转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.getRequestDispatcher(<span class="string">"success.html"</span>).forward(request, response);</span><br></pre></td></tr></table></figure>
 <h3 id="客户端跳转"><a href="#客户端跳转" class="headerlink" title="客户端跳转"></a>客户端跳转</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.sendRedirect(<span class="string">"fail.html"</span>);</span><br></pre></td></tr></table></figure>
 <p>修改后的LoginServlet类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span></span></span><br><span class="line"><span class="function">            <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line"> </span><br><span class="line">        String name = request.getParameter(<span class="string">"name"</span>);</span><br><span class="line">        String password = request.getParameter(<span class="string">"password"</span>);</span><br><span class="line">        <span class="keyword">if</span> (<span class="string">"admin"</span>.equals(name) &amp;&amp; <span class="string">"123"</span>.equals(password))</span><br><span class="line">			request.getRequestDispatcher(<span class="string">"success.html"</span>).forward(request, response);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        	response.sendRedirect(<span class="string">"fail.html"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -519,7 +520,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -541,7 +542,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
