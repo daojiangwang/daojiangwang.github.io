@@ -168,6 +168,23 @@
       </tags>
   </entry>
   <entry>
+    <title>震惊，该物质不溶于自身！LeetCode238、除自身以外数组的乘积</title>
+    <url>/2020/06/04/leetcode238/</url>
+    <content><![CDATA[<p>给你一个长度为 n 的整数数组 nums，其中 n &gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。<br><a id="more"></a><br><strong>示例</strong>：</p>
+<blockquote>
+<p>输入：[1,2,3,4]<br>输出：[24,12,8,6]</p>
+</blockquote>
+<p><strong>分析</strong>：用两个数组分别储存除自身以外的左右之积，最后相乘返回<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] productExceptSelf(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">	<span class="comment">//左右累乘</span></span><br><span class="line">	<span class="keyword">int</span> len=nums.length;</span><br><span class="line">	<span class="keyword">int</span>[] left=<span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">	<span class="comment">//int[] right=new int[len];</span></span><br><span class="line">	<span class="keyword">int</span> right=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		left[i]=<span class="number">1</span>;</span><br><span class="line">		<span class="comment">//right[i]=1;</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">		left[i]=left[i-<span class="number">1</span>] * nums[i-<span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=len-<span class="number">2</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">		<span class="comment">//对right数组优化下</span></span><br><span class="line">		<span class="comment">//right[i]=right[i+1] * nums[i+1];</span></span><br><span class="line">		right=right * nums[i+<span class="number">1</span>];</span><br><span class="line">		left[i]=left[i]*right;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>为什么他能靠21点成为亿万富翁？LeetCode837、新21点</title>
     <url>/2020/06/03/leetcode837/</url>
     <content><![CDATA[<p>爱丽丝参与一个大致基于纸牌游戏 “21点” 规则的游戏，描述如下：<br>爱丽丝以 0 分开始，并在她的得分少于 K 分时抽取数字。 抽取时，她从 [1, W] 的范围中随机获得一个整数作为分数进行累计，其中 W 是整数。 每次抽取都是独立的，其结果具有相同的概率。<br>问：当爱丽丝获得不少于 K 分时，她就停止抽取数字。 爱丽丝的分数不超过 N 的概率是多少？<br><a id="more"></a><br><strong>示例1</strong>：</p>
