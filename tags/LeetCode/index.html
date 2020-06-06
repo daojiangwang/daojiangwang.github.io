@@ -90,7 +90,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="djwang呀">
-<meta property="og:url" content="http://yoursite.com/tags/LeetCode/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/leetcode/index.html">
 <meta property="og:site_name" content="djwang呀">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/LeetCode/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/leetcode/"/>
 
 
 
 
 
-  <title>Tag: LeetCode | djwang呀</title>
+  <title>Tag: leetcode | djwang呀</title>
   
 
 
@@ -296,7 +296,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>LeetCode<small>Tag</small>
+        <h1>leetcode<small>Tag</small>
         </h1>
       </div>
 
@@ -308,37 +308,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2020/06/04/leetcode238/" itemprop="url">
+            <a class="post-title-link" href="/2020/06/06/leetcode128/" itemprop="url">
               
-                <span itemprop="name">震惊，该物质不溶于自身！LeetCode238、除自身以外数组的乘积</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-04T12:32:44+08:00"
-              content="2020-06-04" >
-          06-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/06/03/leetcode837/" itemprop="url">
-              
-                <span itemprop="name">为什么他能靠21点成为亿万富翁？LeetCode837、新21点</span>
+                <span itemprop="name">leetcode128、最长连续序列</span>
               
             </a>
         
@@ -346,93 +318,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-03T16:58:08+08:00"
-              content="2020-06-03" >
-          06-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/05/31/leetcode101/" itemprop="url">
-              
-                <span itemprop="name">leetcode101. 对称二叉树</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-31T20:15:04+08:00"
-              content="2020-05-31" >
-          05-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/05/30/leetcode84/" itemprop="url">
-              
-                <span itemprop="name">LeetCode 84、柱状图中最大的矩形</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-30T10:39:52+08:00"
-              content="2020-05-30" >
-          05-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/05/27/qianzhuihe/" itemprop="url">
-              
-                <span itemprop="name">前缀和</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-27T11:33:37+08:00"
-              content="2020-05-27" >
-          05-27
+              datetime="2020-06-06T13:15:24+08:00"
+              content="2020-06-06" >
+          06-06
         </time>
       </div>
 
@@ -498,7 +386,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -520,7 +408,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1054,6 +942,110 @@
               resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
+unction (resultLeft, resultRight) {
                 if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
                   return resultRight.searchTextCount - resultLeft.searchTextCount;
                 } else if (resultLeft.hitCount !== resultRight.hitCount) {
