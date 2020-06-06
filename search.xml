@@ -1,39 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JavaScript 匿名函数与闭包</title>
-    <url>/2020/03/02/AnonymousFunctionAndClosure/</url>
-    <content><![CDATA[<blockquote>
-<p>匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="一、匿名函数"><a href="#一、匿名函数" class="headerlink" title="一、匿名函数"></a>一、匿名函数</h2><p>声明一个普通函数,函数名为fun：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>那么将函数名去掉，就是匿名函数：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//单独的匿名函数会报错,无法运行、无法调用</span></span><br><span class="line"><span class="comment">//function() &#123;</span></span><br><span class="line"><span class="comment">//  //函数体</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//未在应用场景中，不符合语法，需加上括号</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//在函数后面加上括号，可通过表达式的自我执行，立即执行</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">//如需传值，可以括号内传值</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)(“匿名函数”);</span><br></pre></td></tr></table></figure></p>
-<p>匿名函数运用场景：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1、事件</span></span><br><span class="line">&lt;button id=<span class="string">"btn"</span>&gt;点击&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">    var btn=document.getElementById("btn");</span></span><br><span class="line"><span class="regexp">    btn.onclick=function()&#123;</span></span><br><span class="line"><span class="regexp">        alert("点击按钮");</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2、对象</span></span><br><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">    name:<span class="string">"张三"</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"我是"</span>+<span class="keyword">this</span>.name+<span class="string">"，今年"</span>+<span class="keyword">this</span>.age+<span class="string">"岁。"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj.say());<span class="comment">//我是张三，今年18岁。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3、函数表达式，用作赋值</span></span><br><span class="line"><span class="keyword">var</span> say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"我是张三，今年18岁。"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//4、回调函数</span></span><br><span class="line">say(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"我是张三，今年18岁。"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>匿名函数主要用于闭包，以及模拟块级作用域，减少全局变量，执行结束即销毁，而闭包有所不同</p>
-<h2 id="二、闭包"><a href="#二、闭包" class="headerlink" title="二、闭包"></a>二、闭包</h2><p>都知道在函数内部可以直接读取全局变量，但是在函数外部无法读取函数内部的局部变量。而闭包所实现的就是从外部读取函数内部的局部变量，其方法就是在函数内部创建另一个函数，而如果这个内部函数被返回，并且在其他地方被调用了，这个内部函数就是闭包，闭包会携带它的函数作用域，可以继续存在于缓存中。闭包可以看做两个函数的桥梁，沟通其局部变量。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//通过全局变量来累加</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    a++;</span><br><span class="line">    alert(<span class="string">"a="</span>+a);</span><br><span class="line">&#125;</span><br><span class="line">add();<span class="comment">//a=2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过闭包返回局部变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        a++;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">alert(add()());<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaCollection</title>
-    <url>/2020/05/29/JavaCollection/</url>
-    <content><![CDATA[<h2 id="Java-集合框架图："><a href="#Java-集合框架图：" class="headerlink" title="Java 集合框架图："></a>Java 集合框架图：</h2><a id="more"></a>
-<p><img src="/images/202005/JavaCollection.jpg" alt="Java集合框架图"><br>其中红色为接口，蓝色为抽象类，绿色为并发包中的类</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SPA</title>
     <url>/2020/03/08/SPA/</url>
     <content><![CDATA[<h2 id="SPA"><a href="#SPA" class="headerlink" title="SPA"></a>SPA</h2><p>单页Web应用（single page web application，SPA），就是只有一张Web页面的应用，是加载单个HTML 页面并在用户与应用程序交互时动态更新该页面的Web应用程序。</p>
@@ -56,6 +23,19 @@
 ]]></content>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaCollection</title>
+    <url>/2020/05/29/JavaCollection/</url>
+    <content><![CDATA[<h2 id="Java-集合框架图："><a href="#Java-集合框架图：" class="headerlink" title="Java 集合框架图："></a>Java 集合框架图：</h2><a id="more"></a>
+<p><img src="/images/202005/JavaCollection.jpg" alt="Java集合框架图"><br>其中红色为接口，蓝色为抽象类，绿色为并发包中的类</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -90,26 +70,6 @@
       </tags>
   </entry>
   <entry>
-    <title>AngularJS中Directive指令bindToController属性</title>
-    <url>/2020/04/05/angularjsbindtocontroller/</url>
-    <content><![CDATA[<!-- 标签别名 -->
-<blockquote class="blockquote-center"><p>&amp;、=、@</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="1、-amp"><a href="#1、-amp" class="headerlink" title="1、&amp;"></a>1、&amp;</h2><p>绑定function<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">metadataManagement</span>(<span class="params">PathUtils</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        restrict: <span class="string">'E'</span>,</span><br><span class="line">        bindToController: &#123;</span><br><span class="line">            title:<span class="string">"@"</span>,</span><br><span class="line">            values: <span class="string">"="</span>, <span class="comment">//所有的元数据</span></span><br><span class="line">            deleteFunc: <span class="string">"&amp;"</span>, <span class="comment">//删除触发的方法，需要接收object对象与callback</span></span><br><span class="line">            enableFunc: <span class="string">"&amp;?"</span> <span class="comment">//?为可双向绑定，可传可不传</span></span><br><span class="line">        &#125;,</span><br><span class="line">        controller: [MetadataManagementDir],</span><br><span class="line">        controllerAs: <span class="string">'metadataManagementDir'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delet</span>(<span class="params">index</span>) </span>&#123;</span><br><span class="line">    vm.values[index].inuse = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span> (vm.deleteFunc != <span class="literal">null</span>) &#123;</span><br><span class="line">        vm.deleteFunc(&#123;</span><br><span class="line">            obj: vm.values[index],</span><br><span class="line">            callback: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">enable</span>(<span class="params">index</span>) </span>&#123;</span><br><span class="line">    vm.values[index].inuse = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span> (vm.enableFunc != <span class="literal">null</span>) &#123;</span><br><span class="line">        vm.enableFunc(&#123;</span><br><span class="line">            obj: vm.values[index],</span><br><span class="line">            callback: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>传值：<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span></span></span><br><span class="line"><span class="tag">	<span class="attr">delete-func</span>=<span class="string">"cultivationProcedureCategoryCtrl.deleteFunc(obj,callback)"</span> </span></span><br><span class="line"><span class="tag">	<span class="attr">enable-func</span>=<span class="string">"cultivationProcedureCategoryCtrl.enableFunc(obj,callback)"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deleteFunc</span>(<span class="params">obj, callback</span>) </span>&#123;</span><br><span class="line">    ecnuCultivationProcedureCategoryDao.disableById(obj.id, callback);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">enableFunc</span>(<span class="params">obj, callback</span>) </span>&#123;</span><br><span class="line">    ecnuCultivationProcedureCategoryDao.enableById(obj.id, callback);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2、"><a href="#2、" class="headerlink" title="2、="></a>2、=</h2><p>双向绑定数据<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span> <span class="attr">values</span>=<span class="string">"cultivationProcedureCategoryCtrl.values"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="3、"><a href="#3、" class="headerlink" title="3、@"></a>3、@</h2><p>仅单向绑定，不同于=传递值，只传递字符<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span> <span class="attr">title</span>=<span class="string">"元数据管理"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>AngularJS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>java比较传统方式和数据库连接池方式的性能差异</title>
     <url>/2020/06/03/dbConnectionpoolvs/</url>
     <content><![CDATA[<p>向数据库中插入100条数据，比较传统方式和数据库连接池方式的性能差异<br><a id="more"></a></p>
@@ -141,33 +101,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>hexo访问量与访客失效原因</title>
-    <url>/2018/10/16/hexo%E8%AE%BF%E9%97%AE%E9%87%8F%E4%B8%8E%E8%AE%BF%E5%AE%A2%E5%A4%B1%E6%95%88%E5%8E%9F%E5%9B%A0/</url>
-    <content><![CDATA[<p>嘻嘻，昨天更新后想看看访问有没有变化的，忽然发现统计功能无效了，之前使用的不蒜子脚本，去看了下原来不蒜子域名修改了。</p>
-<p>不蒜子官网：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a></p>
-<p>解决：将\themes\next\layout_partials\footer.swig下的<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-<p>修改为<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>leetcode101. 对称二叉树</title>
-    <url>/2020/05/31/leetcode101/</url>
-    <content><![CDATA[<p>给定一个二叉树，检查它是否是镜像对称的。<br><a id="more"></a><br>例如，二叉树 [1,2,2,3,4,4,3] 是对称的,[1,2,2,null,3,null,3] 则不是镜像对称的,<br><strong>分析</strong>：要判断二叉树是否镜像，首先要判断根结点的左右子树值是否相等，然后判断左子树左节点和右子树右节点的值，和左子树的右节点和右子树左节点的值得是否相等。可以分解为两个树的是否镜像<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSymmetric</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mirror(root,root);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">mirror</span><span class="params">(TreeNode n1,TreeNode n2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n1==<span class="keyword">null</span>&amp;&amp; n2==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(n1==<span class="keyword">null</span> || n2==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> n1.val==n2.val &amp;&amp; mirror(n1.left,n2.right) &amp;&amp;mirror(n1.right,n2.left);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>震惊，该物质不溶于自身！LeetCode238、除自身以外数组的乘积</title>
     <url>/2020/06/04/leetcode238/</url>
     <content><![CDATA[<p>给你一个长度为 n 的整数数组 nums，其中 n &gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。<br><a id="more"></a><br><strong>示例</strong>：</p>
@@ -181,6 +114,18 @@
       </categories>
       <tags>
         <tag>Java</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode101. 对称二叉树</title>
+    <url>/2020/05/31/leetcode101/</url>
+    <content><![CDATA[<p>给定一个二叉树，检查它是否是镜像对称的。<br><a id="more"></a><br>例如，二叉树 [1,2,2,3,4,4,3] 是对称的,[1,2,2,null,3,null,3] 则不是镜像对称的,<br><strong>分析</strong>：要判断二叉树是否镜像，首先要判断根结点的左右子树值是否相等，然后判断左子树左节点和右子树右节点的值，和左子树的右节点和右子树左节点的值得是否相等。可以分解为两个树的是否镜像<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSymmetric</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mirror(root,root);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">mirror</span><span class="params">(TreeNode n1,TreeNode n2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n1==<span class="keyword">null</span>&amp;&amp; n2==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(n1==<span class="keyword">null</span> || n2==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> n1.val==n2.val &amp;&amp; mirror(n1.left,n2.right) &amp;&amp;mirror(n1.right,n2.left);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
         <tag>LeetCode</tag>
       </tags>
   </entry>
@@ -253,6 +198,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Servlet开发（二）</title>
+    <url>/2020/05/31/servlet2/</url>
+    <content><![CDATA[<h2 id="HttpServlet类"><a href="#HttpServlet类" class="headerlink" title="HttpServlet类"></a>HttpServlet类</h2><p>HttpServlet继承抽象类GenericServlet，GenericServlet类实现了Servlet, ServletConfig接口。</p>
+<a id="more"></a>  
+<p>HttpServlet类：<br><img src="/images/202005/HttpServlet.png" alt="HttpServlet类"><br>GenericServlet类：<br><img src="/images/202005/GenericServlet.png" alt="GenericServlet类"></p>
+<p>Servlet 需要提供对应的doGet()与doPost()方法<br>在执行doGet()或者doPost()之前，都会先执行service()，根据请求提交方式来判断使用调用doGet()还是doPost()，因此也可以复写service()方法，提供相应服务。</p>
+<h2 id="Servlet生命周期"><a href="#Servlet生命周期" class="headerlink" title="Servlet生命周期"></a>Servlet生命周期</h2><p>一个Servlet的生命周期由实例化，初始化，提供服务，销毁，被回收几个步骤组成<br><strong>实例化</strong>：<br>当用户通过浏览器输入一个路径，这个路径对应的servlet被调用的时候，该Servlet就会被实例化<br>为LoginServlet显式提供一个构造方法 LoginServlet()<br>而无论访问了多少次LoginServlet，LoginServlet构造方法只会执行一次，所以Servlet是单实例的<br><strong>初始化</strong>：<br>LoginServlet 继承了HttpServlet，同时也继承了init(ServletConfig) 方法<br>init 方法是一个实例方法，所以会在构造方法执行后执行。<br>无论访问了多少次LoginSerlvet<br>init初始化 只会执行一次<br><strong>提供服务</strong>：<br>接下来就是执行service()方法，然后通过浏览器传递过来的信息进行判断，是调用doGet()还是doPost()方法<br>service()中也可以编写业务代码，比如判断用户输入的账号和密码是否正确<br><strong>销毁</strong>：<br>销毁为destroy()<br>在如下几种情况下，会调用destroy()<br>1、 该Servlet所在的web应用重新启动，在server.xml中配置该web应用的时候用到了<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">"/"</span> <span class="attr">docBase</span>=<span class="string">"e:\\project\\j2ee\\web"</span> <span class="attr">debug</span>=<span class="string">"0"</span> <span class="attr">reloadable</span>=<span class="string">"false"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>如果把 reloadable=”false” 改为reloadable=”true” 就表示有任何类发生的更新，web应用会自动重启<br>当web应用自动重启的时候，destroy()方法就会被调用<br>2、关闭tomcat的时候 destroy()方法会被调用<br><strong>回收</strong>：<br>当该Servlet被销毁后，就满足垃圾回收的条件了。当下一次GC时，就有可能被回收。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Servlet</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Servlet开发（一）</title>
     <url>/2020/05/31/servlet1/</url>
     <content><![CDATA[<p>开发Servlet分三步：</p>
@@ -272,23 +234,6 @@
 <p>最后配置tomcat的server.xml 中的&lt;context&gt;&gt;<br>在&lt;Host name=”localhost” …&gt;下面加一句:<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">"/"</span> <span class="attr">docBase</span>=<span class="string">"你的项目文件名\\j2ee\\web"</span> <span class="attr">debug</span>=<span class="string">"0"</span> <span class="attr">reloadable</span>=<span class="string">"false"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>这样就可以通过 <a href="http://127.0.0.1/hello" target="_blank" rel="noopener">http://127.0.0.1/hello</a> 访问到hello.html了,并实现简单的登陆功能<br><img src="/images/202005/loginhtml.png" alt="LoginHtml"><br>由于上面已将项目部署的path修改到了新的目录，所以tomcat下的ROOT需要删除，防止冲突，不过也可以将项目打包至ROOT目录下，这里没用这个</p>
 <h2 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h2><p>1、tomcat运行，启动/tomcat/bin/startup.bat，但有错见图1，需在/tomcat/bin/setclasspath.bat配置JAVA_HOME和JRE_HOME，切记：赋值中间不能有空格，配置见图2<br><img src="/images/202005/tomcaterror1.png" alt="启动Tomcat报错"><br><img src="/images/202005/tomcatset.png" alt="Tomcat配置"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Servlet</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Servlet开发（二）</title>
-    <url>/2020/05/31/servlet2/</url>
-    <content><![CDATA[<h2 id="HttpServlet类"><a href="#HttpServlet类" class="headerlink" title="HttpServlet类"></a>HttpServlet类</h2><p>HttpServlet继承抽象类GenericServlet，GenericServlet类实现了Servlet, ServletConfig接口。</p>
-<a id="more"></a>  
-<p>HttpServlet类：<br><img src="/images/202005/HttpServlet.png" alt="HttpServlet类"><br>GenericServlet类：<br><img src="/images/202005/GenericServlet.png" alt="GenericServlet类"></p>
-<p>Servlet 需要提供对应的doGet()与doPost()方法<br>在执行doGet()或者doPost()之前，都会先执行service()，根据请求提交方式来判断使用调用doGet()还是doPost()，因此也可以复写service()方法，提供相应服务。</p>
-<h2 id="Servlet生命周期"><a href="#Servlet生命周期" class="headerlink" title="Servlet生命周期"></a>Servlet生命周期</h2><p>一个Servlet的生命周期由实例化，初始化，提供服务，销毁，被回收几个步骤组成<br><strong>实例化</strong>：<br>当用户通过浏览器输入一个路径，这个路径对应的servlet被调用的时候，该Servlet就会被实例化<br>为LoginServlet显式提供一个构造方法 LoginServlet()<br>而无论访问了多少次LoginServlet，LoginServlet构造方法只会执行一次，所以Servlet是单实例的<br><strong>初始化</strong>：<br>LoginServlet 继承了HttpServlet，同时也继承了init(ServletConfig) 方法<br>init 方法是一个实例方法，所以会在构造方法执行后执行。<br>无论访问了多少次LoginSerlvet<br>init初始化 只会执行一次<br><strong>提供服务</strong>：<br>接下来就是执行service()方法，然后通过浏览器传递过来的信息进行判断，是调用doGet()还是doPost()方法<br>service()中也可以编写业务代码，比如判断用户输入的账号和密码是否正确<br><strong>销毁</strong>：<br>销毁为destroy()<br>在如下几种情况下，会调用destroy()<br>1、 该Servlet所在的web应用重新启动，在server.xml中配置该web应用的时候用到了<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">"/"</span> <span class="attr">docBase</span>=<span class="string">"e:\\project\\j2ee\\web"</span> <span class="attr">debug</span>=<span class="string">"0"</span> <span class="attr">reloadable</span>=<span class="string">"false"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>如果把 reloadable=”false” 改为reloadable=”true” 就表示有任何类发生的更新，web应用会自动重启<br>当web应用自动重启的时候，destroy()方法就会被调用<br>2、关闭tomcat的时候 destroy()方法会被调用<br><strong>回收</strong>：<br>当该Servlet被销毁后，就满足垃圾回收的条件了。当下一次GC时，就有可能被回收。</p>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -325,34 +270,6 @@
       </categories>
       <tags>
         <tag>Servlet</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vivo 2020届校招在线编程笔试B卷</title>
-    <url>/2020/05/29/vivo2020B/</url>
-    <content><![CDATA[<p>牛客vivo2020校招编程题解<br><a id="more"></a></p>
-<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><p>今年7月份vivo迎来了新入职的大学生，现在需要为每个新同事分配一个工号。人力资源部同事小v设计了一个方法为每个人进行排序并分配最终的工号，具体规则是：</p>
-<blockquote>
-<p>将N（N&lt;10000）个人排成一排，从第1个人开始报数；如果报数是M的倍数就出列，报到队尾后则回到队头继续报，直到所有人都出列；</p>
-</blockquote>
-<p>最后按照出列顺序为每个人依次分配工号。请你使用自己擅长的编程语言帮助小v实现此方法。<br>解法：使用循环单链表，依次出队<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	ListNode next;</span><br><span class="line">	ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">int</span> m=input[<span class="number">1</span>];</span><br><span class="line">	ListNode people=<span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">	ListNode p = people;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		ListNode node=<span class="keyword">new</span> ListNode(i);</span><br><span class="line">		p.next=node;</span><br><span class="line">		p=p.next;</span><br><span class="line">	&#125;</span><br><span class="line">	p.next=people;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> out=n;</span><br><span class="line">	StringBuilder sb=<span class="keyword">new</span> StringBuilder();</span><br><span class="line">	p=people;</span><br><span class="line">	<span class="keyword">while</span>(out&gt;<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;m;i++)&#123;</span><br><span class="line">			p=p.next;</span><br><span class="line">		&#125;</span><br><span class="line">		sb.append(p.val);</span><br><span class="line">		sb.append(<span class="string">" "</span>);</span><br><span class="line">		p.val=p.next.val;</span><br><span class="line">		p.next=p.next.next;</span><br><span class="line">		out--;</span><br><span class="line">	&#125;</span><br><span class="line">	sb.append(p.val);</span><br><span class="line">	<span class="keyword">return</span> sb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3><p>小v在公司负责游戏运营，今天收到一款申请新上架的游戏“跳一跳”，为了确保提供给广大玩家朋友们的游戏都是高品质的，按照运营流程小v必须对新游戏进行全方位了解体验和评估。这款游戏的规则如下：</p>
-<blockquote>
-<p>有n个盒子排成了一行，每个盒子上面有一个数字a[i]，表示在该盒子上的人最多能向右移动a[i]个盒子（比如当前所在盒子上的数字是3，则表示可以一次向右前进1个盒子，2个盒子或者3个盒子）。</p>
-</blockquote>
-<p>现在小v从左边第一个盒子上开始体验游戏，请问最少需要移动几次能到最后一个盒子上？<br>分析：最远跳跃，依次保留每次跳跃中的可以跳跃到下一次的最远距离<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">if</span>(input == <span class="keyword">null</span>||input.length == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> len=input.length;</span><br><span class="line">	<span class="keyword">int</span> step=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> end=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> maxReach=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(maxReach &lt; i) <span class="keyword">return</span> -<span class="number">1</span>;<span class="comment">//如果不能到达最后，则返回-1</span></span><br><span class="line">		<span class="comment">//记录各节点所能到达的最远距离</span></span><br><span class="line">		maxReach=Math.max(maxReach,i+input[i]); </span><br><span class="line">		<span class="keyword">if</span>(maxReach &gt;= len-<span class="number">1</span>) <span class="keyword">return</span> (step+<span class="number">1</span>);<span class="comment">//超出则直接返回</span></span><br><span class="line">		<span class="keyword">if</span>(i==end)&#123;</span><br><span class="line">			end = maxReach;</span><br><span class="line">			step++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> step;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p>小v最近在玩一款挖矿的游戏，该游戏介绍如下：</p>
-<blockquote>
-<p>1、每次可以挖到多个矿石，每个矿石的重量都不一样，挖矿结束后需要通过一款平衡矿车运送下山；<br>2、平衡矿车有左右2个车厢，中间只有1个车轮沿着导轨滑到山下，且矿车只有在2个车厢重量完全相等且矿石数量相差不超过1个的情况下才能成功运送矿石，否则在转弯时可能出现侧翻。</p>
-</blockquote>
-<p>假设小v挖到了n（n&lt;100）个矿石，每个矿石重量不超过100，为了确保一次性将n个矿石都运送出去，一旦矿车的车厢重量不一样就需要购买配重砝码。请问小v每次最少需要购买多少重量的砝码呢? （假设车厢足够放下这些矿石和砝码，砝码重量任选）<br>分析：开始用得贪心，不能ac,,看评论用的动态规划，不是很理解，贴上代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n = input.length; <span class="comment">//n为石块数</span></span><br><span class="line">	<span class="keyword">int</span> s = <span class="number">0</span>; <span class="comment">//s记录总重量，题解要尽可能满足两边平均</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		s += input[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> S = s &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> N = (n + <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span>[][] dp=<span class="keyword">new</span> <span class="keyword">int</span>[S + <span class="number">1</span>][N+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= S; ++i) dp[i][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span>[][] tmp=dp;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = input[i]; j &lt;= S; ++j) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= N; ++k) &#123;</span><br><span class="line">				tmp[j][k] = Math.max(tmp[j][k], dp[j - input[i]][k - <span class="number">1</span>] + input[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">		dp=tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> ((n &amp; <span class="number">1</span>)==<span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> s - <span class="number">2</span> * Math.max(dp[S][N], dp[S][N - <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s - <span class="number">2</span> * dp[S][N];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>OJ</tag>
-        <tag>数据结构与算法</tag>
       </tags>
   </entry>
   <entry>
@@ -398,20 +315,18 @@
       </tags>
   </entry>
   <entry>
-    <title>关于博客</title>
-    <url>/2018/04/28/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<pre><code>考研录取后赋闲在家，闲来无事。
-</code></pre><p>&emsp;&emsp;在过去一段时间内，我从很多优秀的博客学到了很多，深深感谢那些博主通过博客帮助了很多求学的人。<br>&emsp;&emsp;于是也就有个建立博客的念头，在前几日看到weiyang大佬的搭建博客的文章，便着手搭建这个博客，感谢现在互联网的便利，通过github+hexo，以及众多博主的经验分享，综合选择了NexT主题，终于搭建了这个小窝。希望能督促自己,并分享自己今后的生活与学习，也欢迎各位小伙伴的交流。<br>&emsp;&emsp;在此贴出一些学习的文章，希望想搭建博客的小伙伴可以学习。</p>
-<p>&emsp;&emsp;博文文章：<br>&emsp;&emsp;&emsp;&emsp;<a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/w_ngzeqi/article/details/73863543" target="_blank" rel="noopener">hexo之next主题个性化配置详细教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/shengshengshiwo/article/details/79350413" target="_blank" rel="noopener">NexT的主题设定与配置</a><br>&emsp;&emsp;&emsp;&emsp;<a href="http://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/blue_zy/article/details/79058763" target="_blank" rel="noopener">Hexo更换next主题和优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有哪些好看的 Hexo 主题？</a></p>
-<p>&emsp;&emsp;后期陆续补充。。。</p>
+    <title>hexo访问量与访客失效原因</title>
+    <url>/2018/10/16/hexo%E8%AE%BF%E9%97%AE%E9%87%8F%E4%B8%8E%E8%AE%BF%E5%AE%A2%E5%A4%B1%E6%95%88%E5%8E%9F%E5%9B%A0/</url>
+    <content><![CDATA[<p>嘻嘻，昨天更新后想看看访问有没有变化的，忽然发现统计功能无效了，之前使用的不蒜子脚本，去看了下原来不蒜子域名修改了。</p>
+<p>不蒜子官网：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a></p>
+<p>解决：将\themes\next\layout_partials\footer.swig下的<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
         <category>hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>djwang</tag>
-        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -440,6 +355,91 @@
       <tags>
         <tag>前端</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于博客</title>
+    <url>/2018/04/28/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<pre><code>考研录取后赋闲在家，闲来无事。
+</code></pre><p>&emsp;&emsp;在过去一段时间内，我从很多优秀的博客学到了很多，深深感谢那些博主通过博客帮助了很多求学的人。<br>&emsp;&emsp;于是也就有个建立博客的念头，在前几日看到weiyang大佬的搭建博客的文章，便着手搭建这个博客，感谢现在互联网的便利，通过github+hexo，以及众多博主的经验分享，综合选择了NexT主题，终于搭建了这个小窝。希望能督促自己,并分享自己今后的生活与学习，也欢迎各位小伙伴的交流。<br>&emsp;&emsp;在此贴出一些学习的文章，希望想搭建博客的小伙伴可以学习。</p>
+<p>&emsp;&emsp;博文文章：<br>&emsp;&emsp;&emsp;&emsp;<a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/w_ngzeqi/article/details/73863543" target="_blank" rel="noopener">hexo之next主题个性化配置详细教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/shengshengshiwo/article/details/79350413" target="_blank" rel="noopener">NexT的主题设定与配置</a><br>&emsp;&emsp;&emsp;&emsp;<a href="http://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/blue_zy/article/details/79058763" target="_blank" rel="noopener">Hexo更换next主题和优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有哪些好看的 Hexo 主题？</a></p>
+<p>&emsp;&emsp;后期陆续补充。。。</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>djwang</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vivo 2020届校招在线编程笔试B卷</title>
+    <url>/2020/05/29/vivo2020B/</url>
+    <content><![CDATA[<p>牛客vivo2020校招编程题解<br><a id="more"></a></p>
+<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><p>今年7月份vivo迎来了新入职的大学生，现在需要为每个新同事分配一个工号。人力资源部同事小v设计了一个方法为每个人进行排序并分配最终的工号，具体规则是：</p>
+<blockquote>
+<p>将N（N&lt;10000）个人排成一排，从第1个人开始报数；如果报数是M的倍数就出列，报到队尾后则回到队头继续报，直到所有人都出列；</p>
+</blockquote>
+<p>最后按照出列顺序为每个人依次分配工号。请你使用自己擅长的编程语言帮助小v实现此方法。<br>解法：使用循环单链表，依次出队<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	ListNode next;</span><br><span class="line">	ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">int</span> m=input[<span class="number">1</span>];</span><br><span class="line">	ListNode people=<span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">	ListNode p = people;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		ListNode node=<span class="keyword">new</span> ListNode(i);</span><br><span class="line">		p.next=node;</span><br><span class="line">		p=p.next;</span><br><span class="line">	&#125;</span><br><span class="line">	p.next=people;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> out=n;</span><br><span class="line">	StringBuilder sb=<span class="keyword">new</span> StringBuilder();</span><br><span class="line">	p=people;</span><br><span class="line">	<span class="keyword">while</span>(out&gt;<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;m;i++)&#123;</span><br><span class="line">			p=p.next;</span><br><span class="line">		&#125;</span><br><span class="line">		sb.append(p.val);</span><br><span class="line">		sb.append(<span class="string">" "</span>);</span><br><span class="line">		p.val=p.next.val;</span><br><span class="line">		p.next=p.next.next;</span><br><span class="line">		out--;</span><br><span class="line">	&#125;</span><br><span class="line">	sb.append(p.val);</span><br><span class="line">	<span class="keyword">return</span> sb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3><p>小v在公司负责游戏运营，今天收到一款申请新上架的游戏“跳一跳”，为了确保提供给广大玩家朋友们的游戏都是高品质的，按照运营流程小v必须对新游戏进行全方位了解体验和评估。这款游戏的规则如下：</p>
+<blockquote>
+<p>有n个盒子排成了一行，每个盒子上面有一个数字a[i]，表示在该盒子上的人最多能向右移动a[i]个盒子（比如当前所在盒子上的数字是3，则表示可以一次向右前进1个盒子，2个盒子或者3个盒子）。</p>
+</blockquote>
+<p>现在小v从左边第一个盒子上开始体验游戏，请问最少需要移动几次能到最后一个盒子上？<br>分析：最远跳跃，依次保留每次跳跃中的可以跳跃到下一次的最远距离<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">if</span>(input == <span class="keyword">null</span>||input.length == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> len=input.length;</span><br><span class="line">	<span class="keyword">int</span> step=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> end=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> maxReach=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(maxReach &lt; i) <span class="keyword">return</span> -<span class="number">1</span>;<span class="comment">//如果不能到达最后，则返回-1</span></span><br><span class="line">		<span class="comment">//记录各节点所能到达的最远距离</span></span><br><span class="line">		maxReach=Math.max(maxReach,i+input[i]); </span><br><span class="line">		<span class="keyword">if</span>(maxReach &gt;= len-<span class="number">1</span>) <span class="keyword">return</span> (step+<span class="number">1</span>);<span class="comment">//超出则直接返回</span></span><br><span class="line">		<span class="keyword">if</span>(i==end)&#123;</span><br><span class="line">			end = maxReach;</span><br><span class="line">			step++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> step;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p>小v最近在玩一款挖矿的游戏，该游戏介绍如下：</p>
+<blockquote>
+<p>1、每次可以挖到多个矿石，每个矿石的重量都不一样，挖矿结束后需要通过一款平衡矿车运送下山；<br>2、平衡矿车有左右2个车厢，中间只有1个车轮沿着导轨滑到山下，且矿车只有在2个车厢重量完全相等且矿石数量相差不超过1个的情况下才能成功运送矿石，否则在转弯时可能出现侧翻。</p>
+</blockquote>
+<p>假设小v挖到了n（n&lt;100）个矿石，每个矿石重量不超过100，为了确保一次性将n个矿石都运送出去，一旦矿车的车厢重量不一样就需要购买配重砝码。请问小v每次最少需要购买多少重量的砝码呢? （假设车厢足够放下这些矿石和砝码，砝码重量任选）<br>分析：开始用得贪心，不能ac,,看评论用的动态规划，不是很理解，贴上代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n = input.length; <span class="comment">//n为石块数</span></span><br><span class="line">	<span class="keyword">int</span> s = <span class="number">0</span>; <span class="comment">//s记录总重量，题解要尽可能满足两边平均</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		s += input[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> S = s &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> N = (n + <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span>[][] dp=<span class="keyword">new</span> <span class="keyword">int</span>[S + <span class="number">1</span>][N+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= S; ++i) dp[i][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span>[][] tmp=dp;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = input[i]; j &lt;= S; ++j) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= N; ++k) &#123;</span><br><span class="line">				tmp[j][k] = Math.max(tmp[j][k], dp[j - input[i]][k - <span class="number">1</span>] + input[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">		dp=tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> ((n &amp; <span class="number">1</span>)==<span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> s - <span class="number">2</span> * Math.max(dp[S][N], dp[S][N - <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s - <span class="number">2</span> * dp[S][N];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>OJ</tag>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AngularJS中Directive指令bindToController属性</title>
+    <url>/2020/04/05/angularjsbindtocontroller/</url>
+    <content><![CDATA[<!-- 标签别名 -->
+<blockquote class="blockquote-center"><p>&amp;、=、@</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="1、-amp"><a href="#1、-amp" class="headerlink" title="1、&amp;"></a>1、&amp;</h2><p>绑定function<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">metadataManagement</span>(<span class="params">PathUtils</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        restrict: <span class="string">'E'</span>,</span><br><span class="line">        bindToController: &#123;</span><br><span class="line">            title:<span class="string">"@"</span>,</span><br><span class="line">            values: <span class="string">"="</span>, <span class="comment">//所有的元数据</span></span><br><span class="line">            deleteFunc: <span class="string">"&amp;"</span>, <span class="comment">//删除触发的方法，需要接收object对象与callback</span></span><br><span class="line">            enableFunc: <span class="string">"&amp;?"</span> <span class="comment">//?为可双向绑定，可传可不传</span></span><br><span class="line">        &#125;,</span><br><span class="line">        controller: [MetadataManagementDir],</span><br><span class="line">        controllerAs: <span class="string">'metadataManagementDir'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delet</span>(<span class="params">index</span>) </span>&#123;</span><br><span class="line">    vm.values[index].inuse = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span> (vm.deleteFunc != <span class="literal">null</span>) &#123;</span><br><span class="line">        vm.deleteFunc(&#123;</span><br><span class="line">            obj: vm.values[index],</span><br><span class="line">            callback: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">enable</span>(<span class="params">index</span>) </span>&#123;</span><br><span class="line">    vm.values[index].inuse = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span> (vm.enableFunc != <span class="literal">null</span>) &#123;</span><br><span class="line">        vm.enableFunc(&#123;</span><br><span class="line">            obj: vm.values[index],</span><br><span class="line">            callback: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>传值：<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span></span></span><br><span class="line"><span class="tag">	<span class="attr">delete-func</span>=<span class="string">"cultivationProcedureCategoryCtrl.deleteFunc(obj,callback)"</span> </span></span><br><span class="line"><span class="tag">	<span class="attr">enable-func</span>=<span class="string">"cultivationProcedureCategoryCtrl.enableFunc(obj,callback)"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deleteFunc</span>(<span class="params">obj, callback</span>) </span>&#123;</span><br><span class="line">    ecnuCultivationProcedureCategoryDao.disableById(obj.id, callback);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">enableFunc</span>(<span class="params">obj, callback</span>) </span>&#123;</span><br><span class="line">    ecnuCultivationProcedureCategoryDao.enableById(obj.id, callback);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、="></a>2、=</h2><p>双向绑定数据<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span> <span class="attr">values</span>=<span class="string">"cultivationProcedureCategoryCtrl.values"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、@"></a>3、@</h2><p>仅单向绑定，不同于=传递值，只传递字符<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span> <span class="attr">title</span>=<span class="string">"元数据管理"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>AngularJS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript 匿名函数与闭包</title>
+    <url>/2020/03/02/AnonymousFunctionAndClosure/</url>
+    <content><![CDATA[<blockquote>
+<p>匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="一、匿名函数"><a href="#一、匿名函数" class="headerlink" title="一、匿名函数"></a>一、匿名函数</h2><p>声明一个普通函数,函数名为fun：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>那么将函数名去掉，就是匿名函数：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//单独的匿名函数会报错,无法运行、无法调用</span></span><br><span class="line"><span class="comment">//function() &#123;</span></span><br><span class="line"><span class="comment">//  //函数体</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//未在应用场景中，不符合语法，需加上括号</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//在函数后面加上括号，可通过表达式的自我执行，立即执行</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">//如需传值，可以括号内传值</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)(“匿名函数”);</span><br></pre></td></tr></table></figure></p>
+<p>匿名函数运用场景：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1、事件</span></span><br><span class="line">&lt;button id=<span class="string">"btn"</span>&gt;点击&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">    var btn=document.getElementById("btn");</span></span><br><span class="line"><span class="regexp">    btn.onclick=function()&#123;</span></span><br><span class="line"><span class="regexp">        alert("点击按钮");</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2、对象</span></span><br><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">    name:<span class="string">"张三"</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"我是"</span>+<span class="keyword">this</span>.name+<span class="string">"，今年"</span>+<span class="keyword">this</span>.age+<span class="string">"岁。"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj.say());<span class="comment">//我是张三，今年18岁。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3、函数表达式，用作赋值</span></span><br><span class="line"><span class="keyword">var</span> say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"我是张三，今年18岁。"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//4、回调函数</span></span><br><span class="line">say(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"我是张三，今年18岁。"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>匿名函数主要用于闭包，以及模拟块级作用域，减少全局变量，执行结束即销毁，而闭包有所不同</p>
+<h2 id="二、闭包"><a href="#二、闭包" class="headerlink" title="二、闭包"></a>二、闭包</h2><p>都知道在函数内部可以直接读取全局变量，但是在函数外部无法读取函数内部的局部变量。而闭包所实现的就是从外部读取函数内部的局部变量，其方法就是在函数内部创建另一个函数，而如果这个内部函数被返回，并且在其他地方被调用了，这个内部函数就是闭包，闭包会携带它的函数作用域，可以继续存在于缓存中。闭包可以看做两个函数的桥梁，沟通其局部变量。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//通过全局变量来累加</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    a++;</span><br><span class="line">    alert(<span class="string">"a="</span>+a);</span><br><span class="line">&#125;</span><br><span class="line">add();<span class="comment">//a=2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过闭包返回局部变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        a++;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">alert(add()());<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
       </tags>
   </entry>
 </search>
