@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="背包问题," />
 
 
 
@@ -88,13 +88,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="djwang呀">
-<meta property="og:url" content="http://yoursite.com/archives/2020/03/index.html">
+<meta name="description" content="小v是公司的运维工程师，现有一个有关应用程序部署的任务如下：  1、一台服务器的磁盘空间、内存是固定的，现在有N个应用程序要部署；2、每个应用程序所需要的磁盘、内存不同，每个应用程序允许访问的用户数也不同，且同一个应用程序不能在一台服务器上部署多个。  对于一台服务器而言，如何组合部署应用程序能够使得单台服务器允许访问的用户数最多？">
+<meta name="keywords" content="背包问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vivo2020校招A卷第一题、服务部署">
+<meta property="og:url" content="http://yoursite.com/2020/06/06/vivo2020A/index.html">
 <meta property="og:site_name" content="djwang呀">
+<meta property="og:description" content="小v是公司的运维工程师，现有一个有关应用程序部署的任务如下：  1、一台服务器的磁盘空间、内存是固定的，现在有N个应用程序要部署；2、每个应用程序所需要的磁盘、内存不同，每个应用程序允许访问的用户数也不同，且同一个应用程序不能在一台服务器上部署多个。  对于一台服务器而言，如何组合部署应用程序能够使得单台服务器允许访问的用户数最多？">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-06-06T13:13:37.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="djwang呀">
+<meta name="twitter:title" content="vivo2020校招A卷第一题、服务部署">
+<meta name="twitter:description" content="小v是公司的运维工程师，现有一个有关应用程序部署的任务如下：  1、一台服务器的磁盘空间、内存是固定的，现在有N个应用程序要部署；2、每个应用程序所需要的磁盘、内存不同，每个应用程序允许访问的用户数也不同，且同一个应用程序不能在一台服务器上部署多个。  对于一台服务器而言，如何组合部署应用程序能够使得单台服务器允许访问的用户数最多？">
 
 
 
@@ -124,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2020/03/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/06/vivo2020A/"/>
 
 
 
 
 
-  <title>Archive | djwang呀</title>
+  <title>vivo2020校招A卷第一题、服务部署 | djwang呀</title>
   
 
 
@@ -149,7 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	
 	<a href="https://github.com/daojiangwang" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -289,185 +294,198 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/06/vivo2020A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="djwang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="djwang呀">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">vivo2020校招A卷第一题、服务部署</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-06T21:02:11+08:00">
+                2020-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Um..! 23 posts in total. Keep on posting.
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2020">2020</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/06/06/vivo2020A/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/06/vivo2020A/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/23/SpringFramework/" itemprop="url">
-              
-                <span itemprop="name">Spring框架</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-23T12:46:44+08:00"
-              content="2020-03-23" >
-          03-23
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/08/SPA/" itemprop="url">
-              
-                <span itemprop="name">SPA</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-08T17:17:45+08:00"
-              content="2020-03-08" >
-          03-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/05/优化网站加载速度的34条法则, Yahoo!/" itemprop="url">
-              
-                <span itemprop="name">优化网站加载速度的34条法则，Yahoo!</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-05T20:16:09+08:00"
-              content="2020-03-05" >
-          03-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/02/AnonymousFunctionAndClosure/" itemprop="url">
-              
-                <span itemprop="name">JavaScript 匿名函数与闭包</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-02T10:19:22+08:00"
-              content="2020-03-02" >
-          03-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>小v是公司的运维工程师，现有一个有关应用程序部署的任务如下：</p>
+<blockquote>
+<p>1、一台服务器的磁盘空间、内存是固定的，现在有N个应用程序要部署；<br>2、每个应用程序所需要的磁盘、内存不同，每个应用程序允许访问的用户数也不同，且同一个应用程序不能在一台服务器上部署多个。</p>
+</blockquote>
+<p>对于一台服务器而言，如何组合部署应用程序能够使得单台服务器允许访问的用户数最多？<br><a id="more"></a><br><strong>输入描述</strong>：</p>
+<blockquote>
+<p>输入包括三个参数，空格分隔，分别表示服务器的磁盘大小、内存大小，以及应用程序列表；<br>其中第三个参数即应用程序列表，表述方式为：多个应用程序信息之间用 ‘#’ 分隔，每个应用程序的信息包括 ‘,’ 分隔的部署所需磁盘空间、内存、允许访问的用户量三个数字；比如 50,20,2000 表示部署该应用程序需要50G磁盘空间，20G内存，允许访问的用户数是2000</p>
+</blockquote>
+<p><strong>输出描述</strong>：</p>
+<blockquote>
+<p>单台服务器能承载的最大用户数</p>
+</blockquote>
+<p>示例：</p>
+<blockquote>
+<p>输入：</p>
+<blockquote>
+<p>15 10 5,1,1000#2,3,3000#5,2,15000#10,4,16000<br>输出<br>31000</p>
+</blockquote>
+</blockquote>
+<p>分析：三维背包问题，动态规划求得优解<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span> totalDisk, <span class="keyword">int</span> totalMemory, List&lt;Service&gt; services)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = services.size();</span><br><span class="line">    <span class="keyword">int</span>[][][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[len + <span class="number">1</span>][totalDisk + <span class="number">1</span>][totalMemory + <span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= len; i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = totalDisk; j &gt; <span class="number">0</span>; j--)</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k = totalMemory; k &gt; <span class="number">0</span>; k--)&#123;</span><br><span class="line">				<span class="keyword">if</span>(j &gt;= services.get(i - <span class="number">1</span>).getDisk() &amp;&amp; k &gt;= services.get(i - <span class="number">1</span>).getMemory())&#123;</span><br><span class="line">					dp[i][j][k] = Math.max(dp[i - <span class="number">1</span>][j][k], dp[i - <span class="number">1</span>][j - services.get(i - <span class="number">1</span>).getDisk()][k - services.get(i - <span class="number">1</span>).getMemory()] + services.get(i - <span class="number">1</span>).getusers());</span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    dp[i][j][k] = dp[i - <span class="number">1</span>][j][k];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">	<span class="keyword">return</span> dp[len][totalDisk][totalMemory];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Service类</span></span><br><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Service</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> disk;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> memory;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> users;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Service</span><span class="params">(<span class="keyword">int</span> disk, <span class="keyword">int</span> memory, <span class="keyword">int</span> users)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.disk = disk;</span><br><span class="line">		<span class="keyword">this</span>.memory = memory;</span><br><span class="line">		<span class="keyword">this</span>.users = users;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getDisk</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> disk;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDisk</span><span class="params">(<span class="keyword">int</span> disk)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.disk = disk;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getMemory</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> memory;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMemory</span><span class="params">(<span class="keyword">int</span> memory)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.memory = memory;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getusers</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> users;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setusers</span><span class="params">(<span class="keyword">int</span> users)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.users = users;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/背包问题/" rel="tag"><i class="fa fa-tag"></i> 背包问题</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/06/leetcode128/" rel="next" title="leetcode128、最长连续序列">
+                <i class="fa fa-chevron-left"></i> leetcode128、最长连续序列
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -475,6 +493,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -751,6 +776,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1147,26 +1176,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

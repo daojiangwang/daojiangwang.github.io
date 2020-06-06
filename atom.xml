@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-06T05:43:51.596Z</updated>
+  <updated>2020-06-06T13:13:37.615Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vivo2020校招A卷第一题、服务部署</title>
+    <link href="http://yoursite.com/2020/06/06/vivo2020A/"/>
+    <id>http://yoursite.com/2020/06/06/vivo2020A/</id>
+    <published>2020-06-06T13:02:11.000Z</published>
+    <updated>2020-06-06T13:13:37.615Z</updated>
+    
+    <content type="html"><![CDATA[<p>小v是公司的运维工程师，现有一个有关应用程序部署的任务如下：</p><blockquote><p>1、一台服务器的磁盘空间、内存是固定的，现在有N个应用程序要部署；<br>2、每个应用程序所需要的磁盘、内存不同，每个应用程序允许访问的用户数也不同，且同一个应用程序不能在一台服务器上部署多个。</p></blockquote><p>对于一台服务器而言，如何组合部署应用程序能够使得单台服务器允许访问的用户数最多？<br><a id="more"></a><br><strong>输入描述</strong>：</p><blockquote><p>输入包括三个参数，空格分隔，分别表示服务器的磁盘大小、内存大小，以及应用程序列表；<br>其中第三个参数即应用程序列表，表述方式为：多个应用程序信息之间用 ‘#’ 分隔，每个应用程序的信息包括 ‘,’ 分隔的部署所需磁盘空间、内存、允许访问的用户量三个数字；比如 50,20,2000 表示部署该应用程序需要50G磁盘空间，20G内存，允许访问的用户数是2000</p></blockquote><p><strong>输出描述</strong>：</p><blockquote><p>单台服务器能承载的最大用户数</p></blockquote><p>示例：</p><blockquote><p>输入：</p><blockquote><p>15 10 5,1,1000#2,3,3000#5,2,15000#10,4,16000<br>输出<br>31000</p></blockquote></blockquote><p>分析：三维背包问题，动态规划求得优解<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span> totalDisk, <span class="keyword">int</span> totalMemory, List&lt;Service&gt; services)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> len = services.size();</span><br><span class="line">    <span class="keyword">int</span>[][][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[len + <span class="number">1</span>][totalDisk + <span class="number">1</span>][totalMemory + <span class="number">1</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= len; i++)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> j = totalDisk; j &gt; <span class="number">0</span>; j--)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k = totalMemory; k &gt; <span class="number">0</span>; k--)&#123;</span><br><span class="line"><span class="keyword">if</span>(j &gt;= services.get(i - <span class="number">1</span>).getDisk() &amp;&amp; k &gt;= services.get(i - <span class="number">1</span>).getMemory())&#123;</span><br><span class="line">dp[i][j][k] = Math.max(dp[i - <span class="number">1</span>][j][k], dp[i - <span class="number">1</span>][j - services.get(i - <span class="number">1</span>).getDisk()][k - services.get(i - <span class="number">1</span>).getMemory()] + services.get(i - <span class="number">1</span>).getusers());</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    dp[i][j][k] = dp[i - <span class="number">1</span>][j][k];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> dp[len][totalDisk][totalMemory];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Service类</span></span><br><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Service</span> </span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> disk;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> memory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> users;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Service</span><span class="params">(<span class="keyword">int</span> disk, <span class="keyword">int</span> memory, <span class="keyword">int</span> users)</span> </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.disk = disk;</span><br><span class="line"><span class="keyword">this</span>.memory = memory;</span><br><span class="line"><span class="keyword">this</span>.users = users;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getDisk</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> disk;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDisk</span><span class="params">(<span class="keyword">int</span> disk)</span> </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.disk = disk;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getMemory</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> memory;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMemory</span><span class="params">(<span class="keyword">int</span> memory)</span> </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.memory = memory;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getusers</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> users;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setusers</span><span class="params">(<span class="keyword">int</span> users)</span> </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.users = users;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;小v是公司的运维工程师，现有一个有关应用程序部署的任务如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1、一台服务器的磁盘空间、内存是固定的，现在有N个应用程序要部署；&lt;br&gt;2、每个应用程序所需要的磁盘、内存不同，每个应用程序允许访问的用户数也不同，且同一个应用程序不能在一台服务器上部署多个。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对于一台服务器而言，如何组合部署应用程序能够使得单台服务器允许访问的用户数最多？&lt;br&gt;
+    
+    </summary>
+    
+      <category term="数据结构与算法" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="背包问题" scheme="http://yoursite.com/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode128、最长连续序列</title>
@@ -436,7 +462,7 @@
     <published>2018-10-16T08:31:47.000Z</published>
     <updated>2020-05-30T13:35:02.262Z</updated>
     
-    <content type="html"><![CDATA[<p>嘻嘻，昨天更新后想看看访问有没有变化的，忽然发现统计功能无效了，之前使用的不蒜子脚本，去看了下原来不蒜子域名修改了。</p><p>不蒜子官网：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a></p><p>解决：将\themes\next\layout_partials\footer.swig下的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p><p>修改为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p>嘻嘻，昨天更新后想看看访问有没有变化的，忽然发现统计功能无效了，之前使用的不蒜子脚本，去看了下原来不蒜子域名修改了。</p><p>不蒜子官网：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a></p><p>解决：将\themes\next\layout_partials\footer.swig下的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p><p>修改为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
@@ -452,36 +478,6 @@
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于博客</title>
-    <link href="http://yoursite.com/2018/04/28/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2018/04/28/关于博客/</id>
-    <published>2018-04-28T02:20:25.000Z</published>
-    <updated>2018-05-01T01:33:24.240Z</updated>
-    
-    <content type="html"><![CDATA[<pre><code>考研录取后赋闲在家，闲来无事。</code></pre><p>&emsp;&emsp;在过去一段时间内，我从很多优秀的博客学到了很多，深深感谢那些博主通过博客帮助了很多求学的人。<br>&emsp;&emsp;于是也就有个建立博客的念头，在前几日看到weiyang大佬的搭建博客的文章，便着手搭建这个博客，感谢现在互联网的便利，通过github+hexo，以及众多博主的经验分享，综合选择了NexT主题，终于搭建了这个小窝。希望能督促自己,并分享自己今后的生活与学习，也欢迎各位小伙伴的交流。<br>&emsp;&emsp;在此贴出一些学习的文章，希望想搭建博客的小伙伴可以学习。</p><p>&emsp;&emsp;博文文章：<br>&emsp;&emsp;&emsp;&emsp;<a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/w_ngzeqi/article/details/73863543" target="_blank" rel="noopener">hexo之next主题个性化配置详细教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/shengshengshiwo/article/details/79350413" target="_blank" rel="noopener">NexT的主题设定与配置</a><br>&emsp;&emsp;&emsp;&emsp;<a href="http://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/blue_zy/article/details/79058763" target="_blank" rel="noopener">Hexo更换next主题和优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有哪些好看的 Hexo 主题？</a></p><p>&emsp;&emsp;后期陆续补充。。。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;pre&gt;&lt;code&gt;考研录取后赋闲在家，闲来无事。
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;emsp;&amp;emsp;在过去一段时间内，我从很多优秀的博客学到了很多，深深感谢那些博主通过博客帮助了很多求学的人。&lt;br&gt;&amp;emsp;&amp;emsp;于是也就有个建立博客的念头，在前几日看到wei
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-      <category term="djwang" scheme="http://yoursite.com/tags/djwang/"/>
-    
-      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
