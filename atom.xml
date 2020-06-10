@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-06T13:22:56.446Z</updated>
+  <updated>2020-06-10T14:55:29.731Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,84 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>量子噬猪！leetcode458、可怜的小猪</title>
+    <link href="http://yoursite.com/2020/06/10/leetcode458/"/>
+    <id>http://yoursite.com/2020/06/10/leetcode458/</id>
+    <published>2020-06-10T14:44:15.000Z</published>
+    <updated>2020-06-10T14:55:29.731Z</updated>
+    
+    <content type="html"><![CDATA[<p>有 1000 只水桶，其中有且只有一桶装的含有毒药，其余装的都是水。它们从外观看起来都一样。如果小猪喝了毒药，它会在 15 分钟内死去。</p><p>问题来了，如果需要你在一小时内，弄清楚哪只水桶含有毒药，你最少需要多少只猪？<br><a id="more"></a><br>回答这个问题，并为下列的进阶问题编写一个通用算法。<br><strong>进阶</strong>：<br>假设有 n 只水桶，猪饮水中毒后会在 m 分钟内死亡，你需要多少猪（x）就能在 p 分钟内找出 “有毒” 水桶？这 n 只水桶里有且仅有一只有毒的桶。</p><p>代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">poorPigs</span><span class="params">(<span class="keyword">int</span> buckets, <span class="keyword">int</span> minutesToDie, <span class="keyword">int</span> minutesToTest)</span> </span>&#123;</span><br><span class="line"><span class="comment">//一个小时，15分钟会死去，可以有五次机会</span></span><br><span class="line"><span class="comment">//将1000桶水以五进制表示，0-4对应每个15分钟喝水，前四次猪还活着表示第五次有毒，因此可以有五个状态</span></span><br><span class="line"><span class="comment">//那么5^5&gt;1000，即5只猪可根据猪的死去状态试出毒水桶</span></span><br><span class="line"><span class="keyword">int</span> time=minutesToTest/minutesToDie+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> pig=<span class="number">0</span>;</span><br><span class="line"><span class="comment">// while(true)&#123;</span></span><br><span class="line"><span class="comment">//     if(Math.pow(time,pig)&gt;=buckets) return pig;</span></span><br><span class="line"><span class="comment">//     pig++;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">//这部分可以用对数</span></span><br><span class="line">pig = (<span class="keyword">int</span>) Math.ceil(Math.log(buckets)/Math.log(time));</span><br><span class="line"><span class="keyword">return</span> pig;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有 1000 只水桶，其中有且只有一桶装的含有毒药，其余装的都是水。它们从外观看起来都一样。如果小猪喝了毒药，它会在 15 分钟内死去。&lt;/p&gt;
+&lt;p&gt;问题来了，如果需要你在一小时内，弄清楚哪只水桶含有毒药，你最少需要多少只猪？&lt;br&gt;
+    
+    </summary>
+    
+      <category term="数据结构与算法" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot</title>
+    <link href="http://yoursite.com/2020/06/07/SpringBoot/"/>
+    <id>http://yoursite.com/2020/06/07/SpringBoot/</id>
+    <published>2020-06-07T02:43:24.000Z</published>
+    <updated>2020-06-07T02:43:24.469Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SpringMVC</title>
+    <link href="http://yoursite.com/2020/06/07/SpringMVC/"/>
+    <id>http://yoursite.com/2020/06/07/SpringMVC/</id>
+    <published>2020-06-07T02:43:16.000Z</published>
+    <updated>2020-06-07T02:43:16.258Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络基础知识</title>
+    <link href="http://yoursite.com/2020/06/06/computernetwork/"/>
+    <id>http://yoursite.com/2020/06/06/computernetwork/</id>
+    <published>2020-06-06T13:32:31.000Z</published>
+    <updated>2020-06-06T13:58:11.170Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、OSI七层网络模型及协议 OSI七层模型为物理层、数据链路层、网络层、传输层、会话层、表示层、应用层，从网络功能的角度观察：下面4层（物理层、数据链路层、网络层和传输层）主要提供数据传输和交换功能，即以节点到节点之间的通信为主；第4层作为上下两部分的桥梁，是整个网络体系结构中最关键的部分；而上3层（会话层、表示层和应用层）则以提供用户与应用程序之间的信息和数据处理功能为主。简言之，下4层主要完成通信子网的功能，上3层主要完成资源子网的功能。<br>2、TCP协议分层<br>分为链路层、网络层、传输层、应用层，其中网络层有IP和ARP等协议，地址解析协议(Address Resolution Protocol,ARP)提供TCP/IP协议的数据结构和实际物理硬件之间的接口，传输层提供两种端到端的通信服务。其中TCP协议(Transmission Control Protocol)提供可靠的数据流运输服务，UDP协议(Use Datagram Protocol)提供不可靠的用户数据报服务。应用层协议包括FTP(文件传输协议)、HTTP(超文本传输协议)、Telent(远程终端协议)、SMTP(简单邮件传送协议)等。<br>3、TCP连接三次握手<br>作用:1、信息对等，接收机器可以确认自己的发报能力和对方接收能力正常；2、防止请求超时导致脏连接，由于TTL网络报文生存时间超过TCP请求超时时间，故可能发送超时请求导致脏连接。<br>4、TCP断开连接四次挥手<br>作用:释放连接时，被动方服务器，突然收到主动方客户端释放连接的请求时并不能立即释放连接，因为还有必要的数据需要处理，所以服务器先返回ACK确认收到报文，经过CLOSE-WAIT阶段准备好释放连接之后，才能返回FIN释放连接报文。，</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1、OSI七层网络模型及协议 OSI七层模型为物理层、数据链路层、网络层、传输层、会话层、表示层、应用层，从网络功能的角度观察：下面4层（物理层、数据链路层、网络层和传输层）主要提供数据传输和交换功能，即以节点到节点之间的通信为主；第4层作为上下两部分的桥梁，是整个网络体系
+      
+    
+    </summary>
+    
+      <category term="计算机网络" scheme="http://yoursite.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="计算机网络" scheme="http://yoursite.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>vivo2020校招A卷第一题、服务部署</title>
@@ -387,97 +465,6 @@
     
     
       <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SPA</title>
-    <link href="http://yoursite.com/2020/03/08/SPA/"/>
-    <id>http://yoursite.com/2020/03/08/SPA/</id>
-    <published>2020-03-08T09:17:45.000Z</published>
-    <updated>2020-03-08T09:25:59.375Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="SPA"><a href="#SPA" class="headerlink" title="SPA"></a>SPA</h2><p>单页Web应用（single page web application，SPA），就是只有一张Web页面的应用，是加载单个HTML 页面并在用户与应用程序交互时动态更新该页面的Web应用程序。</p><a id="more"></a><h3 id="SPA的特点："><a href="#SPA的特点：" class="headerlink" title="SPA的特点："></a>SPA的特点：</h3><ul><li>速度：更好的用户体验，让用户在web app感受native app的速度和流畅，</li><li>MVVM：经典MVVM开发模式，前后端各负其责。</li><li>ajax：重前端，业务逻辑全部在本地操作，数据都需要通过AJAX同步、提交。</li><li>路由：在URL中采用#号来作为当前视图的地址,改变#号后的参数，页面并不会重载<h3 id="SPA的两个缺点："><a href="#SPA的两个缺点：" class="headerlink" title="SPA的两个缺点："></a>SPA的两个缺点：</h3></li><li>首屏渲染等待时长： 必须得加载完毕，才能渲染出首屏</li><li>seo不友好：爬虫只能拿到一个div，认为页面是空的，不利于seo<h3 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h3></li><li>用循环的视角审视Web应用开发</li><li>框定一个一致的SPA图形用户界面（GUI）和模型</li><li>将SPA的原则带回服务器端</li><li>聚集于对合适的应用进行早期SPA开发 [3]<h3 id="SPA的优缺点"><a href="#SPA的优缺点" class="headerlink" title="SPA的优缺点"></a>SPA的优缺点</h3>单页Web程序的出现是客户端发展的必然结果，但是该技术也是有些局限性，所以采用之前需要了解清楚它的优缺点。</li></ul><p>1、优点：<br>1). 良好的交互体验<br>用户不需要重新刷新页面，获取数据也是通过Ajax异步获取，页面显示流畅。<br>2). 良好的前后端工作分离模式<br>单页Web应用可以和RESTful规约一起使用，通过REST API提供接口数据，并使用Ajax异步获取，这样有助于分离客户端和服务器端工作。更进一步，可以在客户端也可以分解为静态页面和页面交互两个部分。<br>3). 减轻服务器压力<br>服务器只用出数据就可以，不用管展示逻辑和页面合成，吞吐能力会提高几倍；<br>4). 共用一套后端程序代码<br>不用修改后端程序代码就可以同时用于Web界面、手机、平板等多种客户端；</p><p>2、缺点：<br>1). SEO难度较高<br>由于所有的内容都在一个页面中动态替换显示，所以在SEO上其有着天然的弱势，所以如果你的站点对SEO很看重，且要用单页应用，那么就做些静态页面给搜索引擎用吧。<br>2). 前进、后退管理<br>由于单页Web应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理，当然此问题也有解决方案，比如利用URI中的散列+iframe实现。<br>3). 初次加载耗时多<br>为实现单页Web应用功能及显示效果，需要在加载页面的时候将JavaScript、CSS统一加载，部分页面可以在需要的时候加载。所以必须对JavaScript及CSS代码进行合并压缩处理，如果使用第三方库，建议使用一些大公司的CDN，因此带宽的消耗是必然的。</p><p>转自<a href="https://www.jianshu.com/p/dcea4d914b65" target="_blank" rel="noopener">雄霸烽火狼</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;SPA&quot;&gt;&lt;a href=&quot;#SPA&quot; class=&quot;headerlink&quot; title=&quot;SPA&quot;&gt;&lt;/a&gt;SPA&lt;/h2&gt;&lt;p&gt;单页Web应用（single page web application，SPA），就是只有一张Web页面的应用，是加载单个HTML 页面并在用户与应用程序交互时动态更新该页面的Web应用程序。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优化网站加载速度的34条法则，Yahoo!</title>
-    <link href="http://yoursite.com/2020/03/05/%E4%BC%98%E5%8C%96%E7%BD%91%E7%AB%99%E5%8A%A0%E8%BD%BD%E9%80%9F%E5%BA%A6%E7%9A%8434%E6%9D%A1%E6%B3%95%E5%88%99,%20Yahoo!/"/>
-    <id>http://yoursite.com/2020/03/05/优化网站加载速度的34条法则, Yahoo!/</id>
-    <published>2020-03-05T12:16:09.000Z</published>
-    <updated>2020-03-05T12:40:37.320Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1-Minimize-HTTP-Requests-减少-HTTP-请求"><a href="#1-Minimize-HTTP-Requests-减少-HTTP-请求" class="headerlink" title="1.Minimize HTTP Requests　　减少 HTTP 请求"></a>1.Minimize HTTP Requests　　减少 HTTP 请求</h3><p>　　图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。</p><h3 id="2-Use-a-Content-Delivery-Network-利用-CDN-技术"><a href="#2-Use-a-Content-Delivery-Network-利用-CDN-技术" class="headerlink" title="2.Use a Content Delivery Network　　利用 CDN 技术"></a>2.Use a Content Delivery Network　　利用 CDN 技术</h3><h3 id="3-Add-an-Expires-or-a-Cache-Control-Header-设置头文件过期或者静态缓存"><a href="#3-Add-an-Expires-or-a-Cache-Control-Header-设置头文件过期或者静态缓存" class="headerlink" title="3.Add an Expires or a Cache-Control Header　　设置头文件过期或者静态缓存"></a>3.Add an Expires or a Cache-Control Header　　设置头文件过期或者静态缓存</h3><p>　　浏览器会用缓存来减少http请求数来加快页面加载的时间，如果页面头部加一个很长的过期时间，浏览器就会一直缓存页面里的元素。不过这样如果页面里的东西变动的话就要改名字了，否则用户端不会主动刷新，看自己衡量了~ 这项可以通过修改.htaccess文件来实现。<br><a id="more"></a></p><h3 id="4-Gzip-Components-Gzip压缩"><a href="#4-Gzip-Components-Gzip压缩" class="headerlink" title="4.Gzip Components　　Gzip压缩"></a>4.Gzip Components　　Gzip压缩</h3><p>　　Gzip格式是一种很普遍的压缩技术，几乎所有的浏览器都有解压Gzip格式的能力，而且它可以压缩的比例非常大，一般压缩率为85%。压缩没压缩，可以到 这里 做下测试。</p><h3 id="5-Put-Stylesheets-at-the-Top-把CSS放顶部"><a href="#5-Put-Stylesheets-at-the-Top-把CSS放顶部" class="headerlink" title="5.Put Stylesheets at the Top　　把CSS放顶部"></a>5.Put Stylesheets at the Top　　把CSS放顶部</h3><p>　　让浏览者能尽早的看到网站的完整样式。</p><h3 id="6-Put-Scripts-at-the-Bottom-把-JS-放底部"><a href="#6-Put-Scripts-at-the-Bottom-把-JS-放底部" class="headerlink" title="6.Put Scripts at the Bottom　　把 JS 放底部"></a>6.Put Scripts at the Bottom　　把 JS 放底部</h3><p>　　网站呈现完毕后再进行功能设置，当然这些JS要在你的加载过程中不影响内容表现。</p><h3 id="7-Avoid-CSS-Expressions-避免-CSS-Expressions"><a href="#7-Avoid-CSS-Expressions-避免-CSS-Expressions" class="headerlink" title="7.Avoid CSS Expressions　　避免 CSS Expressions"></a>7.Avoid CSS Expressions　　避免 CSS Expressions</h3><p>　　CSS表达式很可怕，这个只被IE支持的东西执行时候的运算量非常大，你移动一下鼠标它都要进行重计算的，但有时候为了做浏览器的兼容必须要用到这个</p><h3 id="8-Make-JavaScript-and-CSS-External-将-JS-和-CSS-外链"><a href="#8-Make-JavaScript-and-CSS-External-将-JS-和-CSS-外链" class="headerlink" title="8.Make JavaScript and CSS External　　将 JS 和 CSS 外链"></a>8.Make JavaScript and CSS External　　将 JS 和 CSS 外链</h3><p>　　前面讲到了缓存这个事情，一些较为公用的JS和CSS，我们可以使用外链的形式，譬如我就是从Google外链来的jQuery文件，如果我的浏览者在浏览别的使用了这个外链文件的网站时已经下载并缓存了这个文件，那么他在浏览我的网站的时候就不需要再进行下载了！~</p><h3 id="9-Reduce-DNS-Lookups-减少DNS查找"><a href="#9-Reduce-DNS-Lookups-减少DNS查找" class="headerlink" title="9.Reduce DNS Lookups　　减少DNS查找"></a>9.Reduce DNS Lookups　　减少DNS查找</h3><p>　　貌似是要减少网站从外部调用资源，我的Google分析和picasa的外链图片都算在里面了。</p><h3 id="10-Minify-JavaScript-and-CSS-减小-JS-和-CSS-的体积"><a href="#10-Minify-JavaScript-and-CSS-减小-JS-和-CSS-的体积" class="headerlink" title="10.Minify JavaScript and CSS　　减小 JS 和 CSS 的体积"></a>10.Minify JavaScript and CSS　　减小 JS 和 CSS 的体积</h3><p>　　写JS和CSS都是有技巧的，用最少的代码实现同样的功能，减少空白，增强逻辑性，用缩写方式等等，当然也有不少工具也能够帮你实现</p><h3 id="11-Avoid-Redirects-避免重定向"><a href="#11-Avoid-Redirects-避免重定向" class="headerlink" title="11.Avoid Redirects　　避免重定向"></a>11.Avoid Redirects　　避免重定向</h3><p>　　在写入链接时，虽然”<a href="http://www.today-s-ooxx..com&quot;" target="_blank" rel="noopener">http://www.today-s-ooxx..com&quot;</a> 和 “<a href="http://www.today-s-ooxx..com/&quot;" target="_blank" rel="noopener">http://www.today-s-ooxx..com/&quot;</a> 仅有一个最后的”/”只差，但是结果是不同的，服务器需要花时间把前者重定向为后者然后进行跳转，这个要自己注意，也可以在Apache里用Alias 或者mod_rewrite或者DirectorySlash解决。</p><h3 id="12-Remove-Duplicate-Scripts-删除重复脚本"><a href="#12-Remove-Duplicate-Scripts-删除重复脚本" class="headerlink" title="12.Remove Duplicate Scripts　　删除重复脚本"></a>12.Remove Duplicate Scripts　　删除重复脚本</h3><p>　　重复调用的代码浏览器并不会识别忽略，而是会再次运算一遍，这当然是大大的浪费。</p><h3 id="13-Configure-ETags-配置-ETags"><a href="#13-Configure-ETags-配置-ETags" class="headerlink" title="13.Configure ETags　　配置 ETags"></a>13.Configure ETags　　配置 ETags</h3><p>　　搞不清楚咋回事，总之我是在.htaccess里把它删除了。</p><h3 id="14-Make-Ajax-Cacheable-缓存-Ajax"><a href="#14-Make-Ajax-Cacheable-缓存-Ajax" class="headerlink" title="14.Make Ajax Cacheable　　缓存 Ajax"></a>14.Make Ajax Cacheable　　缓存 Ajax</h3><p>　　Ajax是实时响应的，在浏览器接收到新的数据前，旧的数据被缓存，这样能够更好的提高效率。</p><h3 id="15-Flush-the-Buffer-Early-尽早的释放缓冲"><a href="#15-Flush-the-Buffer-Early-尽早的释放缓冲" class="headerlink" title="15.Flush the Buffer Early　　尽早的释放缓冲"></a>15.Flush the Buffer Early　　尽早的释放缓冲</h3><p>　　当用户进行页面请求时，服务器端需要花费200到500毫秒时间来拼合HTML，将写在head与body之间，释放缓冲，这样可以将文件头先发送出去，然后再发送文件内容，提高效率。</p><h3 id="16-Use-GET-for-AJAX-Requests-用-GET-方式进行-AJAX-请求"><a href="#16-Use-GET-for-AJAX-Requests-用-GET-方式进行-AJAX-请求" class="headerlink" title="16.Use GET for AJAX Requests　　用 GET 方式进行 AJAX 请求"></a>16.Use GET for AJAX Requests　　用 GET 方式进行 AJAX 请求</h3><p>　　Get 方法和服务器只有一次交互（发送数据），而 Post 要两次（发送头部再发送数据）。</p><h3 id="17-Post-load-Components-延迟加载组件"><a href="#17-Post-load-Components-延迟加载组件" class="headerlink" title="17.Post-load Components　　延迟加载组件*"></a>17.Post-load Components　　延迟加载组件*</h3><p>　　最先加载必须的组件进行页面初始化，然后再加载其他，YUI Image Loader 是很好的例子。</p><h3 id="18-Preload-components-预加载组件"><a href="#18-Preload-components-预加载组件" class="headerlink" title="18.Preload components　　预加载组件"></a>18.Preload components　　预加载组件</h3><p>　　提前加载以后可能用到的东西，和延迟加载并不冲突，它的目的是为后续请求提供更快的响应，参见Google首页上的CSS sprites应用。</p><h3 id="19-Reduce-the-Number-of-DOM-Elements-减少-DOM-元素数量"><a href="#19-Reduce-the-Number-of-DOM-Elements-减少-DOM-元素数量" class="headerlink" title="19.Reduce the Number of DOM Elements　　减少 DOM 元素数量"></a>19.Reduce the Number of DOM Elements　　减少 DOM 元素数量</h3><p>　　复杂的页面结构意味着更长的下载及响应时间，更合理更高效的使用标签来架构页面，是好的前端的必备条件。</p><h3 id="20-Split-Components-Across-Domains-跨域分离组件"><a href="#20-Split-Components-Across-Domains-跨域分离组件" class="headerlink" title="20.Split Components Across Domains　　跨域分离组件"></a>20.Split Components Across Domains　　跨域分离组件</h3><p>　　页面组件多个来源可以增大你的平行下载量，但注意不要过多，超过2-4个域名会引起上面说到的DNS查找浪费。</p><h3 id="21-Minimize-the-Number-of-iframes-减少-iframe-数量"><a href="#21-Minimize-the-Number-of-iframes-减少-iframe-数量" class="headerlink" title="21.Minimize the Number of iframes　　减少 iframe 数量"></a>21.Minimize the Number of iframes　　减少 iframe 数量</h3><p>　　需要更有效的利用 ifames。<br>　　iframe 优点：有利于下载缓慢的广告等第三方内容，安全沙箱，并行下载脚本<br>　　iframe 缺点：即使为空也会有较大资源消耗，会阻止页面的onload，非语义</p><h3 id="22-No-404s-不要出现-404-页面"><a href="#22-No-404s-不要出现-404-页面" class="headerlink" title="22.No 404s　　不要出现 404 页面"></a>22.No 404s　　不要出现 404 页面</h3><p>　　站点本身里（非搜索结果）出现404页面，无意义的404页面会影响用户体验并且会消耗服务器资源。</p><h3 id="23-Reduce-Cookie-Size-减小-Cookie"><a href="#23-Reduce-Cookie-Size-减小-Cookie" class="headerlink" title="23.Reduce Cookie Size　　减小 Cookie"></a>23.Reduce Cookie Size　　减小 Cookie</h3><p>　　Cookie在服务器及浏览器之间的通过文件头进行交换，尽可能减小Cookie体积，设置合理的过期时间，能够很好的提高效率。</p><h3 id="24-Use-Cookie-free-Domains-for-Components-对组件使用无Cookie的域名"><a href="#24-Use-Cookie-free-Domains-for-Components-对组件使用无Cookie的域名" class="headerlink" title="24.Use Cookie-free Domains for Components　　对组件使用无Cookie的域名"></a>24.Use Cookie-free Domains for Components　　对组件使用无Cookie的域名</h3><p>　　对静态组件的Cookie读取是一种浪费，使用另一个无Cookie的域名来存放你的静态组件式一个好方法，或者也可以在Cookie中只存放带www的域名。</p><h3 id="25-Minimize-DOM-Access-减少DOM的访问次数"><a href="#25-Minimize-DOM-Access-减少DOM的访问次数" class="headerlink" title="25.Minimize DOM Access　　减少DOM的访问次数"></a>25.Minimize DOM Access　　减少DOM的访问次数</h3><p>　　JS访问DOM是很慢的，尽量不要用JS来设置页面布局。</p><h3 id="26-Develop-Smart-Event-Handlers-开发灵活的事件处理句柄"><a href="#26-Develop-Smart-Event-Handlers-开发灵活的事件处理句柄" class="headerlink" title="26.Develop Smart Event Handlers　　开发灵活的事件处理句柄"></a>26.Develop Smart Event Handlers　　开发灵活的事件处理句柄</h3><p>　　DOM树上过多的元素被加入事件句柄的话，反应效率肯定会低，YUI事件工具有一个 onAvailable 方法可以帮助你灵活的设置DOM事件句柄</p><h3 id="27-Choose-lt-link-gt-over-import-使用-而非-import"><a href="#27-Choose-lt-link-gt-over-import-使用-而非-import" class="headerlink" title="27.Choose &lt; link &gt;over @import　　使用 而非 @import"></a>27.Choose &lt; link &gt;over @import　　使用 <link>而非 @import</h3><p>　　在IE中使用@import就和在页面底部用&lt; link &gt;一样，我们前面说要把&lt; link &gt;放顶部的。</p><h3 id="28-Avoid-Filters-避免过滤器的使用"><a href="#28-Avoid-Filters-避免过滤器的使用" class="headerlink" title="28.Avoid Filters　　避免过滤器的使用"></a>28.Avoid Filters　　避免过滤器的使用</h3><p>　　如果需要Alpha透明，不要使用AlphaImageLoader，它效率低下而且只对IE6及以下的版本适用，用PNG8图片。如果你非要使用，加上_filter以免影响IE7+用户。</p><h3 id="29-Optimize-Images-优化图片"><a href="#29-Optimize-Images-优化图片" class="headerlink" title="29.Optimize Images　　优化图片"></a>29.Optimize Images　　优化图片</h3><p>　　将你的GIF转为PNG8会是个减小体积的好办法，另外有很多方法处理你的JPG及PNG图片以达到优化效果。</p><h3 id="30-Optimize-CSS-Sprites-优化-CSS-精灵图"><a href="#30-Optimize-CSS-Sprites-优化-CSS-精灵图" class="headerlink" title="30.Optimize CSS Sprites　　优化 CSS 精灵图"></a>30.Optimize CSS Sprites　　优化 CSS 精灵图</h3><p>　　在CSS 精灵图中竖直并尽量紧凑的排列图片，尽量将颜色相似的图片排在一起，会减小图片本身的大小及提高页面图片显示速度。</p><h3 id="31-Don’t-Scale-Images-in-HTML-不要在-HTML中-缩放图片"><a href="#31-Don’t-Scale-Images-in-HTML-不要在-HTML中-缩放图片" class="headerlink" title="31.Don’t Scale Images in HTML　　不要在 HTML中 缩放图片"></a>31.Don’t Scale Images in HTML　　不要在 HTML中 缩放图片</h3><p>　　图片要用多大的就用多大的，1000X1000的图片被width=”100″ height=”100″以后，本身的KB数是不会减少的。</p><h3 id="32-Make-favicon-ico-Small-and-Cacheable-缩小favicon-ico的大小并缓存它"><a href="#32-Make-favicon-ico-Small-and-Cacheable-缩小favicon-ico的大小并缓存它" class="headerlink" title="32.Make favicon. ico Small and Cacheable　　缩小favicon. ico的大小并缓存它"></a>32.Make favicon. ico Small and Cacheable　　缩小favicon. ico的大小并缓存它</h3><p>　　站点的浏览器ICO应该不是经常换吧，那就长时间的缓存它，并且最好控制在1K以下。</p><h3 id="33-Keep-Components-under-25K-保证组件在25K以下"><a href="#33-Keep-Components-under-25K-保证组件在25K以下" class="headerlink" title="33.Keep Components under 25K　　保证组件在25K以下"></a>33.Keep Components under 25K　　保证组件在25K以下</h3><p>　　iPhone不能缓存25K以上的组件，并且这还是要在被压缩前。</p><h3 id="34-Pack-Components-into-a-Multipart-Document-将组件打包进一个多部分的文档中"><a href="#34-Pack-Components-into-a-Multipart-Document-将组件打包进一个多部分的文档中" class="headerlink" title="34.Pack Components into a Multipart Document　将组件打包进一个多部分的文档中"></a>34.Pack Components into a Multipart Document　将组件打包进一个多部分的文档中</h3><p>　　就好像在邮件中加入附件一样，一个HTTP请求就够了，但是这一技术需要确保你的代理支持，iPhone就不支持。</p><h3 id="转载"><a href="#转载" class="headerlink" title="转载"></a>转载</h3><p>原文地址：<a href="https://developer.yahoo.com/performance/rules.html" target="_blank" rel="noopener">Best Practices for Speeding Up Your Web Site</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;1-Minimize-HTTP-Requests-减少-HTTP-请求&quot;&gt;&lt;a href=&quot;#1-Minimize-HTTP-Requests-减少-HTTP-请求&quot; class=&quot;headerlink&quot; title=&quot;1.Minimize HTTP Requests　　减少 HTTP 请求&quot;&gt;&lt;/a&gt;1.Minimize HTTP Requests　　减少 HTTP 请求&lt;/h3&gt;&lt;p&gt;　　图片、css、script、flash等等这些都会增加http请求数，减少这些元素的数量就能减少响应时间。把多个JS、CSS在可能的情况下写进一个文件，页面里直接写入图片也是不好的做法，应该写进CSS里，利用 CSS sprites 将小图拼合后利用background来定位。&lt;/p&gt;
-&lt;h3 id=&quot;2-Use-a-Content-Delivery-Network-利用-CDN-技术&quot;&gt;&lt;a href=&quot;#2-Use-a-Content-Delivery-Network-利用-CDN-技术&quot; class=&quot;headerlink&quot; title=&quot;2.Use a Content Delivery Network　　利用 CDN 技术&quot;&gt;&lt;/a&gt;2.Use a Content Delivery Network　　利用 CDN 技术&lt;/h3&gt;&lt;h3 id=&quot;3-Add-an-Expires-or-a-Cache-Control-Header-设置头文件过期或者静态缓存&quot;&gt;&lt;a href=&quot;#3-Add-an-Expires-or-a-Cache-Control-Header-设置头文件过期或者静态缓存&quot; class=&quot;headerlink&quot; title=&quot;3.Add an Expires or a Cache-Control Header　　设置头文件过期或者静态缓存&quot;&gt;&lt;/a&gt;3.Add an Expires or a Cache-Control Header　　设置头文件过期或者静态缓存&lt;/h3&gt;&lt;p&gt;　　浏览器会用缓存来减少http请求数来加快页面加载的时间，如果页面头部加一个很长的过期时间，浏览器就会一直缓存页面里的元素。不过这样如果页面里的东西变动的话就要改名字了，否则用户端不会主动刷新，看自己衡量了~ 这项可以通过修改.htaccess文件来实现。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript 匿名函数与闭包</title>
-    <link href="http://yoursite.com/2020/03/02/AnonymousFunctionAndClosure/"/>
-    <id>http://yoursite.com/2020/03/02/AnonymousFunctionAndClosure/</id>
-    <published>2020-03-02T02:19:22.000Z</published>
-    <updated>2020-05-31T07:43:51.582Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。</p></blockquote><a id="more"></a><h2 id="一、匿名函数"><a href="#一、匿名函数" class="headerlink" title="一、匿名函数"></a>一、匿名函数</h2><p>声明一个普通函数,函数名为fun：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>那么将函数名去掉，就是匿名函数：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单独的匿名函数会报错,无法运行、无法调用</span></span><br><span class="line"><span class="comment">//function() &#123;</span></span><br><span class="line"><span class="comment">//  //函数体</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//未在应用场景中，不符合语法，需加上括号</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//在函数后面加上括号，可通过表达式的自我执行，立即执行</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">//如需传值，可以括号内传值</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)(“匿名函数”);</span><br></pre></td></tr></table></figure></p><p>匿名函数运用场景：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1、事件</span></span><br><span class="line">&lt;button id=<span class="string">"btn"</span>&gt;点击&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">    var btn=document.getElementById("btn");</span></span><br><span class="line"><span class="regexp">    btn.onclick=function()&#123;</span></span><br><span class="line"><span class="regexp">        alert("点击按钮");</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2、对象</span></span><br><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">    name:<span class="string">"张三"</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"我是"</span>+<span class="keyword">this</span>.name+<span class="string">"，今年"</span>+<span class="keyword">this</span>.age+<span class="string">"岁。"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj.say());<span class="comment">//我是张三，今年18岁。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3、函数表达式，用作赋值</span></span><br><span class="line"><span class="keyword">var</span> say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"我是张三，今年18岁。"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//4、回调函数</span></span><br><span class="line">say(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"我是张三，今年18岁。"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p><p>匿名函数主要用于闭包，以及模拟块级作用域，减少全局变量，执行结束即销毁，而闭包有所不同</p><h2 id="二、闭包"><a href="#二、闭包" class="headerlink" title="二、闭包"></a>二、闭包</h2><p>都知道在函数内部可以直接读取全局变量，但是在函数外部无法读取函数内部的局部变量。而闭包所实现的就是从外部读取函数内部的局部变量，其方法就是在函数内部创建另一个函数，而如果这个内部函数被返回，并且在其他地方被调用了，这个内部函数就是闭包，闭包会携带它的函数作用域，可以继续存在于缓存中。闭包可以看做两个函数的桥梁，沟通其局部变量。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过全局变量来累加</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    a++;</span><br><span class="line">    alert(<span class="string">"a="</span>+a);</span><br><span class="line">&#125;</span><br><span class="line">add();<span class="comment">//a=2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过闭包返回局部变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        a++;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">alert(add()());<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
-    
-    
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo访问量与访客失效原因</title>
-    <link href="http://yoursite.com/2018/10/16/hexo%E8%AE%BF%E9%97%AE%E9%87%8F%E4%B8%8E%E8%AE%BF%E5%AE%A2%E5%A4%B1%E6%95%88%E5%8E%9F%E5%9B%A0/"/>
-    <id>http://yoursite.com/2018/10/16/hexo访问量与访客失效原因/</id>
-    <published>2018-10-16T08:31:47.000Z</published>
-    <updated>2020-05-30T13:35:02.262Z</updated>
-    
-    <content type="html"><![CDATA[<p>嘻嘻，昨天更新后想看看访问有没有变化的，忽然发现统计功能无效了，之前使用的不蒜子脚本，去看了下原来不蒜子域名修改了。</p><p>不蒜子官网：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a></p><p>解决：将\themes\next\layout_partials\footer.swig下的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p><p>修改为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;嘻嘻，昨天更新后想看看访问有没有变化的，忽然发现统计功能无效了，之前使用的不蒜子脚本，去看了下原来不蒜子域名修改了。&lt;/p&gt;
-&lt;p&gt;不蒜子官网：&lt;a href=&quot;http://busuanzi.ibruce.info/&quot; target=&quot;_blank&quot; rel=&quot;noope
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
