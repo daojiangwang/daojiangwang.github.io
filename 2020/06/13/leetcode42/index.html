@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java,单调栈," />
 
 
 
@@ -88,13 +88,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="djwang呀">
-<meta property="og:url" content="http://yoursite.com/tags/Java/index.html">
+<meta name="description" content="给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。 感谢 Marcos 贡献此图。  输入: [0,1,0,2,1,0,1,3,2,1,2,1]输出: 6  分析：方法一：以一个指针记录当前的高度，另一个指针遍历">
+<meta name="keywords" content="Java,单调栈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode42、接雨水">
+<meta property="og:url" content="http://yoursite.com/2020/06/13/leetcode42/index.html">
 <meta property="og:site_name" content="djwang呀">
+<meta property="og:description" content="给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。 感谢 Marcos 贡献此图。  输入: [0,1,0,2,1,0,1,3,2,1,2,1]输出: 6  分析：方法一：以一个指针记录当前的高度，另一个指针遍历">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/images/202006/rainwatertrap.png">
+<meta property="og:updated_time" content="2020-06-13T03:15:18.132Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="djwang呀">
+<meta name="twitter:title" content="leetcode42、接雨水">
+<meta name="twitter:description" content="给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。 感谢 Marcos 贡献此图。  输入: [0,1,0,2,1,0,1,3,2,1,2,1]输出: 6  分析：方法一：以一个指针记录当前的高度，另一个指针遍历">
+<meta name="twitter:image" content="http://yoursite.com/images/202006/rainwatertrap.png">
 
 
 
@@ -124,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Java/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/13/leetcode42/"/>
 
 
 
 
 
-  <title>Tag: Java | djwang呀</title>
+  <title>leetcode42、接雨水 | djwang呀</title>
   
 
 
@@ -149,7 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	
 	<a href="https://github.com/daojiangwang" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -289,166 +296,186 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Java<small>Tag</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/13/leetcode42/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="djwang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="djwang呀">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/06/13/leetcode42/" itemprop="url">
-              
-                <span itemprop="name">leetcode42、接雨水</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">leetcode42、接雨水</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-13T10:51:39+08:00"
-              content="2020-06-13" >
-          06-13
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-13T10:51:39+08:00">
+                2020-06-13
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/06/13/leetcode42/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/13/leetcode42/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/06/04/leetcode238/" itemprop="url">
-              
-                <span itemprop="name">震惊，该物质不溶于自身！LeetCode238、除自身以外数组的乘积</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-06-04T12:32:44+08:00"
-              content="2020-06-04" >
-          06-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/05/29/JavaCollection/" itemprop="url">
-              
-                <span itemprop="name">JavaCollection</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-29T10:05:52+08:00"
-              content="2020-05-29" >
-          05-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/04/17/proxy/" itemprop="url">
-              
-                <span itemprop="name">代理</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-04-17T12:14:37+08:00"
-              content="2020-04-17" >
-          04-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/05/Spring/" itemprop="url">
-              
-                <span itemprop="name">Spring基础知识</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-05T10:42:59+08:00"
-              content="2020-03-05" >
-          03-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <p>给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。<br><img src="/images/202006/rainwatertrap.png" alt="rainwatertrap"><br>上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。 感谢 Marcos 贡献此图。</p>
+<blockquote>
+<p>输入: [0,1,0,2,1,0,1,3,2,1,2,1]<br>输出: 6</p>
+</blockquote>
+<p><strong>分析</strong>：<br>方法一：以一个指针记录当前的高度，另一个指针遍历其他柱子，当遇到超过当前柱子的高度的柱子时，就可以满足接到雨水，此时计算该凹处的雨水量，并更新当前柱子继续遍历。在数组的另一边可能会遇到逐渐减少的情况会一直得不到处理，此时对剩余柱子逆序做刚才的处理。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(height.length&lt;=<span class="number">2</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> pre = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (height[pre] &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">		pre++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = pre+<span class="number">1</span>; i &lt; height.length; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (height[i] &gt;= height[pre]) &#123;</span><br><span class="line">			<span class="keyword">int</span> min = height[pre];</span><br><span class="line">			<span class="keyword">for</span> (; pre &lt; i; pre++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (min &gt; height[pre])</span><br><span class="line">					res += min - height[pre];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (pre &lt; height.length - <span class="number">2</span>) &#123;</span><br><span class="line">		<span class="keyword">int</span> p = height.length - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (height[p] &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">			p--;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = p-<span class="number">1</span>; i &gt;= pre; i--) &#123;</span><br><span class="line">			<span class="keyword">if</span> (height[i] &gt;= height[p]) &#123;</span><br><span class="line">				<span class="keyword">int</span> min = height[p];</span><br><span class="line">				<span class="keyword">for</span> (; p &gt; i; p--) &#123;</span><br><span class="line">					<span class="keyword">if</span> (min &gt; height[p])</span><br><span class="line">						res += min - height[p];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>方法二：用两个数组分别记录每个柱子的左右最大值，最终累计其凹处的雨水。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = height.length;</span><br><span class="line">	<span class="comment">// left[i]表示i左边的最大值，right[i]表示i右边的最大值</span></span><br><span class="line">	<span class="keyword">int</span>[] left=<span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">	<span class="keyword">int</span>[] right=<span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">		left[i] = Math.max(left[i - <span class="number">1</span>], height[i - <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = len - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		right[i] = Math.max(right[i + <span class="number">1</span>], height[i + <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> level = Math.min(left[i], right[i]);</span><br><span class="line">		res += Math.max(<span class="number">0</span>, level - height[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/单调栈/" rel="tag"><i class="fa fa-tag"></i> 单调栈</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/10/leetcode458/" rel="next" title="量子噬猪！leetcode458、可怜的小猪">
+                <i class="fa fa-chevron-left"></i> 量子噬猪！leetcode458、可怜的小猪
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -456,6 +483,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -732,6 +766,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1128,26 +1166,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

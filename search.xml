@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JavaCollection</title>
-    <url>/2020/05/29/JavaCollection/</url>
-    <content><![CDATA[<h2 id="Java-集合框架图："><a href="#Java-集合框架图：" class="headerlink" title="Java 集合框架图："></a>Java 集合框架图：</h2><a id="more"></a>
-<p><img src="/images/202005/JavaCollection.jpg" alt="Java集合框架图"><br>其中红色为接口，蓝色为抽象类，绿色为并发包中的类</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SPA</title>
     <url>/2020/03/08/SPA/</url>
     <content><![CDATA[<h2 id="SPA"><a href="#SPA" class="headerlink" title="SPA"></a>SPA</h2><p>单页Web应用（single page web application，SPA），就是只有一张Web页面的应用，是加载单个HTML 页面并在用户与应用程序交互时动态更新该页面的Web应用程序。</p>
@@ -39,6 +26,19 @@
       </tags>
   </entry>
   <entry>
+    <title>JavaCollection</title>
+    <url>/2020/05/29/JavaCollection/</url>
+    <content><![CDATA[<h2 id="Java-集合框架图："><a href="#Java-集合框架图：" class="headerlink" title="Java 集合框架图："></a>Java 集合框架图：</h2><a id="more"></a>
+<p><img src="/images/202005/JavaCollection.jpg" alt="Java集合框架图"><br>其中红色为接口，蓝色为抽象类，绿色为并发包中的类</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring基础知识</title>
     <url>/2020/03/05/Spring/</url>
     <content><![CDATA[<p>1、IOC/DI<br>1.1 IOC（Inversion Of Control，控制反转）是Spring的基础，</p>
@@ -55,14 +55,27 @@
       </tags>
   </entry>
   <entry>
+    <title>SpringMVC</title>
+    <url>/2020/06/07/SpringMVC/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>SpringBoot</title>
     <url>/2020/06/07/SpringBoot/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>SpringMVC</title>
-    <url>/2020/06/07/SpringMVC/</url>
-    <content><![CDATA[]]></content>
+    <title>计算机网络基础知识</title>
+    <url>/2020/06/06/computernetwork/</url>
+    <content><![CDATA[<p>1、OSI七层网络模型及协议 OSI七层模型为物理层、数据链路层、网络层、传输层、会话层、表示层、应用层，从网络功能的角度观察：下面4层（物理层、数据链路层、网络层和传输层）主要提供数据传输和交换功能，即以节点到节点之间的通信为主；第4层作为上下两部分的桥梁，是整个网络体系结构中最关键的部分；而上3层（会话层、表示层和应用层）则以提供用户与应用程序之间的信息和数据处理功能为主。简言之，下4层主要完成通信子网的功能，上3层主要完成资源子网的功能。<br>2、TCP协议分层<br>分为链路层、网络层、传输层、应用层，其中网络层有IP和ARP等协议，地址解析协议(Address Resolution Protocol,ARP)提供TCP/IP协议的数据结构和实际物理硬件之间的接口，传输层提供两种端到端的通信服务。其中TCP协议(Transmission Control Protocol)提供可靠的数据流运输服务，UDP协议(Use Datagram Protocol)提供不可靠的用户数据报服务。应用层协议包括FTP(文件传输协议)、HTTP(超文本传输协议)、Telent(远程终端协议)、SMTP(简单邮件传送协议)等。<br>3、TCP连接三次握手<br>作用:1、信息对等，接收机器可以确认自己的发报能力和对方接收能力正常；2、防止请求超时导致脏连接，由于TTL网络报文生存时间超过TCP请求超时时间，故可能发送超时请求导致脏连接。<br>4、TCP断开连接四次挥手<br>作用:释放连接时，被动方服务器，突然收到主动方客户端释放连接的请求时并不能立即释放连接，因为还有必要的数据需要处理，所以服务器先返回ACK确认收到报文，经过CLOSE-WAIT阶段准备好释放连接之后，才能返回FIN释放连接报文。，</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+        <tag>计算机网络</tag>
+      </tags>
   </entry>
   <entry>
     <title>Spring框架</title>
@@ -93,19 +106,6 @@
       </categories>
       <tags>
         <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机网络基础知识</title>
-    <url>/2020/06/06/computernetwork/</url>
-    <content><![CDATA[<p>1、OSI七层网络模型及协议 OSI七层模型为物理层、数据链路层、网络层、传输层、会话层、表示层、应用层，从网络功能的角度观察：下面4层（物理层、数据链路层、网络层和传输层）主要提供数据传输和交换功能，即以节点到节点之间的通信为主；第4层作为上下两部分的桥梁，是整个网络体系结构中最关键的部分；而上3层（会话层、表示层和应用层）则以提供用户与应用程序之间的信息和数据处理功能为主。简言之，下4层主要完成通信子网的功能，上3层主要完成资源子网的功能。<br>2、TCP协议分层<br>分为链路层、网络层、传输层、应用层，其中网络层有IP和ARP等协议，地址解析协议(Address Resolution Protocol,ARP)提供TCP/IP协议的数据结构和实际物理硬件之间的接口，传输层提供两种端到端的通信服务。其中TCP协议(Transmission Control Protocol)提供可靠的数据流运输服务，UDP协议(Use Datagram Protocol)提供不可靠的用户数据报服务。应用层协议包括FTP(文件传输协议)、HTTP(超文本传输协议)、Telent(远程终端协议)、SMTP(简单邮件传送协议)等。<br>3、TCP连接三次握手<br>作用:1、信息对等，接收机器可以确认自己的发报能力和对方接收能力正常；2、防止请求超时导致脏连接，由于TTL网络报文生存时间超过TCP请求超时时间，故可能发送超时请求导致脏连接。<br>4、TCP断开连接四次挥手<br>作用:释放连接时，被动方服务器，突然收到主动方客户端释放连接的请求时并不能立即释放连接，因为还有必要的数据需要处理，所以服务器先返回ACK确认收到报文，经过CLOSE-WAIT阶段准备好释放连接之后，才能返回FIN释放连接报文。，</p>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
-        <tag>计算机网络</tag>
       </tags>
   </entry>
   <entry>
@@ -183,6 +183,24 @@
       </categories>
       <tags>
         <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode42、接雨水</title>
+    <url>/2020/06/13/leetcode42/</url>
+    <content><![CDATA[<p>给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。<br><img src="/images/202006/rainwatertrap.png" alt="rainwatertrap"><br>上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。 感谢 Marcos 贡献此图。</p>
+<blockquote>
+<p>输入: [0,1,0,2,1,0,1,3,2,1,2,1]<br>输出: 6</p>
+</blockquote>
+<p><strong>分析</strong>：<br>方法一：以一个指针记录当前的高度，另一个指针遍历其他柱子，当遇到超过当前柱子的高度的柱子时，就可以满足接到雨水，此时计算该凹处的雨水量，并更新当前柱子继续遍历。在数组的另一边可能会遇到逐渐减少的情况会一直得不到处理，此时对剩余柱子逆序做刚才的处理。<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(height.length&lt;=<span class="number">2</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> pre = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (height[pre] &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">		pre++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = pre+<span class="number">1</span>; i &lt; height.length; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (height[i] &gt;= height[pre]) &#123;</span><br><span class="line">			<span class="keyword">int</span> min = height[pre];</span><br><span class="line">			<span class="keyword">for</span> (; pre &lt; i; pre++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (min &gt; height[pre])</span><br><span class="line">					res += min - height[pre];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (pre &lt; height.length - <span class="number">2</span>) &#123;</span><br><span class="line">		<span class="keyword">int</span> p = height.length - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (height[p] &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">			p--;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = p-<span class="number">1</span>; i &gt;= pre; i--) &#123;</span><br><span class="line">			<span class="keyword">if</span> (height[i] &gt;= height[p]) &#123;</span><br><span class="line">				<span class="keyword">int</span> min = height[p];</span><br><span class="line">				<span class="keyword">for</span> (; p &gt; i; p--) &#123;</span><br><span class="line">					<span class="keyword">if</span> (min &gt; height[p])</span><br><span class="line">						res += min - height[p];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>方法二：用两个数组分别记录每个柱子的左右最大值，最终累计其凹处的雨水。<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = height.length;</span><br><span class="line">	<span class="comment">// left[i]表示i左边的最大值，right[i]表示i右边的最大值</span></span><br><span class="line">	<span class="keyword">int</span>[] left=<span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">	<span class="keyword">int</span>[] right=<span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">		left[i] = Math.max(left[i - <span class="number">1</span>], height[i - <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = len - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		right[i] = Math.max(right[i + <span class="number">1</span>], height[i + <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">		<span class="keyword">int</span> level = Math.min(left[i], right[i]);</span><br><span class="line">		res += Math.max(<span class="number">0</span>, level - height[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>单调栈</tag>
       </tags>
   </entry>
   <entry>
@@ -428,20 +446,31 @@
       </tags>
   </entry>
   <entry>
-    <title>关于博客</title>
-    <url>/2018/04/28/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<pre><code>考研录取后赋闲在家，闲来无事。
-</code></pre><p>&emsp;&emsp;在过去一段时间内，我从很多优秀的博客学到了很多，深深感谢那些博主通过博客帮助了很多求学的人。<br>&emsp;&emsp;于是也就有个建立博客的念头，在前几日看到weiyang大佬的搭建博客的文章，便着手搭建这个博客，感谢现在互联网的便利，通过github+hexo，以及众多博主的经验分享，综合选择了NexT主题，终于搭建了这个小窝。希望能督促自己,并分享自己今后的生活与学习，也欢迎各位小伙伴的交流。<br>&emsp;&emsp;在此贴出一些学习的文章，希望想搭建博客的小伙伴可以学习。</p>
-<p>&emsp;&emsp;博文文章：<br>&emsp;&emsp;&emsp;&emsp;<a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/w_ngzeqi/article/details/73863543" target="_blank" rel="noopener">hexo之next主题个性化配置详细教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/shengshengshiwo/article/details/79350413" target="_blank" rel="noopener">NexT的主题设定与配置</a><br>&emsp;&emsp;&emsp;&emsp;<a href="http://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/blue_zy/article/details/79058763" target="_blank" rel="noopener">Hexo更换next主题和优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有哪些好看的 Hexo 主题？</a></p>
-<p>&emsp;&emsp;后期陆续补充。。。</p>
+    <title>vivo 2020届校招在线编程笔试B卷</title>
+    <url>/2020/05/29/vivo2020B/</url>
+    <content><![CDATA[<p>牛客vivo2020校招编程题解<br><a id="more"></a></p>
+<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><p>今年7月份vivo迎来了新入职的大学生，现在需要为每个新同事分配一个工号。人力资源部同事小v设计了一个方法为每个人进行排序并分配最终的工号，具体规则是：</p>
+<blockquote>
+<p>将N（N&lt;10000）个人排成一排，从第1个人开始报数；如果报数是M的倍数就出列，报到队尾后则回到队头继续报，直到所有人都出列；</p>
+</blockquote>
+<p>最后按照出列顺序为每个人依次分配工号。请你使用自己擅长的编程语言帮助小v实现此方法。<br>解法：使用循环单链表，依次出队<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	ListNode next;</span><br><span class="line">	ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">int</span> m=input[<span class="number">1</span>];</span><br><span class="line">	ListNode people=<span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">	ListNode p = people;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		ListNode node=<span class="keyword">new</span> ListNode(i);</span><br><span class="line">		p.next=node;</span><br><span class="line">		p=p.next;</span><br><span class="line">	&#125;</span><br><span class="line">	p.next=people;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> out=n;</span><br><span class="line">	StringBuilder sb=<span class="keyword">new</span> StringBuilder();</span><br><span class="line">	p=people;</span><br><span class="line">	<span class="keyword">while</span>(out&gt;<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;m;i++)&#123;</span><br><span class="line">			p=p.next;</span><br><span class="line">		&#125;</span><br><span class="line">		sb.append(p.val);</span><br><span class="line">		sb.append(<span class="string">" "</span>);</span><br><span class="line">		p.val=p.next.val;</span><br><span class="line">		p.next=p.next.next;</span><br><span class="line">		out--;</span><br><span class="line">	&#125;</span><br><span class="line">	sb.append(p.val);</span><br><span class="line">	<span class="keyword">return</span> sb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3><p>小v在公司负责游戏运营，今天收到一款申请新上架的游戏“跳一跳”，为了确保提供给广大玩家朋友们的游戏都是高品质的，按照运营流程小v必须对新游戏进行全方位了解体验和评估。这款游戏的规则如下：</p>
+<blockquote>
+<p>有n个盒子排成了一行，每个盒子上面有一个数字a[i]，表示在该盒子上的人最多能向右移动a[i]个盒子（比如当前所在盒子上的数字是3，则表示可以一次向右前进1个盒子，2个盒子或者3个盒子）。</p>
+</blockquote>
+<p>现在小v从左边第一个盒子上开始体验游戏，请问最少需要移动几次能到最后一个盒子上？<br>分析：最远跳跃，依次保留每次跳跃中的可以跳跃到下一次的最远距离<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">if</span>(input == <span class="keyword">null</span>||input.length == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> len=input.length;</span><br><span class="line">	<span class="keyword">int</span> step=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> end=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> maxReach=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(maxReach &lt; i) <span class="keyword">return</span> -<span class="number">1</span>;<span class="comment">//如果不能到达最后，则返回-1</span></span><br><span class="line">		<span class="comment">//记录各节点所能到达的最远距离</span></span><br><span class="line">		maxReach=Math.max(maxReach,i+input[i]); </span><br><span class="line">		<span class="keyword">if</span>(maxReach &gt;= len-<span class="number">1</span>) <span class="keyword">return</span> (step+<span class="number">1</span>);<span class="comment">//超出则直接返回</span></span><br><span class="line">		<span class="keyword">if</span>(i==end)&#123;</span><br><span class="line">			end = maxReach;</span><br><span class="line">			step++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> step;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p>小v最近在玩一款挖矿的游戏，该游戏介绍如下：</p>
+<blockquote>
+<p>1、每次可以挖到多个矿石，每个矿石的重量都不一样，挖矿结束后需要通过一款平衡矿车运送下山；<br>2、平衡矿车有左右2个车厢，中间只有1个车轮沿着导轨滑到山下，且矿车只有在2个车厢重量完全相等且矿石数量相差不超过1个的情况下才能成功运送矿石，否则在转弯时可能出现侧翻。</p>
+</blockquote>
+<p>假设小v挖到了n（n&lt;100）个矿石，每个矿石重量不超过100，为了确保一次性将n个矿石都运送出去，一旦矿车的车厢重量不一样就需要购买配重砝码。请问小v每次最少需要购买多少重量的砝码呢? （假设车厢足够放下这些矿石和砝码，砝码重量任选）<br>分析：开始用得贪心，不能ac,,看评论用的动态规划，不是很理解，贴上代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n = input.length; <span class="comment">//n为石块数</span></span><br><span class="line">	<span class="keyword">int</span> s = <span class="number">0</span>; <span class="comment">//s记录总重量，题解要尽可能满足两边平均</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		s += input[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> S = s &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> N = (n + <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span>[][] dp=<span class="keyword">new</span> <span class="keyword">int</span>[S + <span class="number">1</span>][N+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= S; ++i) dp[i][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span>[][] tmp=dp;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = input[i]; j &lt;= S; ++j) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= N; ++k) &#123;</span><br><span class="line">				tmp[j][k] = Math.max(tmp[j][k], dp[j - input[i]][k - <span class="number">1</span>] + input[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">		dp=tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> ((n &amp; <span class="number">1</span>)==<span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> s - <span class="number">2</span> * Math.max(dp[S][N], dp[S][N - <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s - <span class="number">2</span> * dp[S][N];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>数据结构与算法</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>djwang</tag>
-        <tag>学习</tag>
+        <tag>OJ</tag>
+        <tag>数据结构与算法</tag>
       </tags>
   </entry>
   <entry>
@@ -473,31 +502,20 @@
       </tags>
   </entry>
   <entry>
-    <title>vivo 2020届校招在线编程笔试B卷</title>
-    <url>/2020/05/29/vivo2020B/</url>
-    <content><![CDATA[<p>牛客vivo2020校招编程题解<br><a id="more"></a></p>
-<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><p>今年7月份vivo迎来了新入职的大学生，现在需要为每个新同事分配一个工号。人力资源部同事小v设计了一个方法为每个人进行排序并分配最终的工号，具体规则是：</p>
-<blockquote>
-<p>将N（N&lt;10000）个人排成一排，从第1个人开始报数；如果报数是M的倍数就出列，报到队尾后则回到队头继续报，直到所有人都出列；</p>
-</blockquote>
-<p>最后按照出列顺序为每个人依次分配工号。请你使用自己擅长的编程语言帮助小v实现此方法。<br>解法：使用循环单链表，依次出队<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	ListNode next;</span><br><span class="line">	ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">int</span> m=input[<span class="number">1</span>];</span><br><span class="line">	ListNode people=<span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">	ListNode p = people;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		ListNode node=<span class="keyword">new</span> ListNode(i);</span><br><span class="line">		p.next=node;</span><br><span class="line">		p=p.next;</span><br><span class="line">	&#125;</span><br><span class="line">	p.next=people;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> out=n;</span><br><span class="line">	StringBuilder sb=<span class="keyword">new</span> StringBuilder();</span><br><span class="line">	p=people;</span><br><span class="line">	<span class="keyword">while</span>(out&gt;<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;m;i++)&#123;</span><br><span class="line">			p=p.next;</span><br><span class="line">		&#125;</span><br><span class="line">		sb.append(p.val);</span><br><span class="line">		sb.append(<span class="string">" "</span>);</span><br><span class="line">		p.val=p.next.val;</span><br><span class="line">		p.next=p.next.next;</span><br><span class="line">		out--;</span><br><span class="line">	&#125;</span><br><span class="line">	sb.append(p.val);</span><br><span class="line">	<span class="keyword">return</span> sb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3><p>小v在公司负责游戏运营，今天收到一款申请新上架的游戏“跳一跳”，为了确保提供给广大玩家朋友们的游戏都是高品质的，按照运营流程小v必须对新游戏进行全方位了解体验和评估。这款游戏的规则如下：</p>
-<blockquote>
-<p>有n个盒子排成了一行，每个盒子上面有一个数字a[i]，表示在该盒子上的人最多能向右移动a[i]个盒子（比如当前所在盒子上的数字是3，则表示可以一次向右前进1个盒子，2个盒子或者3个盒子）。</p>
-</blockquote>
-<p>现在小v从左边第一个盒子上开始体验游戏，请问最少需要移动几次能到最后一个盒子上？<br>分析：最远跳跃，依次保留每次跳跃中的可以跳跃到下一次的最远距离<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">if</span>(input == <span class="keyword">null</span>||input.length == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> len=input.length;</span><br><span class="line">	<span class="keyword">int</span> step=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> end=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> maxReach=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(maxReach &lt; i) <span class="keyword">return</span> -<span class="number">1</span>;<span class="comment">//如果不能到达最后，则返回-1</span></span><br><span class="line">		<span class="comment">//记录各节点所能到达的最远距离</span></span><br><span class="line">		maxReach=Math.max(maxReach,i+input[i]); </span><br><span class="line">		<span class="keyword">if</span>(maxReach &gt;= len-<span class="number">1</span>) <span class="keyword">return</span> (step+<span class="number">1</span>);<span class="comment">//超出则直接返回</span></span><br><span class="line">		<span class="keyword">if</span>(i==end)&#123;</span><br><span class="line">			end = maxReach;</span><br><span class="line">			step++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> step;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p>小v最近在玩一款挖矿的游戏，该游戏介绍如下：</p>
-<blockquote>
-<p>1、每次可以挖到多个矿石，每个矿石的重量都不一样，挖矿结束后需要通过一款平衡矿车运送下山；<br>2、平衡矿车有左右2个车厢，中间只有1个车轮沿着导轨滑到山下，且矿车只有在2个车厢重量完全相等且矿石数量相差不超过1个的情况下才能成功运送矿石，否则在转弯时可能出现侧翻。</p>
-</blockquote>
-<p>假设小v挖到了n（n&lt;100）个矿石，每个矿石重量不超过100，为了确保一次性将n个矿石都运送出去，一旦矿车的车厢重量不一样就需要购买配重砝码。请问小v每次最少需要购买多少重量的砝码呢? （假设车厢足够放下这些矿石和砝码，砝码重量任选）<br>分析：开始用得贪心，不能ac,,看评论用的动态规划，不是很理解，贴上代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n = input.length; <span class="comment">//n为石块数</span></span><br><span class="line">	<span class="keyword">int</span> s = <span class="number">0</span>; <span class="comment">//s记录总重量，题解要尽可能满足两边平均</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		s += input[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> S = s &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> N = (n + <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span>[][] dp=<span class="keyword">new</span> <span class="keyword">int</span>[S + <span class="number">1</span>][N+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= S; ++i) dp[i][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span>[][] tmp=dp;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = input[i]; j &lt;= S; ++j) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= N; ++k) &#123;</span><br><span class="line">				tmp[j][k] = Math.max(tmp[j][k], dp[j - input[i]][k - <span class="number">1</span>] + input[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">		dp=tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> ((n &amp; <span class="number">1</span>)==<span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> s - <span class="number">2</span> * Math.max(dp[S][N], dp[S][N - <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s - <span class="number">2</span> * dp[S][N];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+    <title>关于博客</title>
+    <url>/2018/04/28/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<pre><code>考研录取后赋闲在家，闲来无事。
+</code></pre><p>&emsp;&emsp;在过去一段时间内，我从很多优秀的博客学到了很多，深深感谢那些博主通过博客帮助了很多求学的人。<br>&emsp;&emsp;于是也就有个建立博客的念头，在前几日看到weiyang大佬的搭建博客的文章，便着手搭建这个博客，感谢现在互联网的便利，通过github+hexo，以及众多博主的经验分享，综合选择了NexT主题，终于搭建了这个小窝。希望能督促自己,并分享自己今后的生活与学习，也欢迎各位小伙伴的交流。<br>&emsp;&emsp;在此贴出一些学习的文章，希望想搭建博客的小伙伴可以学习。</p>
+<p>&emsp;&emsp;博文文章：<br>&emsp;&emsp;&emsp;&emsp;<a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/w_ngzeqi/article/details/73863543" target="_blank" rel="noopener">hexo之next主题个性化配置详细教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/shengshengshiwo/article/details/79350413" target="_blank" rel="noopener">NexT的主题设定与配置</a><br>&emsp;&emsp;&emsp;&emsp;<a href="http://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/blue_zy/article/details/79058763" target="_blank" rel="noopener">Hexo更换next主题和优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有哪些好看的 Hexo 主题？</a></p>
+<p>&emsp;&emsp;后期陆续补充。。。</p>
 ]]></content>
       <categories>
-        <category>数据结构与算法</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>OJ</tag>
-        <tag>数据结构与算法</tag>
+        <tag>hexo</tag>
+        <tag>djwang</tag>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
