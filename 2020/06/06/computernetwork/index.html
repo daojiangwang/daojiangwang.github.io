@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="djwang呀">
 <meta property="og:description" content="1、OSI七层网络模型及协议OSI七层模型为物理层、数据链路层、网络层、传输层、会话层、表示层、应用层，从网络功能的角度观察：下面4层（物理层、数据链路层、网络层和传输层）主要提供数据传输和交换功能，即以节点到节点之间的通信为主；第4层作为上下两部分的桥梁，是整个网络体系结构中最关键的部分；而上3层（会话层、表示层和应用层）则以提供用户与应用程序之间的信息和数据处理功能为主。简言之，下4层主要完成">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-18T10:40:26.391Z">
+<meta property="og:updated_time" content="2020-06-18T15:04:36.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络基础知识">
 <meta name="twitter:description" content="1、OSI七层网络模型及协议OSI七层模型为物理层、数据链路层、网络层、传输层、会话层、表示层、应用层，从网络功能的角度观察：下面4层（物理层、数据链路层、网络层和传输层）主要提供数据传输和交换功能，即以节点到节点之间的通信为主；第4层作为上下两部分的桥梁，是整个网络体系结构中最关键的部分；而上3层（会话层、表示层和应用层）则以提供用户与应用程序之间的信息和数据处理功能为主。简言之，下4层主要完成">
@@ -422,7 +422,7 @@
 <li>将多批小数据写入一个缓冲区，或读取不及时，一个缓冲区存在多批数据，叫粘包。</li>
 <li>解决方式：根据消息头中的长度与偏移量来重组数据。设置定长消息，使得一个缓冲区中的segment总是一批数据的。设置消息边界。</li>
 </ul>
-<h3 id="6、BIO、NIO、AIO"><a href="#6、BIO、NIO、AIO" class="headerlink" title="6、BIO、NIO、AIO"></a>6、BIO、NIO、AIO</h3><ul>
+<h3 id="6、网络IO实现方式：BIO、NIO、AIO"><a href="#6、网络IO实现方式：BIO、NIO、AIO" class="headerlink" title="6、网络IO实现方式：BIO、NIO、AIO"></a>6、网络IO实现方式：BIO、NIO、AIO</h3><ul>
 <li>BIO：同步阻塞IO，每个请求都要一个线程来处理。</li>
 <li>NIO：同步非阻塞IO，一个线程可以处理多个请求，适用于短连接、小数据。</li>
 <li>AIO：异步非阻塞IO，一个线程处理多个请求，使用回调函数实现，适用于长连接、大数据</li>
@@ -669,7 +669,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、OSI七层网络模型及协议"><span class="nav-number">1.</span> <span class="nav-text">1、OSI七层网络模型及协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、TCP-IP模型与协议"><span class="nav-number">2.</span> <span class="nav-text">2、TCP/IP模型与协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、TCP连接三次握手"><span class="nav-number">3.</span> <span class="nav-text">3、TCP连接三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、TCP断开连接四次挥手"><span class="nav-number">4.</span> <span class="nav-text">4、TCP断开连接四次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、TCP拆包和粘包"><span class="nav-number">5.</span> <span class="nav-text">5、TCP拆包和粘包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、BIO、NIO、AIO"><span class="nav-number">6.</span> <span class="nav-text">6、BIO、NIO、AIO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、DDOS攻击原理与防御方式"><span class="nav-number">7.</span> <span class="nav-text">7、DDOS攻击原理与防御方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、CSRF跨站请求伪造原理"><span class="nav-number">8.</span> <span class="nav-text">8、CSRF跨站请求伪造原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、会话劫持"><span class="nav-number">9.</span> <span class="nav-text">9、会话劫持</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、OSI七层网络模型及协议"><span class="nav-number">1.</span> <span class="nav-text">1、OSI七层网络模型及协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、TCP-IP模型与协议"><span class="nav-number">2.</span> <span class="nav-text">2、TCP/IP模型与协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、TCP连接三次握手"><span class="nav-number">3.</span> <span class="nav-text">3、TCP连接三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、TCP断开连接四次挥手"><span class="nav-number">4.</span> <span class="nav-text">4、TCP断开连接四次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、TCP拆包和粘包"><span class="nav-number">5.</span> <span class="nav-text">5、TCP拆包和粘包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、网络IO实现方式：BIO、NIO、AIO"><span class="nav-number">6.</span> <span class="nav-text">6、网络IO实现方式：BIO、NIO、AIO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、DDOS攻击原理与防御方式"><span class="nav-number">7.</span> <span class="nav-text">7、DDOS攻击原理与防御方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、CSRF跨站请求伪造原理"><span class="nav-number">8.</span> <span class="nav-text">8、CSRF跨站请求伪造原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、会话劫持"><span class="nav-number">9.</span> <span class="nav-text">9、会话劫持</span></a></li></ol></div>
             
 
           </div>
