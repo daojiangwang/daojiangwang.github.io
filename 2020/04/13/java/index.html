@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="1、面向对象三大特性：封装、继承、多态。封装是一种对象功能内聚的表现形式，使模块之间耦合度变低，更具有维护性，将类的某些信息隐藏在类内部，不允许外部程序直接访问，而是通过该类提供的方法来实现对隐藏信息的操作和访问；继承使子类能够继承父类，获得父类的部分属性和行为，使模块具有复用性；多态使模块在复用性基础上更加有扩展性，使系统运行更有想象空间，实现方式有覆盖和重载。 2、单例模式及实现？保证一个类仅">
+<meta name="description" content="Oxcafebabe">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java基础知识">
 <meta property="og:url" content="http://yoursite.com/2020/04/13/java/index.html">
 <meta property="og:site_name" content="djwang呀">
-<meta property="og:description" content="1、面向对象三大特性：封装、继承、多态。封装是一种对象功能内聚的表现形式，使模块之间耦合度变低，更具有维护性，将类的某些信息隐藏在类内部，不允许外部程序直接访问，而是通过该类提供的方法来实现对隐藏信息的操作和访问；继承使子类能够继承父类，获得父类的部分属性和行为，使模块具有复用性；多态使模块在复用性基础上更加有扩展性，使系统运行更有想象空间，实现方式有覆盖和重载。 2、单例模式及实现？保证一个类仅">
+<meta property="og:description" content="Oxcafebabe">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-13T09:33:34.656Z">
+<meta property="og:updated_time" content="2020-06-15T08:30:09.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java基础知识">
-<meta name="twitter:description" content="1、面向对象三大特性：封装、继承、多态。封装是一种对象功能内聚的表现形式，使模块之间耦合度变低，更具有维护性，将类的某些信息隐藏在类内部，不允许外部程序直接访问，而是通过该类提供的方法来实现对隐藏信息的操作和访问；继承使子类能够继承父类，获得父类的部分属性和行为，使模块具有复用性；多态使模块在复用性基础上更加有扩展性，使系统运行更有想象空间，实现方式有覆盖和重载。 2、单例模式及实现？保证一个类仅">
+<meta name="twitter:description" content="Oxcafebabe">
 
 
 
@@ -407,12 +407,17 @@
       
 
       
-        <p>1、面向对象三大特性：封装、继承、多态。<br>封装是一种对象功能内聚的表现形式，使模块之间耦合度变低，更具有维护性，将类的某些信息隐藏在类内部，不允许外部程序直接访问，而是通过该类提供的方法来实现对隐藏信息的操作和访问；继承使子类能够继承父类，获得父类的部分属性和行为，使模块具有复用性；多态使模块在复用性基础上更加有扩展性，使系统运行更有想象空间，实现方式有覆盖和重载。</p>
-<p>2、单例模式及实现？<br>保证一个类仅有一个实例，并提供一个访问它的全局访问点。<br>实现方式主要有懒汉式和饿汉式。<br>1、懒汉式，线程不安全<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">    if (instance == null) &#123;  </span><br><span class="line">        instance = new Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <blockquote class="blockquote-center"><p>Oxcafebabe </p>
+</blockquote>
+<a id="more"></a>
+<h3 id="1、面向对象三大特性：封装、继承、多态。"><a href="#1、面向对象三大特性：封装、继承、多态。" class="headerlink" title="1、面向对象三大特性：封装、继承、多态。"></a>1、面向对象三大特性：封装、继承、多态。</h3><p>封装是一种对象功能内聚的表现形式，使模块之间耦合度变低，更具有维护性，将类的某些信息隐藏在类内部，不允许外部程序直接访问，而是通过该类提供的方法来实现对隐藏信息的操作和访问；继承使子类能够继承父类，获得父类的部分属性和行为，使模块具有复用性；多态使模块在复用性基础上更加有扩展性，使系统运行更有想象空间，实现方式有覆盖和重载。</p>
+<h3 id="2、单例模式及实现？"><a href="#2、单例模式及实现？" class="headerlink" title="2、单例模式及实现？"></a>2、单例模式及实现？</h3><p>保证一个类仅有一个实例，并提供一个访问它的全局访问点。<br>实现方式主要有懒汉式和饿汉式。<br>1、懒汉式，线程不安全<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">    if (instance == null) &#123;  </span><br><span class="line">        instance = new Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>2、懒汉式，通过加锁实现线程安全<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static synchronized Singleton getInstance() &#123;  </span><br><span class="line">    if (instance == null) &#123;  </span><br><span class="line">        instance = new Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>3、饿汉式，线程安全,非懒加载，浪费内存<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance = new Singleton();  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>4、双重锁<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private volatile static Singleton singleton;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getSingleton() &#123;  </span><br><span class="line">    if (singleton == null) &#123;  </span><br><span class="line">        synchronized (Singleton.class) &#123;  </span><br><span class="line">        if (singleton == null) &#123;  </span><br><span class="line">            singleton = new Singleton();  </span><br><span class="line">        &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    return singleton;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>5、枚举型，非懒加载、线程安全<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public enum Singleton &#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    public void whateverMethod() &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3、为什么wait方法在object类中，sleep方法在Thread类中？"><a href="#3、为什么wait方法在object类中，sleep方法在Thread类中？" class="headerlink" title="3、为什么wait方法在object类中，sleep方法在Thread类中？"></a>3、为什么wait方法在object类中，sleep方法在Thread类中？</h3><p>JAVA提供的锁是对象级的而不是线程级的，每个对象都有锁，通过线程获得。而wait，notify和notifyAll都是锁级别的操作，所以把他们定义在Object类中。这两者都可以让线程暂停一段时间,本质的区别是一个线程的运行状态控制,一个是线程之间的通讯的问题，sleep控制范围是由当前线程决定,没有释放锁。</p>
+<h3 id="4、锁"><a href="#4、锁" class="headerlink" title="4、锁"></a>4、锁</h3><p>4.1 乐观锁：认为数据一般情况下不会造成冲突，所以只会在数据进行更新的时候，才会判断期间数据有没有改变，实现通常用”版本号”。乐观锁多用于多读的场景，提高系统吞吐量。使用实例：1、JDK并发包中的原子类使用乐观锁的CAS实现；2、数据库乐观锁、缓存乐观锁；<br>4.2 悲观锁：对数据修改持悲观态度，在每次数据处理过程中都会对数据上锁，使别的需要该数据的任务处于阻塞，直到它拿到锁。多用于多写的场景，保证数据写操作安全。使用实例：1、java 的synchronized关键字和Lock；2、传统关系型数据库，如行锁，表锁，读锁，写锁等；3、基于zookeeper、Redis 的分布式锁；<br>4.3 自旋锁：<br>没有获取到锁的线程的两种处理方式，一种是没有获取到锁的线程就一直循环等待判断该资源是否已经释放锁，这种锁叫做自旋锁，它不用将线程阻塞起来(NON-BLOCKING)；还有一种处理方式就是把自己阻塞起来，等待重新调度请求，这种叫做互斥锁。<br>自旋锁的定义：当一个线程尝试去获取某一把锁的时候，如果这个锁此时已经被别人获取(占用)，那么此线程就无法获取到这把锁，该线程将会等待，间隔一段时间后会再次尝试获取。这种采用循环加锁 -&gt; 等待的机制被称为自旋锁(spinlock)，因为自旋锁避免了操作系统进程调度和线程切换，所以自旋锁通常适用在时间比较短的情况下。由于这个原因，操作系统的内核经常使用自旋锁。<br>4.4 互斥锁、共享锁：<br>互斥锁又叫排它锁，一个锁在某一时刻只能被一个线程占有，其它线程必须等待锁被释放之后才可能获取到锁。如ReentrantLock。<br>共享锁又称读锁，就是允许多个线程同时获取一个锁，一个锁可以同时被多个线程拥有。比如说ReadWriteLock。</p>
 
       
     </div>
@@ -510,8 +515,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             <a href="/" class="site-author-image" rel="start" style="border:none">
@@ -554,7 +568,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -613,6 +627,22 @@
 		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height=86 src="//music.163.com/outchain/player?type=2&id=536622304&auto=0&height=66"></iframe>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、面向对象三大特性：封装、继承、多态。"><span class="nav-number">1.</span> <span class="nav-text">1、面向对象三大特性：封装、继承、多态。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、单例模式及实现？"><span class="nav-number">2.</span> <span class="nav-text">2、单例模式及实现？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、为什么wait方法在object类中，sleep方法在Thread类中？"><span class="nav-number">3.</span> <span class="nav-text">3、为什么wait方法在object类中，sleep方法在Thread类中？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、锁"><span class="nav-number">4.</span> <span class="nav-text">4、锁</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
