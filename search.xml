@@ -113,17 +113,9 @@
     <content><![CDATA[<blockquote class="blockquote-center"><p>许愿字节offer </p>
 </blockquote>
 <a id="more"></a>
-<h2 id="字节教育后端三轮面经，牛客-王小C"><a href="#字节教育后端三轮面经，牛客-王小C" class="headerlink" title="字节教育后端三轮面经，牛客@王小C"></a>字节教育后端三轮面经，牛客@王小C</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>1、final (类, 成员变量, 方法)</p>
-<pre><code>+ 修饰类，不可被继承
-+ 修饰方法，不可被重写
-+ 修饰变量时，只能被赋值一次，无法更改，但修饰引用类型变量时，只是对象地址不更改，值可以改变
-</code></pre><p>2、==和equals的区别</p>
-<pre><code>- &quot;==&quot; 比较的是对象的地址是不是相等，基本数据类型比较值的相等；
-- equals如果对象没有重写，等价于==，可重写判断对象内容的相等。
-- hashcode，本地内存地址，一般重写equals,也要重写hashcode，保证哈希集合中判断的效率和去重，hashcode相等equals相等，反之未必
-</code></pre><p>3、Java的多线程同步方式(Lock类, synchonized, volatile)</p>
-<p>4、synchonized仔细讲一下(jvm指令, 锁优化, 和JUC的lock的区别)</p>
-<p>5、聊GC(新生代 老年代, 回收算法, 收集器)</p>
+<h2 id="字节教育后端三轮面经，牛客-王小C"><a href="#字节教育后端三轮面经，牛客-王小C" class="headerlink" title="字节教育后端三轮面经，牛客@王小C"></a>字节教育后端三轮面经，牛客@王小C</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>1、final (类, 成员变量, 方法)<br>    修饰类，不可被继承<br>    修饰方法，不可被重写<br>    修饰变量时，只能被赋值一次，无法更改，但修饰引用类型变量时，只是对象地址不更改，值可以改变<br>2、==和equals的区别<br>    “==” 比较的是对象的地址是不是相等，基本数据类型比较值的相等；<br>    equals如果对象没有重写，等价于==，可重写判断对象内容的相等。<br>    hashcode，本地内存地址，一般重写equals,也要重写hashcode，保证哈希集合中判断的效率和去重，hashcode相等equals相等，反之未必</p>
+<p>3、Java的多线程同步方式(Lock类, synchonized, volatile)<br>    JUC的lock类是Lock框架锁定的一个抽象，允许定义Lock的多种实现，如ReentrantLock就是实现了lock；<br>    synchronized 是互斥锁,声明代码块时可以使其具有原子性和可见性；<br>    而volatile只保证了可见性，不具有原子性，因此不保证线程安全。</p>
+<p>4、synchonized仔细讲一下(jvm指令, 锁优化, 和JUC的lock的区别)<br>    和lock相比，synchonized修饰的方法和语句块在执行完自动释放锁，不需要手动获得锁释放锁；<br>5、聊GC(新生代 老年代, 回收算法, 收集器)</p>
 <p>6、进程、线程区别(linux中怎么实现)</p>
 <p>7、僵尸进程的产生 如何避免</p>
 <p>8、三次握手四次挥手(time_wait)</p>
@@ -161,7 +153,7 @@
 - 加锁懒汉式、饿汉式
 </code></pre><p>5、线程和进程<br>    进程和线程都是一个时间段的描述，是CPU工作时间段的描述，不过是颗粒大小不同<br>    进程是资源分配的最小单位，线程是CPU调度的最小单位</p>
 <p>6、打印斐波那契数列<br>    略</p>
-<h3 id="二面-1"><a href="#二面-1" class="headerlink" title="二面"></a>二面</h3><p>0、介绍项目<br>1、Java的Map和Set和List的区别<br>2、Map有哪些类型，HashMap底层结构，如何实现线程安全。ConcurrentHashMap在一个读一个写的时候会不会加锁呢？HashTable<br>3、数据库为什么用B+树。联合索引特点<br>4、Spring知道吗<br>5、判断二叉搜索树。O(1)空间<br>6、一致性Hash算法</p>
+<h3 id="二面-1"><a href="#二面-1" class="headerlink" title="二面"></a>二面</h3><p>0、介绍项目<br>1、Java的Map和Set和List的区别<br>2、Map有哪些类型，HashMap底层结构，如何实现线程安全。ConcurrentHashMap在一个读一个写的时候会不会加锁呢？HashTable<br>3、数据库为什么用B+树。联合索引特点<br>4、Spring知道吗<br>    AOP、IOC<br>5、判断二叉搜索树。O(1)空间<br>6、一致性Hash算法</p>
 <h3 id="三面-1"><a href="#三面-1" class="headerlink" title="三面"></a>三面</h3><p>0、自我介绍<br>1、如何在一堆数中找到想要的数，说几种方法。（我问是排好序的呢还是没排好序的。他说都讲讲。排好序的二分，没排好的直接搜索。他又问还有吗？我说，复杂度已经只有O(n)了；他说可能有一百万个数。所以用多线程）<br>2、项目中最大的挑战<br>3、一个数据库的查询问题。<br>4、写快排</p>
 ]]></content>
       <categories>
