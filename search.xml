@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JavaCollection</title>
+    <url>/2020/05/29/JavaCollection/</url>
+    <content><![CDATA[<h2 id="Java-集合框架图："><a href="#Java-集合框架图：" class="headerlink" title="Java 集合框架图："></a>Java 集合框架图：</h2><a id="more"></a>
+<p><img src="/images/202005/JavaCollection.jpg" alt="Java集合框架图"><br>其中红色为接口，蓝色为抽象类，绿色为并发包中的类</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring基础知识</title>
     <url>/2020/03/05/Spring/</url>
     <content><![CDATA[<blockquote class="blockquote-center"><p>Spring面试基础知识</p>
@@ -16,26 +29,8 @@
         <category>Spring</category>
       </categories>
       <tags>
-        <tag>Spring</tag>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SpringBoot</title>
-    <url>/2020/06/07/SpringBoot/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>SpringMVC基础知识</title>
-    <url>/2020/06/07/SpringMVC/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
         <tag>Spring</tag>
-        <tag>Java</tag>
-        <tag>SpringMVC</tag>
       </tags>
   </entry>
   <entry>
@@ -70,36 +65,173 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaCollection</title>
-    <url>/2020/05/29/JavaCollection/</url>
-    <content><![CDATA[<h2 id="Java-集合框架图："><a href="#Java-集合框架图：" class="headerlink" title="Java 集合框架图："></a>Java 集合框架图：</h2><a id="more"></a>
-<p><img src="/images/202005/JavaCollection.jpg" alt="Java集合框架图"><br>其中红色为接口，蓝色为抽象类，绿色为并发包中的类</p>
-]]></content>
+    <title>SpringMVC基础知识</title>
+    <url>/2020/06/07/SpringMVC/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>Java</category>
       </categories>
       <tags>
         <tag>Java</tag>
+        <tag>Spring</tag>
+        <tag>SpringMVC</tag>
       </tags>
   </entry>
   <entry>
-    <title>AngularJS中Directive指令bindToController属性</title>
-    <url>/2020/04/05/angularjsbindtocontroller/</url>
-    <content><![CDATA[<!-- 标签别名 -->
-<blockquote class="blockquote-center"><p>&amp;、=、@</p>
+    <title>SPA</title>
+    <url>/2020/03/08/SPA/</url>
+    <content><![CDATA[<h2 id="SPA"><a href="#SPA" class="headerlink" title="SPA"></a>SPA</h2><p>单页Web应用（single page web application，SPA），就是只有一张Web页面的应用，是加载单个HTML 页面并在用户与应用程序交互时动态更新该页面的Web应用程序。</p>
+<a id="more"></a>
+<h3 id="SPA的特点："><a href="#SPA的特点：" class="headerlink" title="SPA的特点："></a>SPA的特点：</h3><ul>
+<li>速度：更好的用户体验，让用户在web app感受native app的速度和流畅，</li>
+<li>MVVM：经典MVVM开发模式，前后端各负其责。</li>
+<li>ajax：重前端，业务逻辑全部在本地操作，数据都需要通过AJAX同步、提交。</li>
+<li>路由：在URL中采用#号来作为当前视图的地址,改变#号后的参数，页面并不会重载<h3 id="SPA的两个缺点："><a href="#SPA的两个缺点：" class="headerlink" title="SPA的两个缺点："></a>SPA的两个缺点：</h3></li>
+<li>首屏渲染等待时长： 必须得加载完毕，才能渲染出首屏</li>
+<li>seo不友好：爬虫只能拿到一个div，认为页面是空的，不利于seo<h3 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h3></li>
+<li>用循环的视角审视Web应用开发</li>
+<li>框定一个一致的SPA图形用户界面（GUI）和模型</li>
+<li>将SPA的原则带回服务器端</li>
+<li>聚集于对合适的应用进行早期SPA开发 [3]<h3 id="SPA的优缺点"><a href="#SPA的优缺点" class="headerlink" title="SPA的优缺点"></a>SPA的优缺点</h3>单页Web程序的出现是客户端发展的必然结果，但是该技术也是有些局限性，所以采用之前需要了解清楚它的优缺点。</li>
+</ul>
+<p>1、优点：<br>1). 良好的交互体验<br>用户不需要重新刷新页面，获取数据也是通过Ajax异步获取，页面显示流畅。<br>2). 良好的前后端工作分离模式<br>单页Web应用可以和RESTful规约一起使用，通过REST API提供接口数据，并使用Ajax异步获取，这样有助于分离客户端和服务器端工作。更进一步，可以在客户端也可以分解为静态页面和页面交互两个部分。<br>3). 减轻服务器压力<br>服务器只用出数据就可以，不用管展示逻辑和页面合成，吞吐能力会提高几倍；<br>4). 共用一套后端程序代码<br>不用修改后端程序代码就可以同时用于Web界面、手机、平板等多种客户端；</p>
+<p>2、缺点：<br>1). SEO难度较高<br>由于所有的内容都在一个页面中动态替换显示，所以在SEO上其有着天然的弱势，所以如果你的站点对SEO很看重，且要用单页应用，那么就做些静态页面给搜索引擎用吧。<br>2). 前进、后退管理<br>由于单页Web应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理，当然此问题也有解决方案，比如利用URI中的散列+iframe实现。<br>3). 初次加载耗时多<br>为实现单页Web应用功能及显示效果，需要在加载页面的时候将JavaScript、CSS统一加载，部分页面可以在需要的时候加载。所以必须对JavaScript及CSS代码进行合并压缩处理，如果使用第三方库，建议使用一些大公司的CDN，因此带宽的消耗是必然的。</p>
+<p>转自<a href="https://www.jianshu.com/p/dcea4d914b65" target="_blank" rel="noopener">雄霸烽火狼</a></p>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SpringBoot</title>
+    <url>/2020/06/07/SpringBoot/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>字节教育后端实习面经集1</title>
+    <url>/2020/06/18/bytedance/</url>
+    <content><![CDATA[<blockquote class="blockquote-center"><p>许愿字节offer </p>
 </blockquote>
 <a id="more"></a>
-<h2 id="1、-amp"><a href="#1、-amp" class="headerlink" title="1、&amp;"></a>1、&amp;</h2><p>绑定function<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">metadataManagement</span>(<span class="params">PathUtils</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        restrict: <span class="string">'E'</span>,</span><br><span class="line">        bindToController: &#123;</span><br><span class="line">            title:<span class="string">"@"</span>,</span><br><span class="line">            values: <span class="string">"="</span>, <span class="comment">//所有的元数据</span></span><br><span class="line">            deleteFunc: <span class="string">"&amp;"</span>, <span class="comment">//删除触发的方法，需要接收object对象与callback</span></span><br><span class="line">            enableFunc: <span class="string">"&amp;?"</span> <span class="comment">//?为可双向绑定，可传可不传</span></span><br><span class="line">        &#125;,</span><br><span class="line">        controller: [MetadataManagementDir],</span><br><span class="line">        controllerAs: <span class="string">'metadataManagementDir'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delet</span>(<span class="params">index</span>) </span>&#123;</span><br><span class="line">    vm.values[index].inuse = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span> (vm.deleteFunc != <span class="literal">null</span>) &#123;</span><br><span class="line">        vm.deleteFunc(&#123;</span><br><span class="line">            obj: vm.values[index],</span><br><span class="line">            callback: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">enable</span>(<span class="params">index</span>) </span>&#123;</span><br><span class="line">    vm.values[index].inuse = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span> (vm.enableFunc != <span class="literal">null</span>) &#123;</span><br><span class="line">        vm.enableFunc(&#123;</span><br><span class="line">            obj: vm.values[index],</span><br><span class="line">            callback: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>传值：<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span></span></span><br><span class="line"><span class="tag">	<span class="attr">delete-func</span>=<span class="string">"cultivationProcedureCategoryCtrl.deleteFunc(obj,callback)"</span> </span></span><br><span class="line"><span class="tag">	<span class="attr">enable-func</span>=<span class="string">"cultivationProcedureCategoryCtrl.enableFunc(obj,callback)"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deleteFunc</span>(<span class="params">obj, callback</span>) </span>&#123;</span><br><span class="line">    ecnuCultivationProcedureCategoryDao.disableById(obj.id, callback);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">enableFunc</span>(<span class="params">obj, callback</span>) </span>&#123;</span><br><span class="line">    ecnuCultivationProcedureCategoryDao.enableById(obj.id, callback);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2、"><a href="#2、" class="headerlink" title="2、="></a>2、=</h2><p>双向绑定数据<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span> <span class="attr">values</span>=<span class="string">"cultivationProcedureCategoryCtrl.values"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="3、"><a href="#3、" class="headerlink" title="3、@"></a>3、@</h2><p>仅单向绑定，不同于=传递值，只传递字符<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span> <span class="attr">title</span>=<span class="string">"元数据管理"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="字节教育后端三轮面经，牛客-王小C"><a href="#字节教育后端三轮面经，牛客-王小C" class="headerlink" title="字节教育后端三轮面经，牛客@王小C"></a>字节教育后端三轮面经，牛客@王小C</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>1、final (类, 成员变量, 方法)</p>
+<pre><code>- 修饰类，不可被继承
+- 修饰方法，不可被重写
+- 修饰变量时，只能被赋值一次，无法更改，但修饰引用类型变量时，只是对象地址不更改，值可以改变
+</code></pre><p>2、==和equals的区别</p>
+<pre><code>- &quot;==&quot; 比较的是对象的地址是不是相等，基本数据类型比较值的相等；
+- equals如果对象没有重写，等价于==，可重写判断对象内容的相等。
+- hashcode，本地内存地址，一般重写equals,也要重写hashcode，保证哈希集合中判断的效率和去重，hashcode相等equals相等，反之未必
+</code></pre><p>3、Java的多线程同步方式(Lock类, synchonized, volatile)</p>
+<p>4、synchonized仔细讲一下(jvm指令, 锁优化, 和JUC的lock的区别)</p>
+<p>5、聊GC(新生代 老年代, 回收算法, 收集器)</p>
+<p>6、进程、线程区别(linux中怎么实现)</p>
+<p>7、僵尸进程的产生 如何避免</p>
+<p>8、三次握手四次挥手(time_wait)</p>
+<p>9、算法题: 买卖股票 leetcode题</p>
+<h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><p>进程间通信方式(和上面重复了)</p>
+<p>浏览器输入一个url后发生什么</p>
+<p>算法题: 打家劫舍 原题</p>
+<p>算法题: 给定升序整形数组和m，a和b是数组中的两个元素；求a+b=m的数据对有多少？(双指针)</p>
+<p>其他: 字节的前两面是连在一起中间休息15分钟</p>
+<h3 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h3><p>jdk8默认的垃圾回收器, 知道哪些垃圾回收器? G1详细说一下</p>
+<p>synchronized关键字的底层是什么?</p>
+<p>线程之间哪些资源是共享的? 什么是独享的?</p>
+<p>堆和栈有什么区别?</p>
+<p>linux查看资源的命令?怎么样查看哪些端口被占用了</p>
+<p>linux内存中swap是什么? 什么用?</p>
+<p>用户态和内核态的区别? 为什么要有用户态内核态区别?</p>
+<p>中断有哪些类型, 区别?</p>
+<p>死锁概念? 条件?</p>
+<p>算法题: 奇数位递增偶数位递减的数组,排序</p>
+<p>get,post区别?</p>
+<p>get可以缓存? 在INTP(?没听懂在哪)里是怎么实现的?</p>
+<p>写sql, group by的查询?</p>
+<p>mySQL的搜索引擎? innodb和myISAM的区别</p>
+<h2 id="字节教育业务后台开发面经-牛客-BinFromFD"><a href="#字节教育业务后台开发面经-牛客-BinFromFD" class="headerlink" title="字节教育业务后台开发面经 牛客@BinFromFD"></a>字节教育业务后台开发面经 牛客@BinFromFD</h2><h3 id="一面-1"><a href="#一面-1" class="headerlink" title="一面"></a>一面</h3><p>0、自我介绍+项目介绍<br>1、Https的过程（详细地说了对称加密和非对称加密，CA，还有随机数生成秘钥的方式）；http和tcp的关系；输入URL之后的过程</p>
+<p>2、数据库如何实现并发；可重复读是什么；有一段代码，两个session，判断结果是什么（和重复读有关）；数据库用什么实现可重复读。<br>3、面向对象的三大特性；多态性是什么，举例；运行时多态、编译时多态</p>
+<ul>
+<li>封装、继承、多态<ul>
+<li>编译时多态<br>主要是方法的重载，通过参数列表的不同来区分不同的方法。</li>
+<li>运行时多态<br>也叫作动态绑定，一般是指在执行期间（非编译期间）判断引用对象的实际类型，根据实际类型判断并调用相应的属性和方法。主要用于继承父类和实现接口时，父类引用指向子类对象。<br>4、知道什么设计模式？写一个线程安全的单例模式。</li>
+</ul>
+</li>
+<li>单例、策略、工厂、代理</li>
+<li>加锁懒汉式、饿汉式</li>
+</ul>
+<p>5、线程和进程</p>
+<ul>
+<li>进程和线程都是一个时间段的描述，是CPU工作时间段的描述，不过是颗粒大小不同</li>
+<li>进程是资源分配的最小单位，线程是CPU调度的最小单位</li>
+</ul>
+<p>6、打印斐波那契数列</p>
+<pre><code>- 略
+</code></pre><h3 id="二面-1"><a href="#二面-1" class="headerlink" title="二面"></a>二面</h3><p>0、介绍项目<br>1、Java的Map和Set和List的区别<br>2、Map有哪些类型，HashMap底层结构，如何实现线程安全。ConcurrentHashMap在一个读一个写的时候会不会加锁呢？HashTable<br>3、数据库为什么用B+树。联合索引特点<br>4、Spring知道吗<br>5、判断二叉搜索树。O(1)空间<br>6、一致性Hash算法</p>
+<h3 id="三面-1"><a href="#三面-1" class="headerlink" title="三面"></a>三面</h3><p>0、自我介绍<br>1、如何在一堆数中找到想要的数，说几种方法。（我问是排好序的呢还是没排好序的。他说都讲讲。排好序的二分，没排好的直接搜索。他又问还有吗？我说，复杂度已经只有O(n)了；他说可能有一百万个数。所以用多线程）<br>2、项目中最大的挑战<br>3、一个数据库的查询问题。<br>4、写快排</p>
 ]]></content>
       <categories>
-        <category>JavaScript</category>
+        <category>面经</category>
       </categories>
       <tags>
-        <tag>AngularJS</tag>
+        <tag>字节跳动</tag>
+        <tag>bytedance</tag>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>bytedance</title>
+    <url>/2020/06/19/bytedanceinterview1/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>数据库知识点整理</title>
+    <url>/2020/06/18/db/</url>
+    <content><![CDATA[<blockquote class="blockquote-center"><p>数据库知识点整理 </p>
+</blockquote>
+<a id="more"></a>
+<h3 id="1、MYISAM与innodb搜索引擎原理"><a href="#1、MYISAM与innodb搜索引擎原理" class="headerlink" title="1、MYISAM与innodb搜索引擎原理"></a>1、MYISAM与innodb搜索引擎原理</h3><ul>
+<li>MyISAM引擎（Mysql5.1前默认引擎）使用B+Tree作为索引结构，叶节点的data域存放的是数据记录的地址。其采用表定义文件、索引文件与数据文件，索引文件只存放索引，叶子节点存放数据的物理地址。数据文件存放数据,可移植性较好。其索引方式是非聚集的。</li>
+<li>InnoDB也使用B+Tree作为索引结构。但是它的主索引与数据都放在一个文件中。这种索引叫做聚集索引，因为InnoDB的数据文件本身要按主键聚集，所以InnoDB要求表必须有主键（MyISAM可以没有），如果没有显式指定，则MySQL系统会自动选择一个可以唯一标识数据记录的列作为主键，如果不存在这种列，则MySQL自动为InnoDB表生成一个隐含字段作为主键，这个字段长度为6个字节，类型为长整形。</li>
+<li>区别一：Innodb支持事务、外键等高级数据库功能，而myisam强调性能，查询有原子性，不提供事务支持；</li>
+<li>区别二：innodb支持事务和行级锁，而myisam只支持表级锁；</li>
+<li>区别三：InnoDB的主索引与数据都放在一个文件中。而MYISAM是分开存放的；</li>
+<li>区别四：InnoDB的辅助索引data域存储相应记录主键的值而不是地址；</li>
+<li>区别五：InnoDB的主键索引是聚集索引，而MYISAM不是聚集索引。</li>
+</ul>
+<h3 id="2、最左前缀原理"><a href="#2、最左前缀原理" class="headerlink" title="2、最左前缀原理"></a>2、最左前缀原理</h3><p>MySQL中的索引可以以一定顺序引用多个列，这种索引叫做联合索引，一般的，一个联合索引是一个有序元组&lt;a1, a2, …, an&gt;，在联合索引中，比如Student表存在姓名学号的联合索引（sno,name），最左前缀原理指的是查询条件进行精确匹配并包含索引的的第一列，才可以命中索引。<br>注：索引优化，当查询时，索引列不能是表达式的一部分或者函数参数，否则无法使用索引，如 SELECT sno FROM student WHERE sno + 1 = 5;</p>
+<h3 id="3、事务ACID"><a href="#3、事务ACID" class="headerlink" title="3、事务ACID"></a>3、事务ACID</h3><ul>
+<li>原子性，事务被视为不可分割的最小单元，事务的所有操作要么全部提交成功，要不全部失败回滚；</li>
+<li>一致性，数据库在事务执行前后都保持一致性状态；</li>
+<li>隔离性，一个事务所做的修改在最终提交以前，对其它事务是不可见的；</li>
+<li>持久性，一旦事务提交，则其所做的修改将会永远保存到数据库中；<br><a href="/images/202006/acid.png">ACID</a><h3 id="4、隔离级别"><a href="#4、隔离级别" class="headerlink" title="4、隔离级别"></a>4、隔离级别</h3></li>
+<li>read uncommit:读不加锁，写加共享锁。会产生脏读、幻读。</li>
+<li>read commit：读加共享锁，写加排它锁，但不加间隙锁。间隙锁的主要作用是防止不可重复读，但会加大锁的范围。</li>
+<li>repeatable read(innodb默认):读加共享锁，写加间隙排它锁。注意，Innodb对这个级别进行了特殊处理，使得这个级别能够避免幻读，但不是所有引擎都能够防止幻读！</li>
+<li>serialization：会给整张表加锁，强一致，但是效率低。<h3 id="5、"><a href="#5、" class="headerlink" title="5、"></a>5、</h3><h3 id="20、galera"><a href="#20、galera" class="headerlink" title="20、galera"></a>20、galera</h3></li>
+<li>多主架构：真正的多点读写的集群，在任何时候读写数据，都是最新的。</li>
+<li>同步复制，各节点间无延迟且节点宕机不会导致数据丢失。</li>
+<li>紧密耦合，所有节点均保持相同状态，节点间无不同数据。</li>
+<li>无需主从切换操作。</li>
+<li>无需进行读写分离。</li>
+<li>并发复制：从节点在APPLY数据时，支持并行执行，有更好的性能表现。</li>
+<li>故障切换：在出现数据库故障时，因为支持多点写入，切的非常容易。</li>
+<li>热插拔：在服务期间，如果数据库挂了，只要监控程序发现的够快，不可服务时间就会非常少。在节点故障期间，节点本身对集群的影响非常小。</li>
+<li>自动节点克隆：在新增节点，或者停机维护时，增量数据或者基础数据不需要人工手动备份提供，Galera Cluster会自动拉取在线节点数据，最终集群会变为一致。</li>
+<li>对应用透明：集群的维护，对应用程序是透明的，几乎感觉不到。</li>
+<li>以下是缺点<ul>
+<li>目前的复制仅仅支持InnoDB存储引擎</li>
+<li>DELETE操作不支持没有主键的表</li>
+<li>在多主环境下LOCK/UNLOCK TABLES不支持以及锁函数GET_LOCK(), RELEASE_LOCK()</li>
+<li>由于集群是乐观的并发控制，事务commit可能在该阶段中止。</li>
+<li>整个集群的写入吞吐量是由最弱的节点限制，如果有一个节点变得缓慢，那么整个集群将是缓慢的。为了稳定的高性能要求，所有的节点应使用统一的硬件</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Database</category>
+      </categories>
+      <tags>
+        <tag>数据库、MySQL、DB</tag>
       </tags>
   </entry>
   <entry>
@@ -156,6 +288,56 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2018/04/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo访问量与访客失效原因</title>
+    <url>/2018/10/16/hexo%E8%AE%BF%E9%97%AE%E9%87%8F%E4%B8%8E%E8%AE%BF%E5%AE%A2%E5%A4%B1%E6%95%88%E5%8E%9F%E5%9B%A0/</url>
+    <content><![CDATA[<p>嘻嘻，昨天更新后想看看访问有没有变化的，忽然发现统计功能无效了，之前使用的不蒜子脚本，去看了下原来不蒜子域名修改了。</p>
+<p>不蒜子官网：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a></p>
+<p>解决：将\themes\next\layout_partials\footer.swig下的<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AngularJS中Directive指令bindToController属性</title>
+    <url>/2020/04/05/angularjsbindtocontroller/</url>
+    <content><![CDATA[<!-- 标签别名 -->
+<blockquote class="blockquote-center"><p>&amp;、=、@</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="1、-amp"><a href="#1、-amp" class="headerlink" title="1、&amp;"></a>1、&amp;</h2><p>绑定function<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">metadataManagement</span>(<span class="params">PathUtils</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        restrict: <span class="string">'E'</span>,</span><br><span class="line">        bindToController: &#123;</span><br><span class="line">            title:<span class="string">"@"</span>,</span><br><span class="line">            values: <span class="string">"="</span>, <span class="comment">//所有的元数据</span></span><br><span class="line">            deleteFunc: <span class="string">"&amp;"</span>, <span class="comment">//删除触发的方法，需要接收object对象与callback</span></span><br><span class="line">            enableFunc: <span class="string">"&amp;?"</span> <span class="comment">//?为可双向绑定，可传可不传</span></span><br><span class="line">        &#125;,</span><br><span class="line">        controller: [MetadataManagementDir],</span><br><span class="line">        controllerAs: <span class="string">'metadataManagementDir'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delet</span>(<span class="params">index</span>) </span>&#123;</span><br><span class="line">    vm.values[index].inuse = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span> (vm.deleteFunc != <span class="literal">null</span>) &#123;</span><br><span class="line">        vm.deleteFunc(&#123;</span><br><span class="line">            obj: vm.values[index],</span><br><span class="line">            callback: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">enable</span>(<span class="params">index</span>) </span>&#123;</span><br><span class="line">    vm.values[index].inuse = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span> (vm.enableFunc != <span class="literal">null</span>) &#123;</span><br><span class="line">        vm.enableFunc(&#123;</span><br><span class="line">            obj: vm.values[index],</span><br><span class="line">            callback: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>传值：<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span></span></span><br><span class="line"><span class="tag">	<span class="attr">delete-func</span>=<span class="string">"cultivationProcedureCategoryCtrl.deleteFunc(obj,callback)"</span> </span></span><br><span class="line"><span class="tag">	<span class="attr">enable-func</span>=<span class="string">"cultivationProcedureCategoryCtrl.enableFunc(obj,callback)"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deleteFunc</span>(<span class="params">obj, callback</span>) </span>&#123;</span><br><span class="line">    ecnuCultivationProcedureCategoryDao.disableById(obj.id, callback);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">enableFunc</span>(<span class="params">obj, callback</span>) </span>&#123;</span><br><span class="line">    ecnuCultivationProcedureCategoryDao.enableById(obj.id, callback);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、="></a>2、=</h2><p>双向绑定数据<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span> <span class="attr">values</span>=<span class="string">"cultivationProcedureCategoryCtrl.values"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、@"></a>3、@</h2><p>仅单向绑定，不同于=传递值，只传递字符<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">metadata-management</span> <span class="attr">title</span>=<span class="string">"元数据管理"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">metadata-management</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>AngularJS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>java比较传统方式和数据库连接池方式的性能差异</title>
     <url>/2020/06/03/dbConnectionpoolvs/</url>
     <content><![CDATA[<p>向数据库中插入100条数据，比较传统方式和数据库连接池方式的性能差异<br><a id="more"></a></p>
@@ -172,113 +354,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据库知识点整理</title>
-    <url>/2020/06/18/db/</url>
-    <content><![CDATA[<blockquote class="blockquote-center"><p>数据库知识点整理 </p>
-</blockquote>
-<a id="more"></a>
-<h3 id="1、MYISAM与innodb搜索引擎原理"><a href="#1、MYISAM与innodb搜索引擎原理" class="headerlink" title="1、MYISAM与innodb搜索引擎原理"></a>1、MYISAM与innodb搜索引擎原理</h3><ul>
-<li>MyISAM引擎（Mysql5.1前默认引擎）使用B+Tree作为索引结构，叶节点的data域存放的是数据记录的地址。其采用表定义文件、索引文件与数据文件，索引文件只存放索引，叶子节点存放数据的物理地址。数据文件存放数据,可移植性较好。其索引方式是非聚集的。</li>
-<li>InnoDB也使用B+Tree作为索引结构。但是它的主索引与数据都放在一个文件中。这种索引叫做聚集索引，因为InnoDB的数据文件本身要按主键聚集，所以InnoDB要求表必须有主键（MyISAM可以没有），如果没有显式指定，则MySQL系统会自动选择一个可以唯一标识数据记录的列作为主键，如果不存在这种列，则MySQL自动为InnoDB表生成一个隐含字段作为主键，这个字段长度为6个字节，类型为长整形。</li>
-<li>区别一：Innodb支持事务、外键等高级数据库功能，而myisam强调性能，查询有原子性，不提供事务支持；</li>
-<li>区别二：innodb支持事务和行级锁，而myisam只支持表级锁；</li>
-<li>区别三：InnoDB的主索引与数据都放在一个文件中。而MYISAM是分开存放的；</li>
-<li>区别四：InnoDB的辅助索引data域存储相应记录主键的值而不是地址；</li>
-<li>区别五：InnoDB的主键索引是聚集索引，而MYISAM不是聚集索引。</li>
-</ul>
-<h3 id="2、最左前缀原理"><a href="#2、最左前缀原理" class="headerlink" title="2、最左前缀原理"></a>2、最左前缀原理</h3><p>MySQL中的索引可以以一定顺序引用多个列，这种索引叫做联合索引，一般的，一个联合索引是一个有序元组&lt;a1, a2, …, an&gt;，在联合索引中，比如Student表存在姓名学号的联合索引（sno,name），最左前缀原理指的是查询条件进行精确匹配并包含索引的的第一列，才可以命中索引。<br>注：索引优化，当查询时，索引列不能是表达式的一部分或者函数参数，否则无法使用索引，如 SELECT sno FROM student WHERE sno + 1 = 5;</p>
-<h3 id="3、事务ACID"><a href="#3、事务ACID" class="headerlink" title="3、事务ACID"></a>3、事务ACID</h3><ul>
-<li>原子性，事务被视为不可分割的最小单元，事务的所有操作要么全部提交成功，要不全部失败回滚；</li>
-<li>一致性，数据库在事务执行前后都保持一致性状态；</li>
-<li>隔离性，一个事务所做的修改在最终提交以前，对其它事务是不可见的；</li>
-<li>持久性，一旦事务提交，则其所做的修改将会永远保存到数据库中；<br><a href="/images/202006/acid.png">ACID</a><h3 id="4、隔离级别"><a href="#4、隔离级别" class="headerlink" title="4、隔离级别"></a>4、隔离级别</h3></li>
-<li>read uncommit:读不加锁，写加共享锁。会产生脏读、幻读。</li>
-<li>read commit：读加共享锁，写加排它锁，但不加间隙锁。间隙锁的主要作用是防止不可重复读，但会加大锁的范围。</li>
-<li>repeatable read(innodb默认):读加共享锁，写加间隙排它锁。注意，Innodb对这个级别进行了特殊处理，使得这个级别能够避免幻读，但不是所有引擎都能够防止幻读！</li>
-<li>serialization：会给整张表加锁，强一致，但是效率低。<h3 id="5、"><a href="#5、" class="headerlink" title="5、"></a>5、</h3><h3 id="20、galera"><a href="#20、galera" class="headerlink" title="20、galera"></a>20、galera</h3></li>
-<li>多主架构：真正的多点读写的集群，在任何时候读写数据，都是最新的。</li>
-<li>同步复制，各节点间无延迟且节点宕机不会导致数据丢失。</li>
-<li>紧密耦合，所有节点均保持相同状态，节点间无不同数据。</li>
-<li>无需主从切换操作。</li>
-<li>无需进行读写分离。</li>
-<li>并发复制：从节点在APPLY数据时，支持并行执行，有更好的性能表现。</li>
-<li>故障切换：在出现数据库故障时，因为支持多点写入，切的非常容易。</li>
-<li>热插拔：在服务期间，如果数据库挂了，只要监控程序发现的够快，不可服务时间就会非常少。在节点故障期间，节点本身对集群的影响非常小。</li>
-<li>自动节点克隆：在新增节点，或者停机维护时，增量数据或者基础数据不需要人工手动备份提供，Galera Cluster会自动拉取在线节点数据，最终集群会变为一致。</li>
-<li>对应用透明：集群的维护，对应用程序是透明的，几乎感觉不到。</li>
-<li>以下是缺点<ul>
-<li>目前的复制仅仅支持InnoDB存储引擎</li>
-<li>DELETE操作不支持没有主键的表</li>
-<li>在多主环境下LOCK/UNLOCK TABLES不支持以及锁函数GET_LOCK(), RELEASE_LOCK()</li>
-<li>由于集群是乐观的并发控制，事务commit可能在该阶段中止。</li>
-<li>整个集群的写入吞吐量是由最弱的节点限制，如果有一个节点变得缓慢，那么整个集群将是缓慢的。为了稳定的高性能要求，所有的节点应使用统一的硬件</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Database</category>
-      </categories>
-      <tags>
-        <tag>数据库、MySQL、DB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SPA</title>
-    <url>/2020/03/08/SPA/</url>
-    <content><![CDATA[<h2 id="SPA"><a href="#SPA" class="headerlink" title="SPA"></a>SPA</h2><p>单页Web应用（single page web application，SPA），就是只有一张Web页面的应用，是加载单个HTML 页面并在用户与应用程序交互时动态更新该页面的Web应用程序。</p>
-<a id="more"></a>
-<h3 id="SPA的特点："><a href="#SPA的特点：" class="headerlink" title="SPA的特点："></a>SPA的特点：</h3><ul>
-<li>速度：更好的用户体验，让用户在web app感受native app的速度和流畅，</li>
-<li>MVVM：经典MVVM开发模式，前后端各负其责。</li>
-<li>ajax：重前端，业务逻辑全部在本地操作，数据都需要通过AJAX同步、提交。</li>
-<li>路由：在URL中采用#号来作为当前视图的地址,改变#号后的参数，页面并不会重载<h3 id="SPA的两个缺点："><a href="#SPA的两个缺点：" class="headerlink" title="SPA的两个缺点："></a>SPA的两个缺点：</h3></li>
-<li>首屏渲染等待时长： 必须得加载完毕，才能渲染出首屏</li>
-<li>seo不友好：爬虫只能拿到一个div，认为页面是空的，不利于seo<h3 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h3></li>
-<li>用循环的视角审视Web应用开发</li>
-<li>框定一个一致的SPA图形用户界面（GUI）和模型</li>
-<li>将SPA的原则带回服务器端</li>
-<li>聚集于对合适的应用进行早期SPA开发 [3]<h3 id="SPA的优缺点"><a href="#SPA的优缺点" class="headerlink" title="SPA的优缺点"></a>SPA的优缺点</h3>单页Web程序的出现是客户端发展的必然结果，但是该技术也是有些局限性，所以采用之前需要了解清楚它的优缺点。</li>
-</ul>
-<p>1、优点：<br>1). 良好的交互体验<br>用户不需要重新刷新页面，获取数据也是通过Ajax异步获取，页面显示流畅。<br>2). 良好的前后端工作分离模式<br>单页Web应用可以和RESTful规约一起使用，通过REST API提供接口数据，并使用Ajax异步获取，这样有助于分离客户端和服务器端工作。更进一步，可以在客户端也可以分解为静态页面和页面交互两个部分。<br>3). 减轻服务器压力<br>服务器只用出数据就可以，不用管展示逻辑和页面合成，吞吐能力会提高几倍；<br>4). 共用一套后端程序代码<br>不用修改后端程序代码就可以同时用于Web界面、手机、平板等多种客户端；</p>
-<p>2、缺点：<br>1). SEO难度较高<br>由于所有的内容都在一个页面中动态替换显示，所以在SEO上其有着天然的弱势，所以如果你的站点对SEO很看重，且要用单页应用，那么就做些静态页面给搜索引擎用吧。<br>2). 前进、后退管理<br>由于单页Web应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理，当然此问题也有解决方案，比如利用URI中的散列+iframe实现。<br>3). 初次加载耗时多<br>为实现单页Web应用功能及显示效果，需要在加载页面的时候将JavaScript、CSS统一加载，部分页面可以在需要的时候加载。所以必须对JavaScript及CSS代码进行合并压缩处理，如果使用第三方库，建议使用一些大公司的CDN，因此带宽的消耗是必然的。</p>
-<p>转自<a href="https://www.jianshu.com/p/dcea4d914b65" target="_blank" rel="noopener">雄霸烽火狼</a></p>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo访问量与访客失效原因</title>
-    <url>/2018/10/16/hexo%E8%AE%BF%E9%97%AE%E9%87%8F%E4%B8%8E%E8%AE%BF%E5%AE%A2%E5%A4%B1%E6%95%88%E5%8E%9F%E5%9B%A0/</url>
-    <content><![CDATA[<p>嘻嘻，昨天更新后想看看访问有没有变化的，忽然发现统计功能无效了，之前使用的不蒜子脚本，去看了下原来不蒜子域名修改了。</p>
-<p>不蒜子官网：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a></p>
-<p>解决：将\themes\next\layout_partials\footer.swig下的<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-<p>修改为<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2018/04/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>leetcode101. 对称二叉树</title>
     <url>/2020/05/31/leetcode101/</url>
     <content><![CDATA[<p>给定一个二叉树，检查它是否是镜像对称的。<br><a id="more"></a><br>例如，二叉树 [1,2,2,3,4,4,3] 是对称的,[1,2,2,null,3,null,3] 则不是镜像对称的,<br><strong>分析</strong>：要判断二叉树是否镜像，首先要判断根结点的左右子树值是否相等，然后判断左子树左节点和右子树右节点的值，和左子树的右节点和右子树左节点的值得是否相等。可以分解为两个树的是否镜像<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSymmetric</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mirror(root,root);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">mirror</span><span class="params">(TreeNode n1,TreeNode n2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n1==<span class="keyword">null</span>&amp;&amp; n2==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(n1==<span class="keyword">null</span> || n2==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> n1.val==n2.val &amp;&amp; mirror(n1.left,n2.right) &amp;&amp;mirror(n1.right,n2.left);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -291,42 +366,23 @@
       </tags>
   </entry>
   <entry>
-    <title>震惊，该物质不溶于自身！LeetCode238、除自身以外数组的乘积</title>
-    <url>/2020/06/04/leetcode238/</url>
-    <content><![CDATA[<p>给你一个长度为 n 的整数数组 nums，其中 n &gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。<br><a id="more"></a><br><strong>示例</strong>：</p>
-<blockquote>
-<p>输入：[1,2,3,4]<br>输出：[24,12,8,6]</p>
-</blockquote>
-<p><strong>分析</strong>：用两个数组分别储存除自身以外的左右之积，最后相乘返回<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] productExceptSelf(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">	<span class="comment">//左右累乘</span></span><br><span class="line">	<span class="keyword">int</span> len=nums.length;</span><br><span class="line">	<span class="keyword">int</span>[] left=<span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">	<span class="comment">//int[] right=new int[len];</span></span><br><span class="line">	<span class="keyword">int</span> right=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		left[i]=<span class="number">1</span>;</span><br><span class="line">		<span class="comment">//right[i]=1;</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">		left[i]=left[i-<span class="number">1</span>] * nums[i-<span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=len-<span class="number">2</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">		<span class="comment">//对right数组优化下</span></span><br><span class="line">		<span class="comment">//right[i]=right[i+1] * nums[i+1];</span></span><br><span class="line">		right=right * nums[i+<span class="number">1</span>];</span><br><span class="line">		left[i]=left[i]*right;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java基础知识</title>
-    <url>/2020/04/13/java/</url>
-    <content><![CDATA[<blockquote class="blockquote-center"><p>Oxcafebabe </p>
+    <title>JavaScript 匿名函数与闭包</title>
+    <url>/2020/03/02/AnonymousFunctionAndClosure/</url>
+    <content><![CDATA[<blockquote>
+<p>匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="1、面向对象三大特性：封装、继承、多态。"><a href="#1、面向对象三大特性：封装、继承、多态。" class="headerlink" title="1、面向对象三大特性：封装、继承、多态。"></a>1、面向对象三大特性：封装、继承、多态。</h3><p>封装是一种对象功能内聚的表现形式，使模块之间耦合度变低，更具有维护性，将类的某些信息隐藏在类内部，不允许外部程序直接访问，而是通过该类提供的方法来实现对隐藏信息的操作和访问；继承使子类能够继承父类，获得父类的部分属性和行为，使模块具有复用性；多态使模块在复用性基础上更加有扩展性，使系统运行更有想象空间，实现方式有覆盖和重载。</p>
-<h3 id="2、单例模式及实现？"><a href="#2、单例模式及实现？" class="headerlink" title="2、单例模式及实现？"></a>2、单例模式及实现？</h3><p>保证一个类仅有一个实例，并提供一个访问它的全局访问点。<br>实现方式主要有懒汉式和饿汉式。<br>1、懒汉式，线程不安全<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">    if (instance == null) &#123;  </span><br><span class="line">        instance = new Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>2、懒汉式，通过加锁实现线程安全<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static synchronized Singleton getInstance() &#123;  </span><br><span class="line">    if (instance == null) &#123;  </span><br><span class="line">        instance = new Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>3、饿汉式，线程安全,非懒加载，浪费内存<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance = new Singleton();  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>4、双重锁<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private volatile static Singleton singleton;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getSingleton() &#123;  </span><br><span class="line">    if (singleton == null) &#123;  </span><br><span class="line">        synchronized (Singleton.class) &#123;  </span><br><span class="line">        if (singleton == null) &#123;  </span><br><span class="line">            singleton = new Singleton();  </span><br><span class="line">        &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    return singleton;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>5、枚举型，非懒加载、线程安全<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public enum Singleton &#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    public void whateverMethod() &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="3、为什么wait方法在object类中，sleep方法在Thread类中？"><a href="#3、为什么wait方法在object类中，sleep方法在Thread类中？" class="headerlink" title="3、为什么wait方法在object类中，sleep方法在Thread类中？"></a>3、为什么wait方法在object类中，sleep方法在Thread类中？</h3><p>JAVA提供的锁是对象级的而不是线程级的，每个对象都有锁，通过线程获得。而wait，notify和notifyAll都是锁级别的操作，所以把他们定义在Object类中。这两者都可以让线程暂停一段时间,本质的区别是一个线程的运行状态控制,一个是线程之间的通讯的问题，sleep控制范围是由当前线程决定,没有释放锁。</p>
-<h3 id="4、锁"><a href="#4、锁" class="headerlink" title="4、锁"></a>4、锁</h3><p>4.1 乐观锁：认为数据一般情况下不会造成冲突，所以只会在数据进行更新的时候，才会判断期间数据有没有改变，实现通常用”版本号”。乐观锁多用于多读的场景，提高系统吞吐量。使用实例：1、JDK并发包中的原子类使用乐观锁的CAS实现；2、数据库乐观锁、缓存乐观锁；<br>4.2 悲观锁：对数据修改持悲观态度，在每次数据处理过程中都会对数据上锁，使别的需要该数据的任务处于阻塞，直到它拿到锁。多用于多写的场景，保证数据写操作安全。使用实例：1、java 的synchronized关键字和Lock；2、传统关系型数据库，如行锁，表锁，读锁，写锁等；3、基于zookeeper、Redis 的分布式锁；<br>4.3 自旋锁：<br>没有获取到锁的线程的两种处理方式，一种是没有获取到锁的线程就一直循环等待判断该资源是否已经释放锁，这种锁叫做自旋锁，它不用将线程阻塞起来(NON-BLOCKING)；还有一种处理方式就是把自己阻塞起来，等待重新调度请求，这种叫做互斥锁。<br>自旋锁的定义：当一个线程尝试去获取某一把锁的时候，如果这个锁此时已经被别人获取(占用)，那么此线程就无法获取到这把锁，该线程将会等待，间隔一段时间后会再次尝试获取。这种采用循环加锁 -&gt; 等待的机制被称为自旋锁(spinlock)，因为自旋锁避免了操作系统进程调度和线程切换，所以自旋锁通常适用在时间比较短的情况下。由于这个原因，操作系统的内核经常使用自旋锁。<br>4.4 互斥锁、共享锁：<br>互斥锁又叫排它锁，一个锁在某一时刻只能被一个线程占有，其它线程必须等待锁被释放之后才可能获取到锁。如ReentrantLock。<br>共享锁又称读锁，就是允许多个线程同时获取一个锁，一个锁可以同时被多个线程拥有。比如说ReadWriteLock。</p>
+<h2 id="一、匿名函数"><a href="#一、匿名函数" class="headerlink" title="一、匿名函数"></a>一、匿名函数</h2><p>声明一个普通函数,函数名为fun：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>那么将函数名去掉，就是匿名函数：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//单独的匿名函数会报错,无法运行、无法调用</span></span><br><span class="line"><span class="comment">//function() &#123;</span></span><br><span class="line"><span class="comment">//  //函数体</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//未在应用场景中，不符合语法，需加上括号</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//在函数后面加上括号，可通过表达式的自我执行，立即执行</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">//如需传值，可以括号内传值</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)(“匿名函数”);</span><br></pre></td></tr></table></figure></p>
+<p>匿名函数运用场景：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1、事件</span></span><br><span class="line">&lt;button id=<span class="string">"btn"</span>&gt;点击&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">    var btn=document.getElementById("btn");</span></span><br><span class="line"><span class="regexp">    btn.onclick=function()&#123;</span></span><br><span class="line"><span class="regexp">        alert("点击按钮");</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2、对象</span></span><br><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">    name:<span class="string">"张三"</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"我是"</span>+<span class="keyword">this</span>.name+<span class="string">"，今年"</span>+<span class="keyword">this</span>.age+<span class="string">"岁。"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj.say());<span class="comment">//我是张三，今年18岁。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3、函数表达式，用作赋值</span></span><br><span class="line"><span class="keyword">var</span> say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"我是张三，今年18岁。"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//4、回调函数</span></span><br><span class="line">say(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"我是张三，今年18岁。"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>匿名函数主要用于闭包，以及模拟块级作用域，减少全局变量，执行结束即销毁，而闭包有所不同</p>
+<h2 id="二、闭包"><a href="#二、闭包" class="headerlink" title="二、闭包"></a>二、闭包</h2><p>都知道在函数内部可以直接读取全局变量，但是在函数外部无法读取函数内部的局部变量。而闭包所实现的就是从外部读取函数内部的局部变量，其方法就是在函数内部创建另一个函数，而如果这个内部函数被返回，并且在其他地方被调用了，这个内部函数就是闭包，闭包会携带它的函数作用域，可以继续存在于缓存中。闭包可以看做两个函数的桥梁，沟通其局部变量。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//通过全局变量来累加</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    a++;</span><br><span class="line">    alert(<span class="string">"a="</span>+a);</span><br><span class="line">&#125;</span><br><span class="line">add();<span class="comment">//a=2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过闭包返回局部变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        a++;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">alert(add()());<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>Java</tag>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -365,56 +421,20 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaScript 匿名函数与闭包</title>
-    <url>/2020/03/02/AnonymousFunctionAndClosure/</url>
-    <content><![CDATA[<blockquote>
-<p>匿名函数为没有函数标识符的函数，主要用于赋值变量；而闭包指有权访问另一个函数作用域中变量的函数，常见方式就是在一个函数内部创建另一个函数。</p>
+    <title>震惊，该物质不溶于自身！LeetCode238、除自身以外数组的乘积</title>
+    <url>/2020/06/04/leetcode238/</url>
+    <content><![CDATA[<p>给你一个长度为 n 的整数数组 nums，其中 n &gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。<br><a id="more"></a><br><strong>示例</strong>：</p>
+<blockquote>
+<p>输入：[1,2,3,4]<br>输出：[24,12,8,6]</p>
 </blockquote>
-<a id="more"></a>
-<h2 id="一、匿名函数"><a href="#一、匿名函数" class="headerlink" title="一、匿名函数"></a>一、匿名函数</h2><p>声明一个普通函数,函数名为fun：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>那么将函数名去掉，就是匿名函数：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//单独的匿名函数会报错,无法运行、无法调用</span></span><br><span class="line"><span class="comment">//function() &#123;</span></span><br><span class="line"><span class="comment">//  //函数体</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//未在应用场景中，不符合语法，需加上括号</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//在函数后面加上括号，可通过表达式的自我执行，立即执行</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="comment">//如需传值，可以括号内传值</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//函数体</span></span><br><span class="line">&#125;)(“匿名函数”);</span><br></pre></td></tr></table></figure></p>
-<p>匿名函数运用场景：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1、事件</span></span><br><span class="line">&lt;button id=<span class="string">"btn"</span>&gt;点击&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">    var btn=document.getElementById("btn");</span></span><br><span class="line"><span class="regexp">    btn.onclick=function()&#123;</span></span><br><span class="line"><span class="regexp">        alert("点击按钮");</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2、对象</span></span><br><span class="line"><span class="keyword">var</span> obj=&#123;</span><br><span class="line">    name:<span class="string">"张三"</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"我是"</span>+<span class="keyword">this</span>.name+<span class="string">"，今年"</span>+<span class="keyword">this</span>.age+<span class="string">"岁。"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj.say());<span class="comment">//我是张三，今年18岁。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3、函数表达式，用作赋值</span></span><br><span class="line"><span class="keyword">var</span> say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"我是张三，今年18岁。"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//4、回调函数</span></span><br><span class="line">say(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"我是张三，今年18岁。"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>匿名函数主要用于闭包，以及模拟块级作用域，减少全局变量，执行结束即销毁，而闭包有所不同</p>
-<h2 id="二、闭包"><a href="#二、闭包" class="headerlink" title="二、闭包"></a>二、闭包</h2><p>都知道在函数内部可以直接读取全局变量，但是在函数外部无法读取函数内部的局部变量。而闭包所实现的就是从外部读取函数内部的局部变量，其方法就是在函数内部创建另一个函数，而如果这个内部函数被返回，并且在其他地方被调用了，这个内部函数就是闭包，闭包会携带它的函数作用域，可以继续存在于缓存中。闭包可以看做两个函数的桥梁，沟通其局部变量。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//通过全局变量来累加</span></span><br><span class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    a++;</span><br><span class="line">    alert(<span class="string">"a="</span>+a);</span><br><span class="line">&#125;</span><br><span class="line">add();<span class="comment">//a=2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过闭包返回局部变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        a++;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">alert(add()());<span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>量子噬猪！leetcode458、可怜的小猪</title>
-    <url>/2020/06/10/leetcode458/</url>
-    <content><![CDATA[<p>有 1000 只水桶，其中有且只有一桶装的含有毒药，其余装的都是水。它们从外观看起来都一样。如果小猪喝了毒药，它会在 15 分钟内死去。</p>
-<p>问题来了，如果需要你在一小时内，弄清楚哪只水桶含有毒药，你最少需要多少只猪？<br><a id="more"></a><br>回答这个问题，并为下列的进阶问题编写一个通用算法。<br><strong>进阶</strong>：<br>假设有 n 只水桶，猪饮水中毒后会在 m 分钟内死亡，你需要多少猪（x）就能在 p 分钟内找出 “有毒” 水桶？这 n 只水桶里有且仅有一只有毒的桶。</p>
-<p>代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">poorPigs</span><span class="params">(<span class="keyword">int</span> buckets, <span class="keyword">int</span> minutesToDie, <span class="keyword">int</span> minutesToTest)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//一个小时，15分钟会死去，可以有五次机会</span></span><br><span class="line">	<span class="comment">//将1000桶水以五进制表示，0-4对应每个15分钟喝水，前四次猪还活着表示第五次有毒，因此可以有五个状态</span></span><br><span class="line">	<span class="comment">//那么5^5&gt;1000，即5只猪可根据猪的死去状态试出毒水桶</span></span><br><span class="line">	<span class="keyword">int</span> time=minutesToTest/minutesToDie+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> pig=<span class="number">0</span>;</span><br><span class="line">	<span class="comment">// while(true)&#123;</span></span><br><span class="line">	<span class="comment">//     if(Math.pow(time,pig)&gt;=buckets) return pig;</span></span><br><span class="line">	<span class="comment">//     pig++;</span></span><br><span class="line">	<span class="comment">// &#125;</span></span><br><span class="line">	<span class="comment">//这部分可以用对数</span></span><br><span class="line">	pig = (<span class="keyword">int</span>) Math.ceil(Math.log(buckets)/Math.log(time));</span><br><span class="line">	<span class="keyword">return</span> pig;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>疫情期间，既要每日测温，也要做LeetCode739、每日温度</title>
-    <url>/2020/06/13/leetcode739/</url>
-    <content><![CDATA[<p>根据每日气温列表，请重新生成一个列表，对应位置的输出是需要再等待多久温度才会升高超过该日的天数。如果之后都不会升高，请在该位置用 0 来代替。<br><a id="more"></a><br>例如，给定一个列表 temperatures = [73, 74, 75, 71, 69, 72, 76, 73]，你的输出应该是 [1, 1, 4, 2, 1, 1, 0, 0]。<br><strong>提示</strong>：气温列表长度的范围是[1, 30000]。每个气温的值的均为华氏度，都是在 [30, 100] 范围内的整数。</p>
-<p><strong>分析</strong>：<br>方法一：使用单调栈记录温度天数，遍历时，当遇到比栈顶高的温度时，出栈并记录栈顶的时间和当前温度时间之间的等待天数。出栈后再次查看栈顶时间的温度是否小于当前温度，小于则继续出栈，大于则不做处理，继续入栈。<br>代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] dailyTemperatures(<span class="keyword">int</span>[] T) &#123;</span><br><span class="line">	<span class="keyword">int</span>[] res=<span class="keyword">new</span> <span class="keyword">int</span>[T.length];</span><br><span class="line">	Deque&lt;Integer&gt; stack=<span class="keyword">new</span> ArrayDeque&lt;&gt;();</span><br><span class="line">	stack.offerLast(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;T.length;i++)&#123;</span><br><span class="line">		<span class="keyword">while</span>(!stack.isEmpty() &amp;&amp; T[stack.peekLast()]&lt;T[i])&#123;</span><br><span class="line">			res[stack.peekLast()]=i-stack.peekLast();</span><br><span class="line">			stack.pollLast();</span><br><span class="line">		&#125;</span><br><span class="line">		stack.offerLast(i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (!stack.isEmpty())&#123;</span><br><span class="line">		res[stack.pollLast()]=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>方法二：从最后一天向前递推，显然最后天为0，倒数第二天时，如果最后一天大于这天，则为1，小于则为0。可以得到规律根据T[i+1]天的结果即可得到T[i]的结果</p>
-<ul>
-<li>如果T[i]&lt;T[i+1]时，res[i]=1；</li>
-<li>如果T[i]&gt;T[i+1]时，res[i+1]=0,那么res[i]=0,若res[i+1]&gt;0,那么继续比较T[i]和T[i+1+res[i+1]],和比T[i+1]大的那天比较。<br>代码：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] dailyTemperatures(<span class="keyword">int</span>[] T) &#123;</span><br><span class="line">	<span class="keyword">int</span>[] res=<span class="keyword">new</span> <span class="keyword">int</span>[T.length];</span><br><span class="line">	res[T.length - <span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = T.length - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; T.length; j += res[j]) &#123;</span><br><span class="line">			<span class="keyword">if</span> (T[i] &lt; T[j]) &#123;</span><br><span class="line">				res[i] = j - i;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (res[j] == <span class="number">0</span>) &#123;</span><br><span class="line">				res[i] = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
+<p><strong>分析</strong>：用两个数组分别储存除自身以外的左右之积，最后相乘返回<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] productExceptSelf(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">	<span class="comment">//左右累乘</span></span><br><span class="line">	<span class="keyword">int</span> len=nums.length;</span><br><span class="line">	<span class="keyword">int</span>[] left=<span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">	<span class="comment">//int[] right=new int[len];</span></span><br><span class="line">	<span class="keyword">int</span> right=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		left[i]=<span class="number">1</span>;</span><br><span class="line">		<span class="comment">//right[i]=1;</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">		left[i]=left[i-<span class="number">1</span>] * nums[i-<span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=len-<span class="number">2</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">		<span class="comment">//对right数组优化下</span></span><br><span class="line">		<span class="comment">//right[i]=right[i+1] * nums[i+1];</span></span><br><span class="line">		right=right * nums[i+<span class="number">1</span>];</span><br><span class="line">		left[i]=left[i]*right;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
         <category>数据结构与算法</category>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>OJ</tag>
+        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
@@ -440,6 +460,20 @@
       </tags>
   </entry>
   <entry>
+    <title>量子噬猪！leetcode458、可怜的小猪</title>
+    <url>/2020/06/10/leetcode458/</url>
+    <content><![CDATA[<p>有 1000 只水桶，其中有且只有一桶装的含有毒药，其余装的都是水。它们从外观看起来都一样。如果小猪喝了毒药，它会在 15 分钟内死去。</p>
+<p>问题来了，如果需要你在一小时内，弄清楚哪只水桶含有毒药，你最少需要多少只猪？<br><a id="more"></a><br>回答这个问题，并为下列的进阶问题编写一个通用算法。<br><strong>进阶</strong>：<br>假设有 n 只水桶，猪饮水中毒后会在 m 分钟内死亡，你需要多少猪（x）就能在 p 分钟内找出 “有毒” 水桶？这 n 只水桶里有且仅有一只有毒的桶。</p>
+<p>代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">poorPigs</span><span class="params">(<span class="keyword">int</span> buckets, <span class="keyword">int</span> minutesToDie, <span class="keyword">int</span> minutesToTest)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//一个小时，15分钟会死去，可以有五次机会</span></span><br><span class="line">	<span class="comment">//将1000桶水以五进制表示，0-4对应每个15分钟喝水，前四次猪还活着表示第五次有毒，因此可以有五个状态</span></span><br><span class="line">	<span class="comment">//那么5^5&gt;1000，即5只猪可根据猪的死去状态试出毒水桶</span></span><br><span class="line">	<span class="keyword">int</span> time=minutesToTest/minutesToDie+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> pig=<span class="number">0</span>;</span><br><span class="line">	<span class="comment">// while(true)&#123;</span></span><br><span class="line">	<span class="comment">//     if(Math.pow(time,pig)&gt;=buckets) return pig;</span></span><br><span class="line">	<span class="comment">//     pig++;</span></span><br><span class="line">	<span class="comment">// &#125;</span></span><br><span class="line">	<span class="comment">//这部分可以用对数</span></span><br><span class="line">	pig = (<span class="keyword">int</span>) Math.ceil(Math.log(buckets)/Math.log(time));</span><br><span class="line">	<span class="keyword">return</span> pig;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LeetCode 84、柱状图中最大的矩形</title>
     <url>/2020/05/30/leetcode84/</url>
     <content><![CDATA[<p><strong>描述</strong>：给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。<br>求在该柱状图中，能够勾勒出来的矩形的最大面积。<br><a id="more"></a><br><img src="/images/202005/leetcode84.png" alt="LeetCode84"><br>图中最大矩形面积，为高度5和6两根柱子所构成的，其面积为 10 个单位。</p>
@@ -451,6 +485,42 @@
       </categories>
       <tags>
         <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java基础知识</title>
+    <url>/2020/04/13/java/</url>
+    <content><![CDATA[<blockquote class="blockquote-center"><p>Oxcafebabe </p>
+</blockquote>
+<a id="more"></a>
+<h3 id="1、面向对象三大特性：封装、继承、多态。"><a href="#1、面向对象三大特性：封装、继承、多态。" class="headerlink" title="1、面向对象三大特性：封装、继承、多态。"></a>1、面向对象三大特性：封装、继承、多态。</h3><p>封装是一种对象功能内聚的表现形式，使模块之间耦合度变低，更具有维护性，将类的某些信息隐藏在类内部，不允许外部程序直接访问，而是通过该类提供的方法来实现对隐藏信息的操作和访问；继承使子类能够继承父类，获得父类的部分属性和行为，使模块具有复用性；多态使模块在复用性基础上更加有扩展性，使系统运行更有想象空间，实现方式有覆盖和重载。</p>
+<h3 id="2、单例模式及实现？"><a href="#2、单例模式及实现？" class="headerlink" title="2、单例模式及实现？"></a>2、单例模式及实现？</h3><p>保证一个类仅有一个实例，并提供一个访问它的全局访问点。<br>实现方式主要有懒汉式和饿汉式。<br>1、懒汉式，线程不安全<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">    if (instance == null) &#123;  </span><br><span class="line">        instance = new Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2、懒汉式，通过加锁实现线程安全<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static synchronized Singleton getInstance() &#123;  </span><br><span class="line">    if (instance == null) &#123;  </span><br><span class="line">        instance = new Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3、饿汉式，线程安全,非懒加载，浪费内存<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance = new Singleton();  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">    return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>4、双重锁<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private volatile static Singleton singleton;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getSingleton() &#123;  </span><br><span class="line">    if (singleton == null) &#123;  </span><br><span class="line">        synchronized (Singleton.class) &#123;  </span><br><span class="line">        if (singleton == null) &#123;  </span><br><span class="line">            singleton = new Singleton();  </span><br><span class="line">        &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    return singleton;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>5、枚举型，非懒加载、线程安全<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public enum Singleton &#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    public void whateverMethod() &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3、为什么wait方法在object类中，sleep方法在Thread类中？"><a href="#3、为什么wait方法在object类中，sleep方法在Thread类中？" class="headerlink" title="3、为什么wait方法在object类中，sleep方法在Thread类中？"></a>3、为什么wait方法在object类中，sleep方法在Thread类中？</h3><p>JAVA提供的锁是对象级的而不是线程级的，每个对象都有锁，通过线程获得。而wait，notify和notifyAll都是锁级别的操作，所以把他们定义在Object类中。这两者都可以让线程暂停一段时间,本质的区别是一个线程的运行状态控制,一个是线程之间的通讯的问题，sleep控制范围是由当前线程决定,没有释放锁。</p>
+<h3 id="4、锁"><a href="#4、锁" class="headerlink" title="4、锁"></a>4、锁</h3><p>4.1 乐观锁：认为数据一般情况下不会造成冲突，所以只会在数据进行更新的时候，才会判断期间数据有没有改变，实现通常用”版本号”。乐观锁多用于多读的场景，提高系统吞吐量。使用实例：1、JDK并发包中的原子类使用乐观锁的CAS实现；2、数据库乐观锁、缓存乐观锁；<br>4.2 悲观锁：对数据修改持悲观态度，在每次数据处理过程中都会对数据上锁，使别的需要该数据的任务处于阻塞，直到它拿到锁。多用于多写的场景，保证数据写操作安全。使用实例：1、java 的synchronized关键字和Lock；2、传统关系型数据库，如行锁，表锁，读锁，写锁等；3、基于zookeeper、Redis 的分布式锁；<br>4.3 自旋锁：<br>没有获取到锁的线程的两种处理方式，一种是没有获取到锁的线程就一直循环等待判断该资源是否已经释放锁，这种锁叫做自旋锁，它不用将线程阻塞起来(NON-BLOCKING)；还有一种处理方式就是把自己阻塞起来，等待重新调度请求，这种叫做互斥锁。<br>自旋锁的定义：当一个线程尝试去获取某一把锁的时候，如果这个锁此时已经被别人获取(占用)，那么此线程就无法获取到这把锁，该线程将会等待，间隔一段时间后会再次尝试获取。这种采用循环加锁 -&gt; 等待的机制被称为自旋锁(spinlock)，因为自旋锁避免了操作系统进程调度和线程切换，所以自旋锁通常适用在时间比较短的情况下。由于这个原因，操作系统的内核经常使用自旋锁。<br>4.4 互斥锁、共享锁：<br>互斥锁又叫排它锁，一个锁在某一时刻只能被一个线程占有，其它线程必须等待锁被释放之后才可能获取到锁。如ReentrantLock。<br>共享锁又称读锁，就是允许多个线程同时获取一个锁，一个锁可以同时被多个线程拥有。比如说ReadWriteLock。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代理</title>
+    <url>/2020/04/17/proxy/</url>
+    <content><![CDATA[<p>Java中代理是复用代码的除组合和继承外的第三种方法，并没有提供直接支持，是继承和组合的中庸。相比组合和继承，可以隐藏父类在子类的方法暴露。<br><a id="more"></a><br>比如Car类，继承CarCore类，来实现汽车的前后移动，<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CarCore</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">forward</span><span class="params">(<span class="keyword">int</span> velocity)</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">back</span><span class="params">(<span class="keyword">int</span> velocity)</span></span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//Car使用继承实现CarCore</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> <span class="keyword">extends</span> <span class="title">CarCore</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Car</span><span class="params">(String name)</span></span>&#123; <span class="keyword">this</span>.name=name; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Car car=<span class="keyword">new</span> Car(<span class="string">"BMW"</span>);</span><br><span class="line">        car.forward(<span class="number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用代理可以很好解决由此的问题：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CarProxy</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> CarCore carCore=<span class="keyword">new</span> CarCore();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CarProxy</span><span class="params">(String name)</span> </span>&#123;<span class="keyword">this</span>.name=name;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//proxy methods</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">forward</span><span class="params">(<span class="keyword">int</span> velocity)</span></span>&#123;</span><br><span class="line">        carCore.forward(velocity);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">back</span><span class="params">(<span class="keyword">int</span> velocity)</span></span>&#123;</span><br><span class="line">        carCore.back(velocity);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        CarProxy carProxy=<span class="keyword">new</span> CarProxy(<span class="string">"BMW"</span>);</span><br><span class="line">        carProxy.forward(<span class="number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>由上通过通过代理者获得了与继承相同的接口，但是用代理可以得到更多的控制力。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -492,34 +562,22 @@
       </tags>
   </entry>
   <entry>
-    <title>Servlet开发（二）</title>
-    <url>/2020/05/31/servlet2/</url>
-    <content><![CDATA[<h2 id="HttpServlet类"><a href="#HttpServlet类" class="headerlink" title="HttpServlet类"></a>HttpServlet类</h2><p>HttpServlet继承抽象类GenericServlet，GenericServlet类实现了Servlet, ServletConfig接口。</p>
-<a id="more"></a>  
-<p>HttpServlet类：<br><img src="/images/202005/HttpServlet.png" alt="HttpServlet类"><br>GenericServlet类：<br><img src="/images/202005/GenericServlet.png" alt="GenericServlet类"></p>
-<p>Servlet 需要提供对应的doGet()与doPost()方法<br>在执行doGet()或者doPost()之前，都会先执行service()，根据请求提交方式来判断使用调用doGet()还是doPost()，因此也可以复写service()方法，提供相应服务。</p>
-<h2 id="Servlet生命周期"><a href="#Servlet生命周期" class="headerlink" title="Servlet生命周期"></a>Servlet生命周期</h2><p>一个Servlet的生命周期由实例化，初始化，提供服务，销毁，被回收几个步骤组成<br><strong>实例化</strong>：<br>当用户通过浏览器输入一个路径，这个路径对应的servlet被调用的时候，该Servlet就会被实例化<br>为LoginServlet显式提供一个构造方法 LoginServlet()<br>而无论访问了多少次LoginServlet，LoginServlet构造方法只会执行一次，所以Servlet是单实例的<br><strong>初始化</strong>：<br>LoginServlet 继承了HttpServlet，同时也继承了init(ServletConfig) 方法<br>init 方法是一个实例方法，所以会在构造方法执行后执行。<br>无论访问了多少次LoginSerlvet<br>init初始化 只会执行一次<br><strong>提供服务</strong>：<br>接下来就是执行service()方法，然后通过浏览器传递过来的信息进行判断，是调用doGet()还是doPost()方法<br>service()中也可以编写业务代码，比如判断用户输入的账号和密码是否正确<br><strong>销毁</strong>：<br>销毁为destroy()<br>在如下几种情况下，会调用destroy()<br>1、 该Servlet所在的web应用重新启动，在server.xml中配置该web应用的时候用到了<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">"/"</span> <span class="attr">docBase</span>=<span class="string">"e:\\project\\j2ee\\web"</span> <span class="attr">debug</span>=<span class="string">"0"</span> <span class="attr">reloadable</span>=<span class="string">"false"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>如果把 reloadable=”false” 改为reloadable=”true” 就表示有任何类发生的更新，web应用会自动重启<br>当web应用自动重启的时候，destroy()方法就会被调用<br>2、关闭tomcat的时候 destroy()方法会被调用<br><strong>回收</strong>：<br>当该Servlet被销毁后，就满足垃圾回收的条件了。当下一次GC时，就有可能被回收。</p>
+    <title>疫情期间，既要每日测温，也要做LeetCode739、每日温度</title>
+    <url>/2020/06/13/leetcode739/</url>
+    <content><![CDATA[<p>根据每日气温列表，请重新生成一个列表，对应位置的输出是需要再等待多久温度才会升高超过该日的天数。如果之后都不会升高，请在该位置用 0 来代替。<br><a id="more"></a><br>例如，给定一个列表 temperatures = [73, 74, 75, 71, 69, 72, 76, 73]，你的输出应该是 [1, 1, 4, 2, 1, 1, 0, 0]。<br><strong>提示</strong>：气温列表长度的范围是[1, 30000]。每个气温的值的均为华氏度，都是在 [30, 100] 范围内的整数。</p>
+<p><strong>分析</strong>：<br>方法一：使用单调栈记录温度天数，遍历时，当遇到比栈顶高的温度时，出栈并记录栈顶的时间和当前温度时间之间的等待天数。出栈后再次查看栈顶时间的温度是否小于当前温度，小于则继续出栈，大于则不做处理，继续入栈。<br>代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] dailyTemperatures(<span class="keyword">int</span>[] T) &#123;</span><br><span class="line">	<span class="keyword">int</span>[] res=<span class="keyword">new</span> <span class="keyword">int</span>[T.length];</span><br><span class="line">	Deque&lt;Integer&gt; stack=<span class="keyword">new</span> ArrayDeque&lt;&gt;();</span><br><span class="line">	stack.offerLast(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;T.length;i++)&#123;</span><br><span class="line">		<span class="keyword">while</span>(!stack.isEmpty() &amp;&amp; T[stack.peekLast()]&lt;T[i])&#123;</span><br><span class="line">			res[stack.peekLast()]=i-stack.peekLast();</span><br><span class="line">			stack.pollLast();</span><br><span class="line">		&#125;</span><br><span class="line">		stack.offerLast(i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (!stack.isEmpty())&#123;</span><br><span class="line">		res[stack.pollLast()]=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>方法二：从最后一天向前递推，显然最后天为0，倒数第二天时，如果最后一天大于这天，则为1，小于则为0。可以得到规律根据T[i+1]天的结果即可得到T[i]的结果</p>
+<ul>
+<li>如果T[i]&lt;T[i+1]时，res[i]=1；</li>
+<li>如果T[i]&gt;T[i+1]时，res[i+1]=0,那么res[i]=0,若res[i+1]&gt;0,那么继续比较T[i]和T[i+1+res[i+1]],和比T[i+1]大的那天比较。<br>代码：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] dailyTemperatures(<span class="keyword">int</span>[] T) &#123;</span><br><span class="line">	<span class="keyword">int</span>[] res=<span class="keyword">new</span> <span class="keyword">int</span>[T.length];</span><br><span class="line">	res[T.length - <span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = T.length - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; T.length; j += res[j]) &#123;</span><br><span class="line">			<span class="keyword">if</span> (T[i] &lt; T[j]) &#123;</span><br><span class="line">				res[i] = j - i;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span> (res[j] == <span class="number">0</span>) &#123;</span><br><span class="line">				res[i] = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 ]]></content>
       <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Servlet</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>代理</title>
-    <url>/2020/04/17/proxy/</url>
-    <content><![CDATA[<p>Java中代理是复用代码的除组合和继承外的第三种方法，并没有提供直接支持，是继承和组合的中庸。相比组合和继承，可以隐藏父类在子类的方法暴露。<br><a id="more"></a><br>比如Car类，继承CarCore类，来实现汽车的前后移动，<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CarCore</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">forward</span><span class="params">(<span class="keyword">int</span> velocity)</span></span>&#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">back</span><span class="params">(<span class="keyword">int</span> velocity)</span></span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//Car使用继承实现CarCore</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> <span class="keyword">extends</span> <span class="title">CarCore</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Car</span><span class="params">(String name)</span></span>&#123; <span class="keyword">this</span>.name=name; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Car car=<span class="keyword">new</span> Car(<span class="string">"BMW"</span>);</span><br><span class="line">        car.forward(<span class="number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>使用代理可以很好解决由此的问题：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CarProxy</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> CarCore carCore=<span class="keyword">new</span> CarCore();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CarProxy</span><span class="params">(String name)</span> </span>&#123;<span class="keyword">this</span>.name=name;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//proxy methods</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">forward</span><span class="params">(<span class="keyword">int</span> velocity)</span></span>&#123;</span><br><span class="line">        carCore.forward(velocity);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">back</span><span class="params">(<span class="keyword">int</span> velocity)</span></span>&#123;</span><br><span class="line">        carCore.back(velocity);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        CarProxy carProxy=<span class="keyword">new</span> CarProxy(<span class="string">"BMW"</span>);</span><br><span class="line">        carProxy.forward(<span class="number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>由上通过通过代理者获得了与继承相同的接口，但是用代理可以得到更多的控制力。</p>
-]]></content>
-      <categories>
-        <category>Java</category>
+        <category>数据结构与算法</category>
       </categories>
       <tags>
         <tag>Java</tag>
+        <tag>OJ</tag>
       </tags>
   </entry>
   <entry>
@@ -578,31 +636,20 @@
       </tags>
   </entry>
   <entry>
-    <title>vivo 2020届校招在线编程笔试B卷</title>
-    <url>/2020/05/29/vivo2020B/</url>
-    <content><![CDATA[<p>牛客vivo2020校招编程题解<br><a id="more"></a></p>
-<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><p>今年7月份vivo迎来了新入职的大学生，现在需要为每个新同事分配一个工号。人力资源部同事小v设计了一个方法为每个人进行排序并分配最终的工号，具体规则是：</p>
-<blockquote>
-<p>将N（N&lt;10000）个人排成一排，从第1个人开始报数；如果报数是M的倍数就出列，报到队尾后则回到队头继续报，直到所有人都出列；</p>
-</blockquote>
-<p>最后按照出列顺序为每个人依次分配工号。请你使用自己擅长的编程语言帮助小v实现此方法。<br>解法：使用循环单链表，依次出队<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	ListNode next;</span><br><span class="line">	ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">int</span> m=input[<span class="number">1</span>];</span><br><span class="line">	ListNode people=<span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">	ListNode p = people;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		ListNode node=<span class="keyword">new</span> ListNode(i);</span><br><span class="line">		p.next=node;</span><br><span class="line">		p=p.next;</span><br><span class="line">	&#125;</span><br><span class="line">	p.next=people;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> out=n;</span><br><span class="line">	StringBuilder sb=<span class="keyword">new</span> StringBuilder();</span><br><span class="line">	p=people;</span><br><span class="line">	<span class="keyword">while</span>(out&gt;<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;m;i++)&#123;</span><br><span class="line">			p=p.next;</span><br><span class="line">		&#125;</span><br><span class="line">		sb.append(p.val);</span><br><span class="line">		sb.append(<span class="string">" "</span>);</span><br><span class="line">		p.val=p.next.val;</span><br><span class="line">		p.next=p.next.next;</span><br><span class="line">		out--;</span><br><span class="line">	&#125;</span><br><span class="line">	sb.append(p.val);</span><br><span class="line">	<span class="keyword">return</span> sb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3><p>小v在公司负责游戏运营，今天收到一款申请新上架的游戏“跳一跳”，为了确保提供给广大玩家朋友们的游戏都是高品质的，按照运营流程小v必须对新游戏进行全方位了解体验和评估。这款游戏的规则如下：</p>
-<blockquote>
-<p>有n个盒子排成了一行，每个盒子上面有一个数字a[i]，表示在该盒子上的人最多能向右移动a[i]个盒子（比如当前所在盒子上的数字是3，则表示可以一次向右前进1个盒子，2个盒子或者3个盒子）。</p>
-</blockquote>
-<p>现在小v从左边第一个盒子上开始体验游戏，请问最少需要移动几次能到最后一个盒子上？<br>分析：最远跳跃，依次保留每次跳跃中的可以跳跃到下一次的最远距离<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">if</span>(input == <span class="keyword">null</span>||input.length == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> len=input.length;</span><br><span class="line">	<span class="keyword">int</span> step=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> end=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> maxReach=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(maxReach &lt; i) <span class="keyword">return</span> -<span class="number">1</span>;<span class="comment">//如果不能到达最后，则返回-1</span></span><br><span class="line">		<span class="comment">//记录各节点所能到达的最远距离</span></span><br><span class="line">		maxReach=Math.max(maxReach,i+input[i]); </span><br><span class="line">		<span class="keyword">if</span>(maxReach &gt;= len-<span class="number">1</span>) <span class="keyword">return</span> (step+<span class="number">1</span>);<span class="comment">//超出则直接返回</span></span><br><span class="line">		<span class="keyword">if</span>(i==end)&#123;</span><br><span class="line">			end = maxReach;</span><br><span class="line">			step++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> step;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p>小v最近在玩一款挖矿的游戏，该游戏介绍如下：</p>
-<blockquote>
-<p>1、每次可以挖到多个矿石，每个矿石的重量都不一样，挖矿结束后需要通过一款平衡矿车运送下山；<br>2、平衡矿车有左右2个车厢，中间只有1个车轮沿着导轨滑到山下，且矿车只有在2个车厢重量完全相等且矿石数量相差不超过1个的情况下才能成功运送矿石，否则在转弯时可能出现侧翻。</p>
-</blockquote>
-<p>假设小v挖到了n（n&lt;100）个矿石，每个矿石重量不超过100，为了确保一次性将n个矿石都运送出去，一旦矿车的车厢重量不一样就需要购买配重砝码。请问小v每次最少需要购买多少重量的砝码呢? （假设车厢足够放下这些矿石和砝码，砝码重量任选）<br>分析：开始用得贪心，不能ac,,看评论用的动态规划，不是很理解，贴上代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n = input.length; <span class="comment">//n为石块数</span></span><br><span class="line">	<span class="keyword">int</span> s = <span class="number">0</span>; <span class="comment">//s记录总重量，题解要尽可能满足两边平均</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		s += input[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> S = s &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> N = (n + <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span>[][] dp=<span class="keyword">new</span> <span class="keyword">int</span>[S + <span class="number">1</span>][N+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= S; ++i) dp[i][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span>[][] tmp=dp;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = input[i]; j &lt;= S; ++j) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= N; ++k) &#123;</span><br><span class="line">				tmp[j][k] = Math.max(tmp[j][k], dp[j - input[i]][k - <span class="number">1</span>] + input[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">		dp=tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> ((n &amp; <span class="number">1</span>)==<span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> s - <span class="number">2</span> * Math.max(dp[S][N], dp[S][N - <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s - <span class="number">2</span> * dp[S][N];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+    <title>Servlet开发（二）</title>
+    <url>/2020/05/31/servlet2/</url>
+    <content><![CDATA[<h2 id="HttpServlet类"><a href="#HttpServlet类" class="headerlink" title="HttpServlet类"></a>HttpServlet类</h2><p>HttpServlet继承抽象类GenericServlet，GenericServlet类实现了Servlet, ServletConfig接口。</p>
+<a id="more"></a>  
+<p>HttpServlet类：<br><img src="/images/202005/HttpServlet.png" alt="HttpServlet类"><br>GenericServlet类：<br><img src="/images/202005/GenericServlet.png" alt="GenericServlet类"></p>
+<p>Servlet 需要提供对应的doGet()与doPost()方法<br>在执行doGet()或者doPost()之前，都会先执行service()，根据请求提交方式来判断使用调用doGet()还是doPost()，因此也可以复写service()方法，提供相应服务。</p>
+<h2 id="Servlet生命周期"><a href="#Servlet生命周期" class="headerlink" title="Servlet生命周期"></a>Servlet生命周期</h2><p>一个Servlet的生命周期由实例化，初始化，提供服务，销毁，被回收几个步骤组成<br><strong>实例化</strong>：<br>当用户通过浏览器输入一个路径，这个路径对应的servlet被调用的时候，该Servlet就会被实例化<br>为LoginServlet显式提供一个构造方法 LoginServlet()<br>而无论访问了多少次LoginServlet，LoginServlet构造方法只会执行一次，所以Servlet是单实例的<br><strong>初始化</strong>：<br>LoginServlet 继承了HttpServlet，同时也继承了init(ServletConfig) 方法<br>init 方法是一个实例方法，所以会在构造方法执行后执行。<br>无论访问了多少次LoginSerlvet<br>init初始化 只会执行一次<br><strong>提供服务</strong>：<br>接下来就是执行service()方法，然后通过浏览器传递过来的信息进行判断，是调用doGet()还是doPost()方法<br>service()中也可以编写业务代码，比如判断用户输入的账号和密码是否正确<br><strong>销毁</strong>：<br>销毁为destroy()<br>在如下几种情况下，会调用destroy()<br>1、 该Servlet所在的web应用重新启动，在server.xml中配置该web应用的时候用到了<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">"/"</span> <span class="attr">docBase</span>=<span class="string">"e:\\project\\j2ee\\web"</span> <span class="attr">debug</span>=<span class="string">"0"</span> <span class="attr">reloadable</span>=<span class="string">"false"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>如果把 reloadable=”false” 改为reloadable=”true” 就表示有任何类发生的更新，web应用会自动重启<br>当web应用自动重启的时候，destroy()方法就会被调用<br>2、关闭tomcat的时候 destroy()方法会被调用<br><strong>回收</strong>：<br>当该Servlet被销毁后，就满足垃圾回收的条件了。当下一次GC时，就有可能被回收。</p>
 ]]></content>
       <categories>
-        <category>数据结构与算法</category>
+        <category>Java</category>
       </categories>
       <tags>
-        <tag>OJ</tag>
-        <tag>数据结构与算法</tag>
+        <tag>Servlet</tag>
       </tags>
   </entry>
   <entry>
@@ -648,6 +695,51 @@
       </tags>
   </entry>
   <entry>
+    <title>关于博客</title>
+    <url>/2018/04/28/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<pre><code>考研录取后赋闲在家，闲来无事。
+</code></pre><p>&emsp;&emsp;在过去一段时间内，我从很多优秀的博客学到了很多，深深感谢那些博主通过博客帮助了很多求学的人。<br>&emsp;&emsp;于是也就有个建立博客的念头，在前几日看到weiyang大佬的搭建博客的文章，便着手搭建这个博客，感谢现在互联网的便利，通过github+hexo，以及众多博主的经验分享，综合选择了NexT主题，终于搭建了这个小窝。希望能督促自己,并分享自己今后的生活与学习，也欢迎各位小伙伴的交流。<br>&emsp;&emsp;在此贴出一些学习的文章，希望想搭建博客的小伙伴可以学习。</p>
+<p>&emsp;&emsp;博文文章：<br>&emsp;&emsp;&emsp;&emsp;<a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/w_ngzeqi/article/details/73863543" target="_blank" rel="noopener">hexo之next主题个性化配置详细教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/shengshengshiwo/article/details/79350413" target="_blank" rel="noopener">NexT的主题设定与配置</a><br>&emsp;&emsp;&emsp;&emsp;<a href="http://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/blue_zy/article/details/79058763" target="_blank" rel="noopener">Hexo更换next主题和优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有哪些好看的 Hexo 主题？</a></p>
+<p>&emsp;&emsp;后期陆续补充。。。</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>djwang</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vivo 2020届校招在线编程笔试B卷</title>
+    <url>/2020/05/29/vivo2020B/</url>
+    <content><![CDATA[<p>牛客vivo2020校招编程题解<br><a id="more"></a></p>
+<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><p>今年7月份vivo迎来了新入职的大学生，现在需要为每个新同事分配一个工号。人力资源部同事小v设计了一个方法为每个人进行排序并分配最终的工号，具体规则是：</p>
+<blockquote>
+<p>将N（N&lt;10000）个人排成一排，从第1个人开始报数；如果报数是M的倍数就出列，报到队尾后则回到队头继续报，直到所有人都出列；</p>
+</blockquote>
+<p>最后按照出列顺序为每个人依次分配工号。请你使用自己擅长的编程语言帮助小v实现此方法。<br>解法：使用循环单链表，依次出队<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	ListNode next;</span><br><span class="line">	ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">int</span> m=input[<span class="number">1</span>];</span><br><span class="line">	ListNode people=<span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">	ListNode p = people;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		ListNode node=<span class="keyword">new</span> ListNode(i);</span><br><span class="line">		p.next=node;</span><br><span class="line">		p=p.next;</span><br><span class="line">	&#125;</span><br><span class="line">	p.next=people;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> out=n;</span><br><span class="line">	StringBuilder sb=<span class="keyword">new</span> StringBuilder();</span><br><span class="line">	p=people;</span><br><span class="line">	<span class="keyword">while</span>(out&gt;<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;m;i++)&#123;</span><br><span class="line">			p=p.next;</span><br><span class="line">		&#125;</span><br><span class="line">		sb.append(p.val);</span><br><span class="line">		sb.append(<span class="string">" "</span>);</span><br><span class="line">		p.val=p.next.val;</span><br><span class="line">		p.next=p.next.next;</span><br><span class="line">		out--;</span><br><span class="line">	&#125;</span><br><span class="line">	sb.append(p.val);</span><br><span class="line">	<span class="keyword">return</span> sb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3><p>小v在公司负责游戏运营，今天收到一款申请新上架的游戏“跳一跳”，为了确保提供给广大玩家朋友们的游戏都是高品质的，按照运营流程小v必须对新游戏进行全方位了解体验和评估。这款游戏的规则如下：</p>
+<blockquote>
+<p>有n个盒子排成了一行，每个盒子上面有一个数字a[i]，表示在该盒子上的人最多能向右移动a[i]个盒子（比如当前所在盒子上的数字是3，则表示可以一次向右前进1个盒子，2个盒子或者3个盒子）。</p>
+</blockquote>
+<p>现在小v从左边第一个盒子上开始体验游戏，请问最少需要移动几次能到最后一个盒子上？<br>分析：最远跳跃，依次保留每次跳跃中的可以跳跃到下一次的最远距离<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">if</span>(input == <span class="keyword">null</span>||input.length == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> len=input.length;</span><br><span class="line">	<span class="keyword">int</span> step=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> end=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> maxReach=input[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(maxReach &lt; i) <span class="keyword">return</span> -<span class="number">1</span>;<span class="comment">//如果不能到达最后，则返回-1</span></span><br><span class="line">		<span class="comment">//记录各节点所能到达的最远距离</span></span><br><span class="line">		maxReach=Math.max(maxReach,i+input[i]); </span><br><span class="line">		<span class="keyword">if</span>(maxReach &gt;= len-<span class="number">1</span>) <span class="keyword">return</span> (step+<span class="number">1</span>);<span class="comment">//超出则直接返回</span></span><br><span class="line">		<span class="keyword">if</span>(i==end)&#123;</span><br><span class="line">			end = maxReach;</span><br><span class="line">			step++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> step;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p>小v最近在玩一款挖矿的游戏，该游戏介绍如下：</p>
+<blockquote>
+<p>1、每次可以挖到多个矿石，每个矿石的重量都不一样，挖矿结束后需要通过一款平衡矿车运送下山；<br>2、平衡矿车有左右2个车厢，中间只有1个车轮沿着导轨滑到山下，且矿车只有在2个车厢重量完全相等且矿石数量相差不超过1个的情况下才能成功运送矿石，否则在转弯时可能出现侧翻。</p>
+</blockquote>
+<p>假设小v挖到了n（n&lt;100）个矿石，每个矿石重量不超过100，为了确保一次性将n个矿石都运送出去，一旦矿车的车厢重量不一样就需要购买配重砝码。请问小v每次最少需要购买多少重量的砝码呢? （假设车厢足够放下这些矿石和砝码，砝码重量任选）<br>分析：开始用得贪心，不能ac,,看评论用的动态规划，不是很理解，贴上代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">solution</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Write your code here</span></span><br><span class="line">	<span class="keyword">int</span> n = input.length; <span class="comment">//n为石块数</span></span><br><span class="line">	<span class="keyword">int</span> s = <span class="number">0</span>; <span class="comment">//s记录总重量，题解要尽可能满足两边平均</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		s += input[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> S = s &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> N = (n + <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span>[][] dp=<span class="keyword">new</span> <span class="keyword">int</span>[S + <span class="number">1</span>][N+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= S; ++i) dp[i][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">		<span class="keyword">int</span>[][] tmp=dp;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = input[i]; j &lt;= S; ++j) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= N; ++k) &#123;</span><br><span class="line">				tmp[j][k] = Math.max(tmp[j][k], dp[j - input[i]][k - <span class="number">1</span>] + input[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">		dp=tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> ((n &amp; <span class="number">1</span>)==<span class="number">1</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span> s - <span class="number">2</span> * Math.max(dp[S][N], dp[S][N - <span class="number">1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> s - <span class="number">2</span> * dp[S][N];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>OJ</tag>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Servlet开发（三）</title>
     <url>/2020/05/31/servlet3/</url>
     <content><![CDATA[<h2 id="Servlet跳转"><a href="#Servlet跳转" class="headerlink" title="Servlet跳转"></a>Servlet跳转</h2><ul>
@@ -675,23 +767,6 @@
       </categories>
       <tags>
         <tag>Servlet</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于博客</title>
-    <url>/2018/04/28/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<pre><code>考研录取后赋闲在家，闲来无事。
-</code></pre><p>&emsp;&emsp;在过去一段时间内，我从很多优秀的博客学到了很多，深深感谢那些博主通过博客帮助了很多求学的人。<br>&emsp;&emsp;于是也就有个建立博客的念头，在前几日看到weiyang大佬的搭建博客的文章，便着手搭建这个博客，感谢现在互联网的便利，通过github+hexo，以及众多博主的经验分享，综合选择了NexT主题，终于搭建了这个小窝。希望能督促自己,并分享自己今后的生活与学习，也欢迎各位小伙伴的交流。<br>&emsp;&emsp;在此贴出一些学习的文章，希望想搭建博客的小伙伴可以学习。</p>
-<p>&emsp;&emsp;博文文章：<br>&emsp;&emsp;&emsp;&emsp;<a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/w_ngzeqi/article/details/73863543" target="_blank" rel="noopener">hexo之next主题个性化配置详细教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/shengshengshiwo/article/details/79350413" target="_blank" rel="noopener">NexT的主题设定与配置</a><br>&emsp;&emsp;&emsp;&emsp;<a href="http://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/blue_zy/article/details/79058763" target="_blank" rel="noopener">Hexo更换next主题和优化</a><br>&emsp;&emsp;&emsp;&emsp;<a href="https://www.zhihu.com/question/24422335" target="_blank" rel="noopener">有哪些好看的 Hexo 主题？</a></p>
-<p>&emsp;&emsp;后期陆续补充。。。</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>djwang</tag>
-        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
