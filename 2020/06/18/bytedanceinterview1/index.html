@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="djwang呀">
 <meta property="og:description" content="许愿字节offer">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-19T15:04:34.555Z">
+<meta property="og:updated_time" content="2020-06-19T15:10:59.697Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字节教育后端实习面经集1">
 <meta name="twitter:description" content="许愿字节offer">
@@ -411,9 +411,9 @@
 </blockquote>
 <a id="more"></a>
 <h2 id="字节教育后端三轮面经，牛客-王小C"><a href="#字节教育后端三轮面经，牛客-王小C" class="headerlink" title="字节教育后端三轮面经，牛客@王小C"></a>字节教育后端三轮面经，牛客@王小C</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>1、final (类, 成员变量, 方法)</p>
-<pre><code>- 修饰类，不可被继承
-- 修饰方法，不可被重写
-- 修饰变量时，只能被赋值一次，无法更改，但修饰引用类型变量时，只是对象地址不更改，值可以改变
+<pre><code>+ 修饰类，不可被继承
++ 修饰方法，不可被重写
++ 修饰变量时，只能被赋值一次，无法更改，但修饰引用类型变量时，只是对象地址不更改，值可以改变
 </code></pre><p>2、==和equals的区别</p>
 <pre><code>- &quot;==&quot; 比较的是对象的地址是不是相等，基本数据类型比较值的相等；
 - equals如果对象没有重写，等价于==，可重写判断对象内容的相等。
@@ -449,20 +449,16 @@
 <ul>
 <li>封装、继承、多态<ul>
 <li>编译时多态<br>主要是方法的重载，通过参数列表的不同来区分不同的方法。</li>
-<li>运行时多态<br>也叫作动态绑定，一般是指在执行期间（非编译期间）判断引用对象的实际类型，根据实际类型判断并调用相应的属性和方法。主要用于继承父类和实现接口时，父类引用指向子类对象。<br>4、知道什么设计模式？写一个线程安全的单例模式。</li>
+<li>运行时多态<br>也叫作动态绑定，一般是指在执行期间（非编译期间）判断引用对象的实际类型，根据实际类型判断并调用相应的属性和方法。主要用于继承父类和实现接口时，父类引用指向子类对象。</li>
 </ul>
 </li>
-<li>单例、策略、工厂、代理</li>
-<li>加锁懒汉式、饿汉式</li>
 </ul>
-<p>5、线程和进程</p>
-<ul>
-<li>进程和线程都是一个时间段的描述，是CPU工作时间段的描述，不过是颗粒大小不同</li>
-<li>进程是资源分配的最小单位，线程是CPU调度的最小单位</li>
-</ul>
-<p>6、打印斐波那契数列</p>
-<pre><code>- 略
-</code></pre><h3 id="二面-1"><a href="#二面-1" class="headerlink" title="二面"></a>二面</h3><p>0、介绍项目<br>1、Java的Map和Set和List的区别<br>2、Map有哪些类型，HashMap底层结构，如何实现线程安全。ConcurrentHashMap在一个读一个写的时候会不会加锁呢？HashTable<br>3、数据库为什么用B+树。联合索引特点<br>4、Spring知道吗<br>5、判断二叉搜索树。O(1)空间<br>6、一致性Hash算法</p>
+<p>4、知道什么设计模式？写一个线程安全的单例模式。</p>
+<pre><code>- 单例、策略、工厂、代理
+- 加锁懒汉式、饿汉式
+</code></pre><p>5、线程和进程<br>    进程和线程都是一个时间段的描述，是CPU工作时间段的描述，不过是颗粒大小不同<br>    进程是资源分配的最小单位，线程是CPU调度的最小单位</p>
+<p>6、打印斐波那契数列<br>    略</p>
+<h3 id="二面-1"><a href="#二面-1" class="headerlink" title="二面"></a>二面</h3><p>0、介绍项目<br>1、Java的Map和Set和List的区别<br>2、Map有哪些类型，HashMap底层结构，如何实现线程安全。ConcurrentHashMap在一个读一个写的时候会不会加锁呢？HashTable<br>3、数据库为什么用B+树。联合索引特点<br>4、Spring知道吗<br>5、判断二叉搜索树。O(1)空间<br>6、一致性Hash算法</p>
 <h3 id="三面-1"><a href="#三面-1" class="headerlink" title="三面"></a>三面</h3><p>0、自我介绍<br>1、如何在一堆数中找到想要的数，说几种方法。（我问是排好序的呢还是没排好序的。他说都讲讲。排好序的二分，没排好的直接搜索。他又问还有吗？我说，复杂度已经只有O(n)了；他说可能有一百万个数。所以用多线程）<br>2、项目中最大的挑战<br>3、一个数据库的查询问题。<br>4、写快排</p>
 
       
