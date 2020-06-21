@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="djwang呀">
 <meta property="og:description" content="许愿字节offer">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-21T03:07:15.454Z">
+<meta property="og:updated_time" content="2020-06-21T03:10:49.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字节教育后端实习面经集1">
 <meta name="twitter:description" content="许愿字节offer">
@@ -410,7 +410,11 @@
         <blockquote class="blockquote-center"><p>许愿字节offer </p>
 </blockquote>
 <a id="more"></a>
-<h2 id="字节教育后端三轮面经，牛客-王小C"><a href="#字节教育后端三轮面经，牛客-王小C" class="headerlink" title="字节教育后端三轮面经，牛客@王小C"></a>字节教育后端三轮面经，牛客@王小C</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>1、final (类, 成员变量, 方法)<br>    修饰类，不可被继承<br>    修饰方法，不可被重写<br>    修饰变量时，只能被赋值一次，无法更改，但修饰引用类型变量时，只是对象地址不更改，值可以改变<br>2、==和equals的区别<br>    “==” 比较的是对象的地址是不是相等，基本数据类型比较值的相等；<br>    equals如果对象没有重写，等价于==，可重写判断对象内容的相等。<br>    hashcode，本地内存地址，一般重写equals,也要重写hashcode，保证哈希集合中判断的效率和去重，hashcode相等equals相等，反之未必</p>
+<h2 id="字节教育后端三轮面经，牛客-王小C"><a href="#字节教育后端三轮面经，牛客-王小C" class="headerlink" title="字节教育后端三轮面经，牛客@王小C"></a>字节教育后端三轮面经，牛客@王小C</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>1、final (类, 成员变量, 方法)</p>
+<pre><code>- 修饰类，不可被继承
+修饰方法，不可被重写
+修饰变量时，只能被赋值一次，无法更改，但修饰引用类型变量时，只是对象地址不更改，值可以改变
+</code></pre><p>2、==和equals的区别<br>    “==” 比较的是对象的地址是不是相等，基本数据类型比较值的相等；<br>    equals如果对象没有重写，等价于==，可重写判断对象内容的相等。<br>    hashcode，本地内存地址，一般重写equals,也要重写hashcode，保证哈希集合中判断的效率和去重，hashcode相等equals相等，反之未必</p>
 <p>3、Java的多线程同步方式(Lock类, synchonized, volatile)<br>    JUC的lock类是Lock框架锁定的一个抽象，允许定义Lock的多种实现，如ReentrantLock就是实现了lock；<br>    synchronized 是互斥锁,声明代码块时可以使其具有原子性和可见性；<br>    而volatile只保证了可见性，不具有原子性，因此不保证线程安全。</p>
 <p>4、synchonized仔细讲一下(jvm指令, 锁优化, 和JUC的lock的区别)<br>    和lock相比，synchonized修饰的方法和语句块在执行完自动释放锁，不需要手动获得锁释放锁；<br>5、聊GC(新生代 老年代, 回收算法, 收集器)</p>
 <p>6、进程、线程区别(linux中怎么实现)</p>
