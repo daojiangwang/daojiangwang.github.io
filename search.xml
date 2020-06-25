@@ -149,13 +149,14 @@
 <li>Serial收集器、Serial Old (标记整理算法)、ParNew收集器；</li>
 <li>Parallel Scavenge收集器(复制算法)、Parallel Old收集器(标记整理算法)；</li>
 <li>Concurrent Mark Sweep (标记清除算法);</li>
-<li>G1收集器(标记整理算法)<br>6、进程、线程区别(linux中怎么实现)<blockquote>
+<li>G1收集器(标记整理算法)</li>
+</ul>
+</li>
+</ul>
+<p>6、进程、线程区别(linux中怎么实现)</p>
+<blockquote>
 <p>1.进程与线程<br>进程：具有独立功能的程序关于某个数据集合上的一次运行活动。<br>线程：进程的一个实体。<br>比喻：一列火车是一个进程，火车的每一节车厢是线程。<br>2.进程与线程的联系<br>①一个线程只能属于一个进程，一个进程可以有多个线程；<br>②系统资源分配给进程，同一进程的所有线程共享该进程的所有资源；<br>③真正在处理机上运行的是线程；<br>④不同进程的线程间利用消息通信的方式实现同步。<br>3.进程与线程的区别<br>①调度：线程是系统调度和分配的基本单位，进程是作为拥有系统资源的基本单位；<br>②并发性：进程之间可以并发执行，同一进程的多个线程时间亦可以并发执行；<br>③拥有资源：进程是拥有资源的独立单位，线程不拥有资源，但可以访问隶属于进程的资源；<br>④系统开销：创建和撤销进程的开销更大；进程拥有独立的地址空间，一个进程的崩溃不会影响其他进程；线程拥有自己的堆栈和局部变量，没有独立的地址空间，因此进程里的一个线程崩溃会导致其他线程均崩溃<br>————————————————<br>原文链接：<a href="https://blog.csdn.net/sinat_21107433/article/details/82809946" target="_blank" rel="noopener">https://blog.csdn.net/sinat_21107433/article/details/82809946</a></p>
 </blockquote>
-</li>
-</ul>
-</li>
-</ul>
 <p>7、僵尸进程的产生 如何避免</p>
 <ul>
 <li>如果子进程先于父进程退出， 同时父进程又没有调用wait/waitpid，则该子进程将成为僵尸进程。通过ps命令，我们可以看到该进程的状态为Z(表示僵死);</li>
@@ -229,7 +230,7 @@
     <content><![CDATA[<blockquote class="blockquote-center"><p>数据库知识点整理 </p>
 </blockquote>
 <a id="more"></a>
-<h3 id="0、MySQL-sql语句执行过程"><a href="#0、MySQL-sql语句执行过程" class="headerlink" title="0、MySQL sql语句执行过程"></a>0、MySQL sql语句执行过程</h3><p><img src="/images/202006/sqlexecute.png" alt="sql执行过程"></p>
+<h3 id="0、MySQL-sql语句执行过程"><a href="#0、MySQL-sql语句执行过程" class="headerlink" title="0、MySQL sql语句执行过程"></a>0、MySQL sql语句执行过程</h3><p><img src="/images/202006/mysqlexecute.png" alt="sql执行过程"></p>
 <h3 id="1、MYISAM与innodb搜索引擎原理"><a href="#1、MYISAM与innodb搜索引擎原理" class="headerlink" title="1、MYISAM与innodb搜索引擎原理"></a>1、MYISAM与innodb搜索引擎原理</h3><ul>
 <li>MyISAM引擎（Mysql5.1前默认引擎）使用B+Tree作为索引结构，叶节点的data域存放的是数据记录的地址。其采用表定义文件、索引文件与数据文件，索引文件只存放索引，叶子节点存放数据的物理地址。数据文件存放数据,可移植性较好。其索引方式是非聚集的。</li>
 <li>InnoDB也使用B+Tree作为索引结构。但是它的主索引与数据都放在一个文件中。这种索引叫做聚集索引，因为InnoDB的数据文件本身要按主键聚集，所以InnoDB要求表必须有主键（MyISAM可以没有），如果没有显式指定，则MySQL系统会自动选择一个可以唯一标识数据记录的列作为主键，如果不存在这种列，则MySQL自动为InnoDB表生成一个隐含字段作为主键，这个字段长度为6个字节，类型为长整形。</li>
@@ -244,7 +245,9 @@
 <li>原子性，事务被视为不可分割的最小单元，事务的所有操作要么全部提交成功，要不全部失败回滚；</li>
 <li>一致性，数据库在事务执行前后都保持一致性状态；</li>
 <li>隔离性，一个事务所做的修改在最终提交以前，对其它事务是不可见的；</li>
-<li>持久性，一旦事务提交，则其所做的修改将会永远保存到数据库中；<br><a href="/images/202006/acid.png">ACID</a><h3 id="4、隔离级别"><a href="#4、隔离级别" class="headerlink" title="4、隔离级别"></a>4、隔离级别</h3></li>
+<li>持久性，一旦事务提交，则其所做的修改将会永远保存到数据库中；<br><a href="/images/202006/acid.png">ACID</a></li>
+</ul>
+<h3 id="4、隔离级别"><a href="#4、隔离级别" class="headerlink" title="4、隔离级别"></a>4、隔离级别</h3><ul>
 <li>read uncommit:读不加锁，写加共享锁。会产生脏读、幻读。</li>
 <li>read commit：读加共享锁，写加排它锁，但不加间隙锁。间隙锁的主要作用是防止不可重复读，但会加大锁的范围。</li>
 <li>repeatable read(innodb默认):读加共享锁，写加间隙排它锁。注意，Innodb对这个级别进行了特殊处理，使得这个级别能够避免幻读，但不是所有引擎都能够防止幻读！</li>
