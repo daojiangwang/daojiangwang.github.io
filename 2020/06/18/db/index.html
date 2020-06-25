@@ -96,10 +96,12 @@
 <meta property="og:site_name" content="djwang呀">
 <meta property="og:description" content="数据库知识点整理">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-18T13:35:34.578Z">
+<meta property="og:image" content="http://yoursite.com/images/202006/sqlexecute.png">
+<meta property="og:updated_time" content="2020-06-25T14:37:23.336Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库知识点整理">
 <meta name="twitter:description" content="数据库知识点整理">
+<meta name="twitter:image" content="http://yoursite.com/images/202006/sqlexecute.png">
 
 
 
@@ -410,6 +412,7 @@
         <blockquote class="blockquote-center"><p>数据库知识点整理 </p>
 </blockquote>
 <a id="more"></a>
+<h3 id="0、MySQL-sql语句执行过程"><a href="#0、MySQL-sql语句执行过程" class="headerlink" title="0、MySQL sql语句执行过程"></a>0、MySQL sql语句执行过程</h3><p><img src="/images/202006/sqlexecute.png" alt="sql执行过程"></p>
 <h3 id="1、MYISAM与innodb搜索引擎原理"><a href="#1、MYISAM与innodb搜索引擎原理" class="headerlink" title="1、MYISAM与innodb搜索引擎原理"></a>1、MYISAM与innodb搜索引擎原理</h3><ul>
 <li>MyISAM引擎（Mysql5.1前默认引擎）使用B+Tree作为索引结构，叶节点的data域存放的是数据记录的地址。其采用表定义文件、索引文件与数据文件，索引文件只存放索引，叶子节点存放数据的物理地址。数据文件存放数据,可移植性较好。其索引方式是非聚集的。</li>
 <li>InnoDB也使用B+Tree作为索引结构。但是它的主索引与数据都放在一个文件中。这种索引叫做聚集索引，因为InnoDB的数据文件本身要按主键聚集，所以InnoDB要求表必须有主键（MyISAM可以没有），如果没有显式指定，则MySQL系统会自动选择一个可以唯一标识数据记录的列作为主键，如果不存在这种列，则MySQL自动为InnoDB表生成一个隐含字段作为主键，这个字段长度为6个字节，类型为长整形。</li>
@@ -667,7 +670,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、MYISAM与innodb搜索引擎原理"><span class="nav-number">1.</span> <span class="nav-text">1、MYISAM与innodb搜索引擎原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、最左前缀原理"><span class="nav-number">2.</span> <span class="nav-text">2、最左前缀原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、事务ACID"><span class="nav-number">3.</span> <span class="nav-text">3、事务ACID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、隔离级别"><span class="nav-number">4.</span> <span class="nav-text">4、隔离级别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、"><span class="nav-number">5.</span> <span class="nav-text">5、</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20、galera"><span class="nav-number">6.</span> <span class="nav-text">20、galera</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0、MySQL-sql语句执行过程"><span class="nav-number">1.</span> <span class="nav-text">0、MySQL sql语句执行过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1、MYISAM与innodb搜索引擎原理"><span class="nav-number">2.</span> <span class="nav-text">1、MYISAM与innodb搜索引擎原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、最左前缀原理"><span class="nav-number">3.</span> <span class="nav-text">2、最左前缀原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、事务ACID"><span class="nav-number">4.</span> <span class="nav-text">3、事务ACID</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、隔离级别"><span class="nav-number">5.</span> <span class="nav-text">4、隔离级别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、"><span class="nav-number">6.</span> <span class="nav-text">5、</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20、galera"><span class="nav-number">7.</span> <span class="nav-text">20、galera</span></a></li></ol></div>
             
 
           </div>

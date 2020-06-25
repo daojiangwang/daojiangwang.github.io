@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="djwang呀">
 <meta property="og:description" content="许愿字节offer">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-21T06:35:53.626Z">
+<meta property="og:updated_time" content="2020-06-25T15:17:40.052Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字节教育后端实习面经集1">
 <meta name="twitter:description" content="许愿字节offer">
@@ -429,18 +429,60 @@
 <li>而volatile只保证了可见性，不具有原子性，因此不保证线程安全。</li>
 </ul>
 <p>4、synchonized仔细讲一下(jvm指令, 锁优化, 和JUC的lock的区别) 和lock相比，synchonized修饰的方法和语句块在执行完自动释放锁，不需要手动获得锁释放锁；<br>5、聊GC(新生代 老年代, 回收算法, 收集器)</p>
-<p>6、进程、线程区别(linux中怎么实现)</p>
+<ul>
+<li>判断内存回收<ul>
+<li>引用计数算法，无法检测出循环引用</li>
+<li>可达性分析</li>
+</ul>
+</li>
+<li>垃圾回收算法：<ul>
+<li>标记-清除算法</li>
+<li>复制算法</li>
+<li>标记-整理算法</li>
+<li>分代回收算法</li>
+</ul>
+</li>
+<li>常见的垃圾收集器<ul>
+<li>Serial收集器、Serial Old (标记整理算法)、ParNew收集器；</li>
+<li>Parallel Scavenge收集器(复制算法)、Parallel Old收集器(标记整理算法)；</li>
+<li>Concurrent Mark Sweep (标记清除算法);</li>
+<li>G1收集器(标记整理算法)<br>6、进程、线程区别(linux中怎么实现)<blockquote>
+<p>1.进程与线程<br>进程：具有独立功能的程序关于某个数据集合上的一次运行活动。<br>线程：进程的一个实体。<br>比喻：一列火车是一个进程，火车的每一节车厢是线程。<br>2.进程与线程的联系<br>①一个线程只能属于一个进程，一个进程可以有多个线程；<br>②系统资源分配给进程，同一进程的所有线程共享该进程的所有资源；<br>③真正在处理机上运行的是线程；<br>④不同进程的线程间利用消息通信的方式实现同步。<br>3.进程与线程的区别<br>①调度：线程是系统调度和分配的基本单位，进程是作为拥有系统资源的基本单位；<br>②并发性：进程之间可以并发执行，同一进程的多个线程时间亦可以并发执行；<br>③拥有资源：进程是拥有资源的独立单位，线程不拥有资源，但可以访问隶属于进程的资源；<br>④系统开销：创建和撤销进程的开销更大；进程拥有独立的地址空间，一个进程的崩溃不会影响其他进程；线程拥有自己的堆栈和局部变量，没有独立的地址空间，因此进程里的一个线程崩溃会导致其他线程均崩溃<br>————————————————<br>原文链接：<a href="https://blog.csdn.net/sinat_21107433/article/details/82809946" target="_blank" rel="noopener">https://blog.csdn.net/sinat_21107433/article/details/82809946</a></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
 <p>7、僵尸进程的产生 如何避免</p>
+<ul>
+<li>如果子进程先于父进程退出， 同时父进程又没有调用wait/waitpid，则该子进程将成为僵尸进程。通过ps命令，我们可以看到该进程的状态为Z(表示僵死);</li>
+<li>避免：<ul>
+<li>使用signal函数显式忽略SIGCHLD信号；</li>
+<li>调用wait()或者waitpid();</li>
+<li>fork两次，父进程fork子进程后继续执行，子进程fork一个孙进程后退出，此时孙进程会被init进程接管，避免僵尸进程，当然子进程的退出还是要处理的。</li>
+</ul>
+</li>
+</ul>
 <p>8、三次握手四次挥手(time_wait)<br>    略；在客户端发送针对服务器FIN的ACK后，进入time_wait状态，经过2MSL（Maximun Segment Lifetime）后，没有收到服务器传来的报文，则确定服务器收到ACK指令，TCP连接正式释放。</p>
 <p>9、算法题: 买卖股票 leetcode题</p>
 <h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><p>进程间通信方式(和上面重复了)</p>
+<blockquote>
+<p>①管道：半双工的通信方式，数据只能单向流动，且只能在有亲缘关系（父子进程或兄弟进程）的进程间使用；<br>②命名管道：FIFO，半双工的通信方式，但允许在无亲缘关系的进程间通信；<br>③消息队列：消息的链表，存放在内核中，并由消息队列标识符标识。消息队列克服了信号传递信息少、管道只能承载无格式字节流以及缓冲区大小受限等缺点；<br>④信号量：是一个计数器，用于控制多个进程间对共享资源的访问；<br>⑤共享内存：映射一段能被其他进程访问的内存，这段内存由一个进程创建，但多个进程都可以访问；<br>⑥套接字<br>————————————————<br>原文链接：<a href="https://blog.csdn.net/sinat_21107433/article/details/82809946" target="_blank" rel="noopener">https://blog.csdn.net/sinat_21107433/article/details/82809946</a></p>
+</blockquote>
 <p>浏览器输入一个url后发生什么</p>
 <p>算法题: 打家劫舍 原题</p>
 <p>算法题: 给定升序整形数组和m，a和b是数组中的两个元素；求a+b=m的数据对有多少？(双指针)</p>
 <p>其他: 字节的前两面是连在一起中间休息15分钟</p>
 <h3 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h3><p>jdk8默认的垃圾回收器, 知道哪些垃圾回收器? G1详细说一下</p>
 <p>synchronized关键字的底层是什么?</p>
+<ul>
+<li>无状态锁、偏向锁、轻量锁、重量锁</li>
+</ul>
 <p>线程之间哪些资源是共享的? 什么是独享的?</p>
+<ul>
+<li>共享：堆；全局变量；静态变量；文件等公共资源；</li>
+<li>独享：栈；寄存器；</li>
+</ul>
 <p>堆和栈有什么区别?</p>
 <p>linux查看资源的命令?怎么样查看哪些端口被占用了</p>
 <p>linux内存中swap是什么? 什么用?</p>
