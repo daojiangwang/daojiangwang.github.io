@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="前端,hexo," />
+  <meta name="keywords" content="Java,多线程," />
 
 
 
@@ -88,20 +88,18 @@
 
 
 
-<meta name="description" content="小帅哥快来玩呀 本文测试用">
-<meta name="keywords" content="前端,hexo">
+<meta name="description" content="线程的实现方式1、继承Thread类，缺点是Java不支持多继承，不能继承其他类12345678910public static class MyThread extends Thread&amp;#123;	@Override	public void run()&amp;#123;		System.out.println(&quot;继承Thread类&quot;);	&amp;#125;&amp;#125;public static void">
+<meta name="keywords" content="Java,多线程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇博文">
-<meta property="og:url" content="http://yoursite.com/2018/04/26/第一篇博文/index.html">
+<meta property="og:title" content="Java多线程">
+<meta property="og:url" content="http://yoursite.com/2020/04/29/multithread/index.html">
 <meta property="og:site_name" content="djwang呀">
-<meta property="og:description" content="小帅哥快来玩呀 本文测试用">
+<meta property="og:description" content="线程的实现方式1、继承Thread类，缺点是Java不支持多继承，不能继承其他类12345678910public static class MyThread extends Thread&amp;#123;	@Override	public void run()&amp;#123;		System.out.println(&quot;继承Thread类&quot;);	&amp;#125;&amp;#125;public static void">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/images/IMG_20170420_164916.jpg">
-<meta property="og:updated_time" content="2018-10-17T06:09:09.768Z">
+<meta property="og:updated_time" content="2020-06-29T15:10:01.987Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一篇博文">
-<meta name="twitter:description" content="小帅哥快来玩呀 本文测试用">
-<meta name="twitter:image" content="http://yoursite.com/images/IMG_20170420_164916.jpg">
+<meta name="twitter:title" content="Java多线程">
+<meta name="twitter:description" content="线程的实现方式1、继承Thread类，缺点是Java不支持多继承，不能继承其他类12345678910public static class MyThread extends Thread&amp;#123;	@Override	public void run()&amp;#123;		System.out.println(&quot;继承Thread类&quot;);	&amp;#125;&amp;#125;public static void">
 
 
 
@@ -131,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/26/第一篇博文/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/29/multithread/"/>
 
 
 
 
 
-  <title>第一篇博文 | djwang呀</title>
+  <title>Java多线程 | djwang呀</title>
   
 
 
@@ -310,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/26/第一篇博文/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/29/multithread/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="djwang">
@@ -327,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第一篇博文</h1>
+          <h1 class="post-title" itemprop="name headline">Java多线程</h1>
         
 
         <div class="post-meta">
@@ -339,8 +337,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-26T22:54:07+08:00">
-                2018-04-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-29T21:44:33+08:00">
+                2020-04-29
               </time>
             
 
@@ -362,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -380,8 +378,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/26/第一篇博文/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/26/第一篇博文/" itemprop="commentCount"></span>
+                <a href="/2020/04/29/multithread/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/29/multithread/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -409,23 +407,10 @@
       
 
       
-        <!-- 标签别名 -->
-<blockquote class="blockquote-center"><p>小帅哥快来玩呀 <br>本文测试用</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"这里是djwang's blog。"</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>\(y = f(x)\)<br>$\int^2_3 x^2 {\rm d}x$<br>$\frac{7x+5}{1+y^2}$<br>$\frac{d}{dx}e^{ax}=ae^{ax}\quad \sum_{i=1}^{n}{(X_i - \overline{X})^2}$<br>$\ln15$  $$\log_2 10$$ <!-- 单$为行内，双$为整行 --><br><a href="https://blog.csdn.net/zdk930519/article/details/54137476" target="_blank" rel="noopener">Markdown中数学公式整理</a></p>
-<h3 id="媒体"><a href="#媒体" class="headerlink" title="媒体"></a>媒体</h3><center><br><div style="bottom: 120px; width:310px; heigh:80px;"><br><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="200" height="86" src="//music.163.com/outchain/player?type=2&id=536622304&auto=1&height=66"></iframe><br></div></center>
-
-<p><img src="/images/IMG_20170420_164916.jpg" alt="我们毕业了"> </p>
-<!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 -->
-<!-- 其中 class="blockquote-center" 是必须的 -->
-<blockquote class="blockquote-center">我们毕业了</blockquote>
-
-<!-- 标签 方式，要求版本在0.4.5或以上 -->
-<blockquote class="blockquote-center"><p>如有纠正，欢迎指出</p>
-</blockquote>
-
+        <h3 id="线程的实现方式"><a href="#线程的实现方式" class="headerlink" title="线程的实现方式"></a>线程的实现方式</h3><p>1、继承Thread类，缺点是Java不支持多继承，不能继承其他类<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"继承Thread类"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	MyThread myThread=<span class="keyword">new</span> MyThread();</span><br><span class="line">	myThread.start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2、实现Runnable接口的run方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public static class MyThread2 implements Runnable&#123;</span><br><span class="line">	@Override</span><br><span class="line">	public void run()&#123;</span><br><span class="line">		System.out.println(&quot;实现Runnable类&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	MyThread2 myThread2=new MyThread2();</span><br><span class="line">	new Thread(myThread2).start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3、使用FutureTask方式,包装Callable对象，优点是相对前两种可以获取任务返回值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public static class MyThread3 implements Callable&lt;String&gt; &#123;</span><br><span class="line">	@Override</span><br><span class="line">	public String call() throws Exception &#123;</span><br><span class="line">		return &quot;实现Callable类&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">	FutureTask&lt;String&gt; futureTask=new FutureTask&lt;&gt;(new MyThread3());</span><br><span class="line">	new Thread(futureTask).start();</span><br><span class="line">	try &#123;</span><br><span class="line">		System.out.println(futureTask.get());</span><br><span class="line">	&#125; catch (InterruptedException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125; catch (ExecutionException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="多线程间通信"><a href="#多线程间通信" class="headerlink" title="多线程间通信"></a>多线程间通信</h3><h3 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h3>
       
     </div>
     
@@ -442,9 +427,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
-            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+            <a href="/tags/多线程/" rel="tag"><i class="fa fa-tag"></i> 多线程</a>
           
         </div>
       
@@ -457,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/25/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2020/04/17/proxy/" rel="next" title="代理">
+                <i class="fa fa-chevron-left"></i> 代理
               </a>
             
           </div>
@@ -467,8 +452,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/28/关于博客/" rel="prev" title="关于博客">
-                关于博客 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/05/27/qianzhuihe/" rel="prev" title="前缀和">
+                前缀和 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -646,7 +631,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块"><span class="nav-number">1.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公式"><span class="nav-number">2.</span> <span class="nav-text">公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#媒体"><span class="nav-number">3.</span> <span class="nav-text">媒体</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#线程的实现方式"><span class="nav-number">1.</span> <span class="nav-text">线程的实现方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多线程间通信"><span class="nav-number">2.</span> <span class="nav-text">多线程间通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程池"><span class="nav-number">3.</span> <span class="nav-text">线程池</span></a></li></ol></div>
             
 
           </div>
@@ -1205,26 +1190,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
