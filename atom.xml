@@ -191,9 +191,9 @@
     
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
-      <category term="SpringMVC" scheme="http://yoursite.com/tags/SpringMVC/"/>
-    
       <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+      <category term="SpringMVC" scheme="http://yoursite.com/tags/SpringMVC/"/>
     
   </entry>
   
