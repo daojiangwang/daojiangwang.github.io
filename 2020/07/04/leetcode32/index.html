@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Java,LeetCode," />
+  <meta name="keywords" content="LeetCode," />
 
 
 
@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="给你一个长度为 n 的整数数组 nums，其中 n &amp;gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。">
-<meta name="keywords" content="Java,LeetCode">
+<meta name="description" content="给定一个只包含 ‘(‘ 和 ‘)’ 的字符串，找出最长的包含有效括号的子串的长度。">
+<meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="震惊，该物质不溶于自身！LeetCode238、除自身以外数组的乘积">
-<meta property="og:url" content="http://yoursite.com/2020/06/04/leetcode238/index.html">
+<meta property="og:title" content="另一半，在LeetCode32、最长有效括号">
+<meta property="og:url" content="http://yoursite.com/2020/07/04/leetcode32/index.html">
 <meta property="og:site_name" content="djwang呀">
-<meta property="og:description" content="给你一个长度为 n 的整数数组 nums，其中 n &amp;gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。">
+<meta property="og:description" content="给定一个只包含 ‘(‘ 和 ‘)’ 的字符串，找出最长的包含有效括号的子串的长度。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-04T04:37:54.856Z">
+<meta property="og:updated_time" content="2020-07-04T07:10:12.042Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="震惊，该物质不溶于自身！LeetCode238、除自身以外数组的乘积">
-<meta name="twitter:description" content="给你一个长度为 n 的整数数组 nums，其中 n &amp;gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。">
+<meta name="twitter:title" content="另一半，在LeetCode32、最长有效括号">
+<meta name="twitter:description" content="给定一个只包含 ‘(‘ 和 ‘)’ 的字符串，找出最长的包含有效括号的子串的长度。">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/04/leetcode238/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/04/leetcode32/"/>
 
 
 
 
 
-  <title>震惊，该物质不溶于自身！LeetCode238、除自身以外数组的乘积 | djwang呀</title>
+  <title>另一半，在LeetCode32、最长有效括号 | djwang呀</title>
   
 
 
@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/04/leetcode238/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/04/leetcode32/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="djwang">
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">震惊，该物质不溶于自身！LeetCode238、除自身以外数组的乘积</h1>
+          <h1 class="post-title" itemprop="name headline">另一半，在LeetCode32、最长有效括号</h1>
         
 
         <div class="post-meta">
@@ -337,8 +337,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-04T12:32:44+08:00">
-                2020-06-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-04T14:35:02+08:00">
+                2020-07-04
               </time>
             
 
@@ -378,8 +378,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/06/04/leetcode238/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/04/leetcode238/" itemprop="commentCount"></span>
+                <a href="/2020/07/04/leetcode32/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/07/04/leetcode32/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -407,11 +407,11 @@
       
 
       
-        <p>给你一个长度为 n 的整数数组 nums，其中 n &gt; 1，返回输出数组 output ，其中 output[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。<br><a id="more"></a><br><strong>示例</strong>：</p>
+        <p>给定一个只包含 ‘(‘ 和 ‘)’ 的字符串，找出最长的包含有效括号的子串的长度。<br><a id="more"></a><br>示例：</p>
 <blockquote>
-<p>输入：[1,2,3,4]<br>输出：[24,12,8,6]</p>
+<p>1、输入: “(()”<br>输出: 2<br>解释: 最长有效括号子串为 “()”<br>2、输入: “)()())”<br>输出: 4<br>解释: 最长有效括号子串为 “()()”</p>
 </blockquote>
-<p><strong>分析</strong>：用两个数组分别储存除自身以外的左右之积，最后相乘返回<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] productExceptSelf(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">	<span class="comment">//左右累乘</span></span><br><span class="line">	<span class="keyword">int</span> len=nums.length;</span><br><span class="line">	<span class="keyword">int</span>[] left=<span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">	<span class="comment">//int[] right=new int[len];</span></span><br><span class="line">	<span class="keyword">int</span> right=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">		left[i]=<span class="number">1</span>;</span><br><span class="line">		<span class="comment">//right[i]=1;</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">		left[i]=left[i-<span class="number">1</span>] * nums[i-<span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=len-<span class="number">2</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">		<span class="comment">//对right数组优化下</span></span><br><span class="line">		<span class="comment">//right[i]=right[i+1] * nums[i+1];</span></span><br><span class="line">		right=right * nums[i+<span class="number">1</span>];</span><br><span class="line">		left[i]=left[i]*right;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>分析：使用动态规划，以dp[i+1]表示以下标为i字符的结尾的最长有效括号长度，当我们遇到左括号时，dp[i+1]为0，而当遇到右括号时，我们需要对dp数组前一位做判断，对其长度的字符串的前一位判断是否为左括号，如果不为左括号，则匹配失败，设为0，如果为左括号，那么匹配成功，不仅要在dp[i]的基础上加2，还要查看前续是否具有有效长度括号，代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">longestValidParentheses</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = s.length();</span><br><span class="line">	<span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[len + <span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span>(s.charAt(i)==<span class="string">')'</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i&gt;dp[i] &amp;&amp; s.charAt(i-dp[i]-<span class="number">1</span>)==<span class="string">'('</span>)</span><br><span class="line">				dp[i + <span class="number">1</span>] = dp[i]+<span class="number">2</span>+dp[i-dp[i]-<span class="number">1</span>];</span><br><span class="line">			res=Math.max(res,dp[i+<span class="number">1</span>]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -429,8 +429,6 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
-          
             <a href="/tags/LeetCode/" rel="tag"><i class="fa fa-tag"></i> LeetCode</a>
           
         </div>
@@ -444,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/03/leetcode837/" rel="next" title="为什么他能靠21点成为亿万富翁？LeetCode837、新21点">
-                <i class="fa fa-chevron-left"></i> 为什么他能靠21点成为亿万富翁？LeetCode837、新21点
+              <a href="/2020/06/18/bytedanceinterview1/" rel="next" title="字节教育后端实习面经集1">
+                <i class="fa fa-chevron-left"></i> 字节教育后端实习面经集1
               </a>
             
           </div>
@@ -453,10 +451,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/06/06/leetcode128/" rel="prev" title="leetcode128、最长连续序列">
-                leetcode128、最长连续序列 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
